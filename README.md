@@ -26,7 +26,12 @@ Node.js and npm
 - [Vim-Node](https://github.com/moll/vim-node) Node.js module navigation
 - [Vim-JavaScript-Syntax](https://github.com/jelera/vim-javascript-syntax.git) JavaScript Syntax Improved
 - [JavaScript-Libraries-Syntax](https://github.com/othree/javascript-libraries-syntax.vim) Syntax Improved for 3rd party libraries
- 
+
+### TODO
+
+- https://github.com/marijnh/tern_for_vim
+- https://github.com/guileen/vim-node-dict 
+- https://github.com/scrooloose/syntastic
 
 ## Cheat Sheet
 
