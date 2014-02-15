@@ -38,3 +38,5 @@ map <C-f> :call JsBeautify()<CR>
 " nerdtree autoclose
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" js libraries used
+let g:used_javascript_libs = 'jquery,underscore,requirejs'

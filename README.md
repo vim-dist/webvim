@@ -25,6 +25,8 @@ Node.js and npm
 - [Mango](https://github.com/goatslacker/mango.vim) Color theme
 - [Vim-Node](https://github.com/moll/vim-node) Node.js module navigation
 - [Vim-JavaScript-Syntax](https://github.com/jelera/vim-javascript-syntax.git) JavaScript Syntax Improved
+- [JavaScript-Libraries-Syntax](https://github.com/othree/javascript-libraries-syntax.vim) Syntax Improved for 3rd party libraries
+ 
 
 ## Cheat Sheet
 
