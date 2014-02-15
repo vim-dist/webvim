@@ -12,6 +12,8 @@ set paste
 call pathogen#infect()
 call pathogen#helptags()
 
+filetype plugin on
+
 " nerdtree open Ctrl-n
 map <C-n> :NERDTreeToggle<CR>
 " nerdtree autoclose
