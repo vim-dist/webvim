@@ -13,3 +13,6 @@
 [submodule "modules/mango.vim"]
 	path = modules/mango.vim
 	url = https://github.com/goatslacker/mango.vim
+[submodule "modules/vim-node"]
+	path = modules/vim-node
+	url = https://github.com/moll/vim-node.git
