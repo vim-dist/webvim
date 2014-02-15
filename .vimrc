@@ -19,12 +19,18 @@ set expandtab
 
 " copy/paste
 set paste
-set clipboard=unamedplus
+set clipboard=unnamedplus
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 map <S-Right> :tabn<CR>
 map <S-Left> :tabp<CR>
+
+" nerdcommenter
+map <C-_> :call NERDComment(0, "Toggle")<CR>
+
+" js beautify
+map <C-f> :call JsBeautify()<CR>
 
 " nerdtree autoclose
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

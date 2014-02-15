@@ -10,18 +10,25 @@ my vim based IDE
 Or compile a recent version with `xterm_clipboard` support
 
 	git clone https://github.com/krampstudio/dotvim.git ~/.vim
+    cd ~/.vim && git submodule update --init --recursive
+
+### Dependencies
+
+Node.js and npm
+    
 
 ## Content 
 
-- NerdTree
-- NerdCommenter
+- [NerdTree](https://github.com/scrooloose/nerdtree)
+- [NerdCommenter](https://github.com/scrooloose/nerdcommenter)
+- [Vim-JsBeautify](https://github.com/maksimr/vim-jsbeautify.git)
 
 ## Cheat Sheet
 
 
-http://fprintf.net/vimCheatSheet.html
+[Common usage cheat sheet](http://fprintf.net/vimCheatSheet.html)
 
-NERDTree
+### NERDTree
 open: Ctrl-n
 menu: m
 tab: t
@@ -39,6 +46,7 @@ uncomment \ci
 JsBeautify
 beautify: Ctrl-f
 
+<!--
 Visual
 Visual line : V
 Visual block : Ctrl-V
@@ -61,3 +69,4 @@ base
 effacer sour cursuer: x
 effacer mot dw
 effacer vers fin d$
+-->

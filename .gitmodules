@@ -7,3 +7,6 @@
 [submodule "modules/nerdcommenter"]
 	path = modules/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "modules/vim-jsbeautify"]
+	path = modules/vim-jsbeautify
+	url = https://github.com/maksimr/vim-jsbeautify.git
