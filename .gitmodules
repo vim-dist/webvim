@@ -16,3 +16,6 @@
 [submodule "modules/vim-node"]
 	path = modules/vim-node
 	url = https://github.com/moll/vim-node.git
+[submodule "modules/vim-javascript-syntax"]
+	path = modules/vim-javascript-syntax
+	url = https://github.com/jelera/vim-javascript-syntax.git
