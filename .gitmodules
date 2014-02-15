@@ -10,3 +10,6 @@
 [submodule "modules/vim-jsbeautify"]
 	path = modules/vim-jsbeautify
 	url = https://github.com/maksimr/vim-jsbeautify.git
+[submodule "modules/mango.vim"]
+	path = modules/mango.vim
+	url = https://github.com/goatslacker/mango.vim

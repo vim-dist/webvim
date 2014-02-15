@@ -7,9 +7,12 @@ filetype plugin on
 " show line numbers
 set number
 
-"syntax highlighting
+" syntax highlighting
 syn on
 set background=dark
+set t_Co=256
+color mango
+
 
 "indent
 set smartindent

@@ -1,0 +1,1 @@
+../modules/mango.vim/colors/mango.vim
