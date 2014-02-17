@@ -25,3 +25,9 @@
 [submodule "modules/syntastic"]
 	path = modules/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "modules/YouCompleteMe"]
+	path = modules/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "modules/tern_for_vim"]
+	path = modules/tern_for_vim
+	url = https://github.com/marijnh/tern_for_vim.git

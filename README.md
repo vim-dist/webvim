@@ -5,20 +5,26 @@ my vim based IDE
 
 ## Install (Debian/Ubuntu)
 
-	aptitude install vim vim-runtime vim-gui-common
+	aptitude install vim vim-runtime vim-gui-common build-essential cmake python-dev
 
 Or compile a recent version with `xterm_clipboard` support
 
 	git clone https://github.com/krampstudio/dotvim.git ~/.vim
     cd ~/.vim && git submodule update --init --recursive
-    
+   
+
 
 ### Dependencies
 
 Node.js and npm:
 
-    npm install -g jshint csslint jsonlint
-    
+    npm install -g jshint csslint jsonlint tern
+
+    cd modules/YouCompleteMe 
+    ./install.sh --clang-completer    
+
+    cd modules/tern_for_vim
+    npm install
 
 ## Content 
 
@@ -30,11 +36,12 @@ Node.js and npm:
 - [Vim-JavaScript-Syntax](https://github.com/jelera/vim-javascript-syntax.git) JavaScript Syntax Improved
 - [JavaScript-Libraries-Syntax](https://github.com/othree/javascript-libraries-syntax.vim) Syntax Improved for 3rd party libraries
 - [Syntastic](https://github.com/scrooloose/syntastic) Generic syntax checker wrapper
+- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) AutoCompletion for C base languages
+- [tern_for_vim](https://github.com/marijnh/tern_for_vim) Better autocompletion for Javascript (hook omni or YCM)
+
 
 ### TODO
 
-- tern
-- you complete me
 - https://github.com/guileen/vim-node-dict 
 
 ## Cheat Sheet
@@ -60,15 +67,16 @@ Node.js and npm:
 - uncomment: `\ci`
 
 ### JsBeautify
+
 - beautify: `Ctrl-f`
 
 ### Vim-Node
+
 - Inside require("...") to jump to source and module files: `gf`
 - Use [I on any keyword to look for it in the current and required files: `[I` 
 - Edit the main file of a module: `:Nedit module_name`
 - Edit its lib/foo.js file: `:Nedit module_name/lib/foo` 
 - Edit your Node projects main (usually index.js) file: `:Nedit .` 
-
 
 ### Syntastic
 
@@ -78,6 +86,17 @@ Node.js and npm:
 - Error window: `:Errors`
 - Jump next/previous error: `:help :lnext` or `:help :lprev`
 
+### YouCompleteMe
+
+- `TAB` and `Shift-TAB`
+
+### Tern
+
+- Jump to the definition of the thing under the cursor: `:TernDef`
+- Look up the documentation of something: `:TernDoc`
+- Find the type of the thing under the cursor: `:TernType`
+- Show all references to the variable or property under the cursor: `:TernRefs`
+- Rename the variable under the cursor: `:TernRename`
 
 <!--
 Visual
