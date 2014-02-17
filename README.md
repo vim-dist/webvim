@@ -11,10 +11,13 @@ Or compile a recent version with `xterm_clipboard` support
 
 	git clone https://github.com/krampstudio/dotvim.git ~/.vim
     cd ~/.vim && git submodule update --init --recursive
+    
 
 ### Dependencies
 
-Node.js and npm
+Node.js and npm:
+
+    npm install -g jshint csslint jsonlint
     
 
 ## Content 
@@ -26,12 +29,13 @@ Node.js and npm
 - [Vim-Node](https://github.com/moll/vim-node) Node.js module navigation
 - [Vim-JavaScript-Syntax](https://github.com/jelera/vim-javascript-syntax.git) JavaScript Syntax Improved
 - [JavaScript-Libraries-Syntax](https://github.com/othree/javascript-libraries-syntax.vim) Syntax Improved for 3rd party libraries
+- [Syntastic](https://github.com/scrooloose/syntastic) Generic syntax checker wrapper
 
 ### TODO
 
-- https://github.com/marijnh/tern_for_vim
+- tern
+- you complete me
 - https://github.com/guileen/vim-node-dict 
-- https://github.com/scrooloose/syntastic
 
 ## Cheat Sheet
 
@@ -59,11 +63,21 @@ Node.js and npm
 - beautify: `Ctrl-f`
 
 ### Vim-Node
-- Use gf inside require("...") to jump to source and module files.
-- Use [I on any keyword to look for it in the current and required files.
-- Use :Nedit module_name to edit the main file of a module.
-- Use :Nedit module_name/lib/foo to edit its lib/foo.js file.
-- Use :Nedit . to edit your Node projects main (usually index.js) file.
+- Inside require("...") to jump to source and module files: `gf`
+- Use [I on any keyword to look for it in the current and required files: `[I` 
+- Edit the main file of a module: `:Nedit module_name`
+- Edit its lib/foo.js file: `:Nedit module_name/lib/foo` 
+- Edit your Node projects main (usually index.js) file: `:Nedit .` 
+
+
+### Syntastic
+
+- Checkers infos: `:SyntasticInfo`
+- Check:  `:SyntasticCheck`
+- Toggle check: `:SyntasticToggleMode`
+- Error window: `:Errors`
+- Jump next/previous error: `:help :lnext` or `:help :lprev`
+
 
 <!--
 Visual

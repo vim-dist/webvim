@@ -22,3 +22,6 @@
 [submodule "modules/javascript-libraries-syntax.vim"]
 	path = modules/javascript-libraries-syntax.vim
 	url = https://github.com/othree/javascript-libraries-syntax.vim.git
+[submodule "modules/syntastic"]
+	path = modules/syntastic
+	url = https://github.com/scrooloose/syntastic.git

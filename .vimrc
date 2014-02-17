@@ -40,3 +40,13 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " js libraries used
 let g:used_javascript_libs = 'jquery,underscore,requirejs'
+
+" Syntax checkers
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_javascript_jshint_conf='~/.vim/.jshintrc'
+let g:syntastic_json_checkers=['jsonlint']
+let g:syntastic_css_checkers=['csslint']
+
