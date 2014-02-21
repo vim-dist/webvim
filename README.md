@@ -52,6 +52,7 @@ Node.js and npm:
 - https://github.com/hail2u/vim-css3-syntax
 - https://github.com/cakebaker/scss-syntax.vim
 - https://github.com/tpope/vim-fugitive
+- https://github.com/mustache/vim-mustache-handlebars
 
 
 ## Cheat Sheet
