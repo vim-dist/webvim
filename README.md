@@ -43,6 +43,17 @@ Node.js and npm:
 ### TODO
 
 - https://github.com/guileen/vim-node-dict 
+- https://github.com/tpope/vim-surround
+- https://github.com/sidorares/node-vim-debugger
+- https://github.com/plasticboy/vim-markdown
+- https://github.com/othree/html5-syntax.vim
+- https://github.com/othree/html5.vim
+- https://github.com/elzr/vim-json
+- https://github.com/hail2u/vim-css3-syntax
+- https://github.com/cakebaker/scss-syntax.vim
+- https://github.com/tpope/vim-fugitive
+- https://github.com/mustache/vim-mustache-handlebars
+
 
 ## Cheat Sheet
 
