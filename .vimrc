@@ -50,3 +50,11 @@ let g:syntastic_javascript_jshint_conf='~/.vim/.jshintrc'
 let g:syntastic_json_checkers=['jsonlint']
 let g:syntastic_css_checkers=['csslint']
 
+" Custom 
+" If you want to add new configurations, you can put them into the file .vim-user
+let s:userconf = $HOME . '/.vim/.vim-user'
+if filereadable(s:userconf)
+    exec ":source ". s:userconf 
+endif
+
+
