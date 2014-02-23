@@ -37,7 +37,8 @@ Node.js and npm:
 - [JavaScript-Libraries-Syntax](https://github.com/othree/javascript-libraries-syntax.vim) Syntax Improved for 3rd party libraries
 - [Syntastic](https://github.com/scrooloose/syntastic) Generic syntax checker wrapper
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) AutoCompletion for C base languages
-- [tern_for_vim](https://github.com/marijnh/tern_for_vim) Better autocompletion for Javascript (hook omni or YCM)
+- [Tern_For_Vim](https://github.com/marijnh/tern_for_vim) Better autocompletion for Javascript (hook omni or YCM)
+- [Vim-json](https://github.com/elzr/vim-json) Nice json(p) file support
 
 
 ### TODO
@@ -48,7 +49,6 @@ Node.js and npm:
 - https://github.com/plasticboy/vim-markdown
 - https://github.com/othree/html5-syntax.vim
 - https://github.com/othree/html5.vim
-- https://github.com/elzr/vim-json
 - https://github.com/hail2u/vim-css3-syntax
 - https://github.com/cakebaker/scss-syntax.vim
 - https://github.com/tpope/vim-fugitive
@@ -72,7 +72,7 @@ Node.js and npm:
 
 ### NerdComment
 
-- toggle: `Ctrl-_`
+- toggle: `Ctrl-_` or `Ctrl-Shift-/`
 - comment: ̀`\cn`
 - alt comment: `\cs`
 - uncomment: `\ci`
