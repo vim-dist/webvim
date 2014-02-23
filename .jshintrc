@@ -8,7 +8,7 @@
     "newcap" : true,
     "noempty" : true,
     "undef" : true,
-    "strict" : true,
+    "strict" : false,
     "smarttabs" : true,
     "browser" : true,
     "node" : true,
