@@ -39,6 +39,7 @@ Node.js and npm:
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) AutoCompletion for C base languages
 - [Tern_For_Vim](https://github.com/marijnh/tern_for_vim) Better autocompletion for Javascript (hook omni or YCM)
 - [Vim-json](https://github.com/elzr/vim-json) Nice json(p) file support
+- [Scss-Syntax](https://github.com/cakebaker/scss-syntax.vim) SASS/SCSS syntax support
 
 
 ### TODO
@@ -50,7 +51,6 @@ Node.js and npm:
 - https://github.com/othree/html5-syntax.vim
 - https://github.com/othree/html5.vim
 - https://github.com/hail2u/vim-css3-syntax
-- https://github.com/cakebaker/scss-syntax.vim
 - https://github.com/tpope/vim-fugitive
 - https://github.com/mustache/vim-mustache-handlebars
 

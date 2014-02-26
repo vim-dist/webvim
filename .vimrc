@@ -38,6 +38,10 @@ map <C-f> :call JsBeautify()<CR>
 " nerdtree autoclose
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+
+" override scss filetype to fix mess with css validator
+au BufRead,BufNewFile *.scss	set filetype=scss
+
 " js libraries used
 let g:used_javascript_libs = 'jquery,underscore,requirejs'
 
@@ -48,6 +52,7 @@ let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_javascript_jshint_conf='~/.vim/.jshintrc'
 let g:syntastic_json_checkers=['jsonlint']
+let g:syntastic_scss_checkers=['sass']
 let g:syntastic_css_checkers=['csslint']
 
 " Custom 

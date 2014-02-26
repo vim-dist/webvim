@@ -31,3 +31,9 @@
 [submodule "modules/tern_for_vim"]
 	path = modules/tern_for_vim
 	url = https://github.com/marijnh/tern_for_vim.git
+[submodule "modules/scss-syntax.vim"]
+	path = modules/scss-syntax.vim
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "modules/vim-json"]
+	path = modules/vim-json
+	url = https://github.com/elzr/vim-json.git
