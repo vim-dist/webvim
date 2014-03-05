@@ -24,6 +24,9 @@ set expandtab
 set paste
 set clipboard=unnamedplus
 
+" folding manual
+set foldmethod=manual
+
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 map <S-Right> :tabn<CR>
@@ -41,6 +44,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " override scss filetype to fix mess with css validator
 au BufRead,BufNewFile *.scss	set filetype=scss
+au BufRead,BufNewFile *.tpl	set filetype=html
 
 " js libraries used
 let g:used_javascript_libs = 'jquery,underscore,requirejs'
@@ -49,6 +53,7 @@ let g:used_javascript_libs = 'jquery,underscore,requirejs'
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_html_checkers=['jshint']
 let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_javascript_jshint_conf='~/.vim/.jshintrc'
 let g:syntastic_json_checkers=['jsonlint']
