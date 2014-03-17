@@ -18,7 +18,7 @@ Or compile a recent version with `xterm_clipboard` support
 
 Node.js and npm:
 
-    npm install -g jshint csslint jsonlint tern
+    npm install -g jshint csslint jsonlint tern handlebars
 
     cd modules/YouCompleteMe 
     ./install.sh --clang-completer    
@@ -40,6 +40,7 @@ Node.js and npm:
 - [Tern_For_Vim](https://github.com/marijnh/tern_for_vim) Better autocompletion for Javascript (hook omni or YCM)
 - [Vim-json](https://github.com/elzr/vim-json) Nice json(p) file support
 - [Scss-Syntax](https://github.com/cakebaker/scss-syntax.vim) SASS/SCSS syntax support
+- [Mustache-Handlebar](https://github.com/mustache/vim-mustache-handlebars) Mustache and handlebar support
 
 
 ### TODO
@@ -52,8 +53,6 @@ Node.js and npm:
 - https://github.com/othree/html5.vim
 - https://github.com/hail2u/vim-css3-syntax
 - https://github.com/tpope/vim-fugitive
-- https://github.com/mustache/vim-mustache-handlebars
-
 
 ## Cheat Sheet
 

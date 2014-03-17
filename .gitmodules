@@ -37,3 +37,6 @@
 [submodule "modules/vim-json"]
 	path = modules/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "modules/vim-mustache-handlebars"]
+	path = modules/vim-mustache-handlebars
+	url = git://github.com/mustache/vim-mustache-handlebars.git

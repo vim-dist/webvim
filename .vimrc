@@ -45,9 +45,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " override scss filetype to fix mess with css validator
 au BufRead,BufNewFile *.scss	set filetype=scss
 au BufRead,BufNewFile *.tpl	set filetype=html
-
+au BufRead,BufNewFile *.mustache,*.handlebars,*.hbs,*.hogan,*.hulk,*.hjs,*.hbt,*.tpl set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
 " js libraries used
 let g:used_javascript_libs = 'jquery,underscore,requirejs'
+
+" mustache abbr
+let g:mustache_abbreviations = 1
 
 " Syntax checkers
 let g:syntastic_check_on_open=1
@@ -59,6 +62,8 @@ let g:syntastic_javascript_jshint_conf='~/.vim/.jshintrc'
 let g:syntastic_json_checkers=['jsonlint']
 let g:syntastic_scss_checkers=['sass']
 let g:syntastic_css_checkers=['csslint']
+let g:syntastic_handlebars_checkers=['handlebars']
+let g:syntastic_tpl_checkers=['handlebars']
 
 " Custom 
 " If you want to add new configurations, you can put them into the file .vim-user
