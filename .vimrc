@@ -41,6 +41,14 @@ map <C-f> :call JsBeautify()<CR>
 " nerdtree autoclose
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" nerdtree window resize
+let NERDTreeWinSize = 35
+
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " override scss filetype to fix mess with css validator
 au BufRead,BufNewFile *.scss	set filetype=scss
