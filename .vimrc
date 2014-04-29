@@ -27,6 +27,9 @@ set clipboard=unnamedplus
 " folding manual
 set foldmethod=manual
 
+" mouse
+set mouse=a
+
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 map <S-Right> :tabn<CR>
@@ -37,6 +40,10 @@ map <C-_> :call NERDComment(0, "Toggle")<CR>
 
 " js beautify
 map <C-f> :call JsBeautify()<CR>
+
+" on vim enter opens nerd tree
+" autocmd vimenter * NERDTree
+autocmd vimenter * NERDTreeFind
 
 " nerdtree autoclose
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
