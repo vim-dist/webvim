@@ -40,3 +40,6 @@
 [submodule "modules/vim-mustache-handlebars"]
 	path = modules/vim-mustache-handlebars
 	url = git://github.com/mustache/vim-mustache-handlebars.git
+[submodule "modules/YankRing.vim"]
+	path = modules/YankRing.vim
+	url = https://github.com/vim-scripts/YankRing.vim

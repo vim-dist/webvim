@@ -30,6 +30,7 @@ Node.js and npm:
 
 - [NerdTree](https://github.com/scrooloose/nerdtree) File system navigation
 - [NerdCommenter](https://github.com/scrooloose/nerdcommenter) Smart comments
+- [YankRing](https://github.com/vim-scripts/YankRing.vim) Yank regsiter
 - [Vim-JsBeautify](https://github.com/maksimr/vim-jsbeautify) Format JS, CSS and HTML files
 - [Mango](https://github.com/goatslacker/mango.vim) Color theme
 - [Vim-Node](https://github.com/moll/vim-node) Node.js module navigation
@@ -75,6 +76,12 @@ Node.js and npm:
 - comment: ̀`\cn`
 - alt comment: `\cs`
 - uncomment: `\ci`
+
+### YankRing
+
+Paste then:
+- move backwards through the yankring : `Ctrl-P`
+- move forwards through the yankring : `Ctrl-PN`
 
 ### JsBeautify
 
