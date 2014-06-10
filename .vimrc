@@ -30,7 +30,7 @@ set foldmethod=manual
 " mouse
 set mouse=a
 
-" nerdtree
+" nerdtree also remapped on after
 map <C-n> :NERDTreeToggle<CR>
 map <S-Right> :tabn<CR>
 map <S-Left> :tabp<CR>
