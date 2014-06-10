@@ -42,6 +42,7 @@ Node.js and npm:
 - [Vim-json](https://github.com/elzr/vim-json) Nice json(p) file support
 - [Scss-Syntax](https://github.com/cakebaker/scss-syntax.vim) SASS/SCSS syntax support
 - [Mustache-Handlebar](https://github.com/mustache/vim-mustache-handlebars) Mustache and handlebar support
+- [Airline](https://github.com/bling/vim-airline.git) Lean & mean status/tabline for vim that's light as air
 
 
 ### TODO

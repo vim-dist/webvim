@@ -43,3 +43,6 @@
 [submodule "modules/YankRing.vim"]
 	path = modules/YankRing.vim
 	url = https://github.com/vim-scripts/YankRing.vim
+[submodule "modules/vim-airline"]
+	path = modules/vim-airline
+	url = https://github.com/bling/vim-airline.git

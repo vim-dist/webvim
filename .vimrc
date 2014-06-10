@@ -51,6 +51,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " nerdtree window resize
 let NERDTreeWinSize = 35
 
+" airline smarttab extension
+let g:airline#extensions#tabline#enabled = 1
+
+" airline always opened
+set laststatus=2
+
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
 " insert mode
@@ -86,5 +92,3 @@ let s:userconf = $HOME . '/.vim/.vim-user'
 if filereadable(s:userconf)
     exec ":source ". s:userconf 
 endif
-
-
