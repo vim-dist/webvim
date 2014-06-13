@@ -1,0 +1,27 @@
+#!/bin/sh
+
+current=$(dirname "$0")
+fontDir="$HOME/.fonts"
+fontFile="$current/PowerlineSymbols.otf"
+fontConfDir="$HOME/.fonts.conf.d"
+fontConfFile="$current/10-powerline-symbols.conf"
+
+echo "Installing Powerline Font for Airline plugin into user space $HOME"
+
+#Check fc-cache is installed
+command -v fc-cache >/dev/null 2>&1 || { echo >&2 "This script requires fc-cache to install the font, but it's not installed. Quiting"; exit 1; }
+
+if [ ! -d "$fontDir" ]; then
+    mkdir "$fontDir"
+fi
+cp "$fontFile" "$fontDir" 
+
+
+if [ ! -d "$fontiConfDir" ]; then
+    mkdir "$fontConfDir"
+fi
+cp "$fontConfFile" "$fontConfDir"
+
+fc-cache -vf "$fontDir"
+
+exit 0

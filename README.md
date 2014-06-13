@@ -7,7 +7,9 @@ my vim based IDE
 
 	aptitude install vim vim-runtime vim-gui-common build-essential cmake python-dev
 
-Or compile a recent version with `xterm_clipboard` support
+or compile a recent version with `xterm_clipboard` support. 
+
+Then install it:
 
 	git clone https://github.com/krampstudio/dotvim.git ~/.vim
     cd ~/.vim && git submodule update --init --recursive
@@ -19,12 +21,16 @@ Or compile a recent version with `xterm_clipboard` support
 Node.js and npm:
 
     npm install -g jshint csslint jsonlint tern handlebars
-
+    
     cd modules/YouCompleteMe 
     ./install.sh --clang-completer    
-
+    
     cd modules/tern_for_vim
     npm install
+    
+    cd fonts
+    ./install
+
 
 ## Content 
 
