@@ -1,9 +1,15 @@
 dotvim
 ======
 
-> my vim based IDE
+My Vim IDE targetting js/web development. It features : 
 
-A vim IDE targetting js/web development
+ - syntax highighting
+ - syntax error checking
+ - autocomplete
+ - tabs, file browser
+ - visual and mouse interactions
+ - folding, indenting, comments, etc.
+ - and all the awesome vim stuffs
 
 ## Screen shots
 
