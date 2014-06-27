@@ -1,7 +1,14 @@
 dotvim
 ======
 
-my vim based IDE
+> my vim based IDE
+
+A vim IDE targetting js/web development
+
+## Screen shots
+
+![editing javascript with autocomplete](https://raw.githubusercontent.com/krampstudio/dotvim/screenshots/img/vim-js-tern.png "Editing javascript with autocomplete")
+![tree and nice color theme](https://raw.githubusercontent.com/krampstudio/dotvim/screenshots/img/vim-tree.png "Tree and nice color theme")
 
 ## Install (Debian/Ubuntu)
 
