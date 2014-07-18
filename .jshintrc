@@ -33,8 +33,9 @@
         "strictEqual" : true, 
         "notStrictEqual" : true, 
         "raises" : true,
-        "xtag" : true,
+        "throws" : true,
+		"xtag" : true,
         "describe" : true,
-        "it" ; true
+        "it" : true
     }
 }

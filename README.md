@@ -1,13 +1,28 @@
 dotvim
 ======
 
-my vim based IDE
+My Vim IDE targetting js/web development. It features : 
+
+ - syntax highighting
+ - syntax error checking
+ - autocomplete
+ - tabs, file browser
+ - visual and mouse interactions
+ - folding, indenting, comments, etc.
+ - and all the awesome vim stuffs
+
+## Screen shots
+
+![editing javascript with autocomplete](https://raw.githubusercontent.com/krampstudio/dotvim/screenshots/img/vim-js-tern.png "Editing javascript with autocomplete")
+![tree and nice color theme](https://raw.githubusercontent.com/krampstudio/dotvim/screenshots/img/vim-tree.png "Tree and nice color theme")
 
 ## Install (Debian/Ubuntu)
 
 	aptitude install vim vim-runtime vim-gui-common build-essential cmake python-dev
 
-Or compile a recent version with `xterm_clipboard` support
+or compile a recent version with `xterm_clipboard` support. 
+
+Then install it:
 
 	git clone https://github.com/krampstudio/dotvim.git ~/.vim
     cd ~/.vim && git submodule update --init --recursive
@@ -19,12 +34,16 @@ Or compile a recent version with `xterm_clipboard` support
 Node.js and npm:
 
     npm install -g jshint csslint jsonlint tern handlebars
-
+    
     cd modules/YouCompleteMe 
     ./install.sh --clang-completer    
-
+    
     cd modules/tern_for_vim
     npm install
+    
+    cd fonts
+    ./install
+
 
 ## Content 
 
@@ -65,6 +84,7 @@ Node.js and npm:
 
 - open: `Ctrl-n`
 - menu: `m`
+  - then `g` to grep, `a` to add, `c` to copy, `m` to moven, `d` to delete
 - open in a tab: `t`
 - tab nav: `Shift-left|right`
 - switch  win: `Ctrl-w`

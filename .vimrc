@@ -51,8 +51,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " nerdtree window resize
 let NERDTreeWinSize = 35
 
-" airline smarttab extension
-let g:airline#extensions#tabline#enabled = 1
+" airline:
+"  smarttab extension
+" let g:airline#extensions#tabline#enabled = 1
+"  pwerline font
+let g:airline_powerline_fonts=1
 
 " airline always opened
 set laststatus=2
