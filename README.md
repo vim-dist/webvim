@@ -71,6 +71,7 @@ Node.js and npm:
 
 - open: `Ctrl-n`
 - menu: `m`
+  - then `g` to grep, `a` to add, `c` to copy, `m` to moven, `d` to delete
 - open in a tab: `t`
 - tab nav: `Shift-left|right`
 - switch  win: `Ctrl-w`
