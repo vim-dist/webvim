@@ -18,7 +18,7 @@ My Vim IDE targetting js/web development. It features :
 
 ## Install (Debian/Ubuntu)
 
-	aptitude install vim vim-runtime vim-gui-common build-essential cmake python-dev
+	aptitude install vim vim-runtime vim-gui-common build-essential cmake python-dev exuberant-ctags
 
 or compile a recent version with `xterm_clipboard` support. 
 
@@ -62,6 +62,8 @@ Node.js and npm:
 - [Scss-Syntax](https://github.com/cakebaker/scss-syntax.vim) SASS/SCSS syntax support
 - [Mustache-Handlebar](https://github.com/mustache/vim-mustache-handlebars) Mustache and handlebar support
 - [Airline](https://github.com/bling/vim-airline.git) Lean & mean status/tabline for vim that's light as air
+- [PhpComplete](https://github.com/shawncplus/phpcomplete.vim) PHP omincomplete
+- [CtrlP](https://github.com/kien/ctrlp.vim) Find in file
 
 
 ### TODO
@@ -135,6 +137,10 @@ Paste then:
 - Find the type of the thing under the cursor: `:TernType`
 - Show all references to the variable or property under the cursor: `:TernRefs`
 - Rename the variable under the cursor: `:TernRename`
+
+### Ctrl-P
+
+- Find in file : `Ctrl-I`
 
 <!--
 Visual

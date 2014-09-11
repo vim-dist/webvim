@@ -89,6 +89,14 @@ let g:syntastic_css_checkers=['csslint']
 let g:syntastic_handlebars_checkers=['handlebars']
 let g:syntastic_tpl_checkers=['handlebars']
 
+" phpcomplete
+let g:phpcomplete_complete_for_unknown_classes=1
+let g:phpcomplete_parse_docblock_comments=1 
+
+" ctrl-p mapped to something else than ctrl-p...
+let g:ctrlp_map = '<C-I>'
+let g:ctrlp_cmd = 'CtrlP'
+
 " Custom 
 " If you want to add new configurations, you can put them into the file .vim-user
 let s:userconf = $HOME . '/.vim/.vim-user'
