@@ -18,7 +18,7 @@ My Vim IDE targetting js/web development. It features :
 
 ## Install (Debian/Ubuntu)
 
-	aptitude install vim vim-runtime vim-gui-common build-essential cmake python-dev exuberant-ctags
+	aptitude install vim vim-runtime vim-gui-common build-essential cmake python-dev exuberant-ctags libclang3.4-dev
 
 or compile a recent version with `xterm_clipboard` support. 
 
@@ -26,6 +26,7 @@ Then install it:
 
 	git clone https://github.com/krampstudio/dotvim.git ~/.vim
     cd ~/.vim && git submodule update --init --recursive
+    ln -s ~/.vim/.vimrc ~/.vimrc
    
 
 
@@ -36,7 +37,7 @@ Node.js and npm:
     npm install -g jshint csslint jsonlint tern handlebars
     
     cd modules/YouCompleteMe 
-    ./install.sh --clang-completer    
+    ./install.sh --clang-completer --system-libclang 
     
     cd modules/tern_for_vim
     npm install
