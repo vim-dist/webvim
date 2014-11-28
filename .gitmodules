@@ -1,54 +1,72 @@
 [submodule "modules/vim-pathogen"]
 	path = modules/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+    ignore = dirty
 [submodule "modules/nerdtree"]
 	path = modules/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+    ignore = dirty
 [submodule "modules/nerdcommenter"]
 	path = modules/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+    ignore = dirty
 [submodule "modules/vim-jsbeautify"]
 	path = modules/vim-jsbeautify
 	url = https://github.com/maksimr/vim-jsbeautify.git
+    ignore = dirty
 [submodule "modules/mango.vim"]
 	path = modules/mango.vim
 	url = https://github.com/goatslacker/mango.vim
+    ignore = dirty
 [submodule "modules/vim-node"]
 	path = modules/vim-node
 	url = https://github.com/moll/vim-node.git
+    ignore = dirty
 [submodule "modules/vim-javascript-syntax"]
 	path = modules/vim-javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax.git
+    ignore = dirty
 [submodule "modules/javascript-libraries-syntax.vim"]
 	path = modules/javascript-libraries-syntax.vim
 	url = https://github.com/othree/javascript-libraries-syntax.vim.git
+    ignore = dirty
 [submodule "modules/syntastic"]
 	path = modules/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+    ignore = dirty
 [submodule "modules/YouCompleteMe"]
 	path = modules/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+    ignore = dirty
 [submodule "modules/tern_for_vim"]
 	path = modules/tern_for_vim
 	url = https://github.com/marijnh/tern_for_vim.git
+    ignore = dirty
 [submodule "modules/scss-syntax.vim"]
 	path = modules/scss-syntax.vim
 	url = https://github.com/cakebaker/scss-syntax.vim.git
+    ignore = dirty
 [submodule "modules/vim-json"]
 	path = modules/vim-json
 	url = https://github.com/elzr/vim-json.git
+    ignore = dirty
 [submodule "modules/vim-mustache-handlebars"]
 	path = modules/vim-mustache-handlebars
 	url = git://github.com/mustache/vim-mustache-handlebars.git
+    ignore = dirty
 [submodule "modules/YankRing.vim"]
 	path = modules/YankRing.vim
 	url = https://github.com/vim-scripts/YankRing.vim
+    ignore = dirty
 [submodule "modules/vim-airline"]
 	path = modules/vim-airline
 	url = https://github.com/bling/vim-airline.git
+    ignore = dirty
 [submodule "modules/phpcomplete.vim"]
 	path = modules/phpcomplete.vim
 	url = git://github.com/shawncplus/phpcomplete.vim.git
+    ignore = dirty
 [submodule "modules/ctrlp.vim"]
 	path = modules/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+    ignore = dirty
