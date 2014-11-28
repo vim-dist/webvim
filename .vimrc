@@ -82,7 +82,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 let g:syntastic_html_checkers=['jshint']
 let g:syntastic_javascript_checkers=['jshint']
-let g:syntastic_javascript_jshint_conf='~/.vim/.jshintrc'
+let g:syntastic_javascript_jshint_args = '--config ~/.vim/.jshintrc'
 let g:syntastic_json_checkers=['jsonlint']
 let g:syntastic_scss_checkers=['sass']
 let g:syntastic_css_checkers=['csslint']
@@ -90,7 +90,6 @@ let g:syntastic_handlebars_checkers=['handlebars']
 let g:syntastic_tpl_checkers=['handlebars']
 
 " phpcomplete
-let g:phpcomplete_complete_for_unknown_classes=1
 let g:phpcomplete_parse_docblock_comments=1 
 
 " ctrl-p mapped to something else than ctrl-p...

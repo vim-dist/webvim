@@ -46,7 +46,6 @@
 [submodule "modules/vim-airline"]
 	path = modules/vim-airline
 	url = https://github.com/bling/vim-airline.git
-
 [submodule "modules/phpcomplete.vim"]
 	path = modules/phpcomplete.vim
 	url = git://github.com/shawncplus/phpcomplete.vim.git
