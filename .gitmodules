@@ -70,3 +70,6 @@
 	path = modules/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
     ignore = dirty
+[submodule "modules/editorconfig-vim"]
+	path = modules/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
