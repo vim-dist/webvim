@@ -1,7 +1,7 @@
 dotvim
 ======
 
-My Vim IDE targetting js/web development. It features : 
+My Vim IDE targetting js/web development. It features :
 
  - syntax highighting
  - syntax error checking
@@ -20,14 +20,14 @@ My Vim IDE targetting js/web development. It features :
 
 	aptitude install vim vim-runtime vim-gui-common build-essential cmake python-dev exuberant-ctags libclang3.4-dev
 
-or compile a recent version with `xterm_clipboard` support. 
+or compile a recent version with `xterm_clipboard` support.
 
 Then install it:
 
 	git clone https://github.com/krampstudio/dotvim.git ~/.vim
     cd ~/.vim && git submodule update --init --recursive
     ln -s ~/.vim/.vimrc ~/.vimrc
-   
+
 
 
 ### Dependencies
@@ -35,18 +35,18 @@ Then install it:
 Node.js and npm:
 
     npm install -g jshint csslint jsonlint tern handlebars
-    
-    cd modules/YouCompleteMe 
-    ./install.sh --clang-completer --system-libclang 
-    
+
+    cd modules/YouCompleteMe
+    ./install.sh --clang-completer --system-libclang
+
     cd modules/tern_for_vim
     npm install
-    
+
     cd fonts
     ./install
 
 
-## Content 
+## Content
 
 - [NerdTree](https://github.com/scrooloose/nerdtree) File system navigation
 - [NerdCommenter](https://github.com/scrooloose/nerdcommenter) Smart comments
@@ -66,11 +66,13 @@ Node.js and npm:
 - [PhpComplete](https://github.com/shawncplus/phpcomplete.vim) PHP omincomplete
 - [CtrlP](https://github.com/kien/ctrlp.vim) Find in file
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) Support of [editorconfig](http://editorconfig.org/)
+- [Git Gutter](https://github.com/airblade/vim-gitgutter) Shows a git diff in the gutter (sign column)
+- [Trailing Whitespaces](https://github.com/bronson/vim-trailing-whitespace) Highlight trailing whitespaces in red
 
 
 ### TODO
 
-- https://github.com/guileen/vim-node-dict 
+- https://github.com/guileen/vim-node-dict
 - https://github.com/tpope/vim-surround
 - https://github.com/sidorares/node-vim-debugger
 - https://github.com/plasticboy/vim-markdown
@@ -115,10 +117,10 @@ Paste then:
 ### Vim-Node
 
 - Inside require("...") to jump to source and module files: `gf`
-- Use [I on any keyword to look for it in the current and required files: `[I` 
+- Use [I on any keyword to look for it in the current and required files: `[I`
 - Edit the main file of a module: `:Nedit module_name`
-- Edit its lib/foo.js file: `:Nedit module_name/lib/foo` 
-- Edit your Node projects main (usually index.js) file: `:Nedit .` 
+- Edit its lib/foo.js file: `:Nedit module_name/lib/foo`
+- Edit your Node projects main (usually index.js) file: `:Nedit .`
 
 ### Syntastic
 
@@ -155,7 +157,7 @@ s&r
 %s/OLD/NEW/g
 
 Moov
-word/token left : b 
+word/token left : b
 word/token  right: w
 
 Clipboard

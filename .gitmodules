@@ -73,3 +73,9 @@
 [submodule "modules/editorconfig-vim"]
 	path = modules/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "modules/vim-trailing-whitespace"]
+	path = modules/vim-trailing-whitespace
+	url = https://github.com/bronson/vim-trailing-whitespace.git
+[submodule "modules/vim-gitgutter"]
+	path = modules/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
