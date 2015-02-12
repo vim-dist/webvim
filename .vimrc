@@ -77,7 +77,7 @@ au BufRead,BufNewFile *.scss	set filetype=scss
 au BufRead,BufNewFile *.tpl	set filetype=html
 au BufRead,BufNewFile *.mustache,*.handlebars,*.hbs,*.hogan,*.hulk,*.hjs,*.hbt,*.tpl set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
 " js libraries used
-let g:used_javascript_libs = 'jquery,underscore,requirejs'
+let g:used_javascript_libs = 'jquery,underscore,requirejs,chai,handlebars'
 
 " tern mapping like <Leader> tR for rename
 let g:tern_map_keys=1
