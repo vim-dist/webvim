@@ -65,6 +65,7 @@ Node.js and npm:
 - [Airline](https://github.com/bling/vim-airline.git) Lean & mean status/tabline for vim that's light as air
 - [PhpComplete](https://github.com/shawncplus/phpcomplete.vim) PHP omincomplete
 - [CtrlP](https://github.com/kien/ctrlp.vim) Find in file
+- [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) Support of [editorconfig](http://editorconfig.org/)
 
 
 ### TODO

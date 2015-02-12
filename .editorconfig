@@ -1,6 +1,6 @@
 ; .editorconfig
 
-;root = true
+root = true
 
 [*]
 end_of_line = lf
@@ -10,11 +10,9 @@ indent_size = 4
 charset = "utf-8"
 trim_trailing_whitespace = true
 
-
-[*.js]
-end_of_line = lf
-insert_final_newline = true
+[**.json]
 indent_style = space
-indent_size = 4
-charset = "utf-8"
-trim_trailing_whitespace = true
+indent_size = 2
+
+[**.html]
+brace_style = expand
