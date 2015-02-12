@@ -30,6 +30,12 @@ set foldmethod=manual
 " mouse
 set mouse=a
 
+"spell checking
+" zg to add a word into dic
+" z= for autocomplete
+"set spell spelllang=en_us
+"set complete+=kspell
+
 " nerdtree also remapped on after
 map <C-n> :NERDTreeToggle<CR>
 map <S-Right> :tabn<CR>
@@ -73,6 +79,12 @@ au BufRead,BufNewFile *.mustache,*.handlebars,*.hbs,*.hogan,*.hulk,*.hjs,*.hbt,*
 " js libraries used
 let g:used_javascript_libs = 'jquery,underscore,requirejs'
 
+" tern mapping like <Leader> tR for rename
+let g:tern_map_keys=1
+
+" tern type hints
+let g:tern_show_argument_hints='on_hold'
+
 " mustache abbr
 let g:mustache_abbreviations = 1
 
@@ -90,15 +102,15 @@ let g:syntastic_handlebars_checkers=['handlebars']
 let g:syntastic_tpl_checkers=['handlebars']
 
 " phpcomplete
-let g:phpcomplete_parse_docblock_comments=1 
+let g:phpcomplete_parse_docblock_comments=1
 
 " ctrl-p mapped to something else than ctrl-p...
 let g:ctrlp_map = '<C-I>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" Custom 
+" Custom
 " If you want to add new configurations, you can put them into the file .vim-user
 let s:userconf = $HOME . '/.vim/.vim-user'
 if filereadable(s:userconf)
-    exec ":source ". s:userconf 
+    exec ":source ". s:userconf
 endif
