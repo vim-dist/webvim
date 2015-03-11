@@ -21,6 +21,6 @@
         "define" : true,
         "requirejs" : true,
         "Modernizr" : true,
-		"xtag" : true,
+		"xtag" : true
     }
 }
