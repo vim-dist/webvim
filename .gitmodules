@@ -2,10 +2,12 @@
 	path = modules/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
     ignore = dirty
+    branch = master
 [submodule "modules/nerdtree"]
 	path = modules/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
     ignore = dirty
+    branch = master
 [submodule "modules/nerdcommenter"]
 	path = modules/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -25,7 +27,6 @@
 [submodule "modules/vim-javascript-syntax"]
 	path = modules/vim-javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax.git
-    ignore = dirty
 [submodule "modules/javascript-libraries-syntax.vim"]
 	path = modules/javascript-libraries-syntax.vim
 	url = https://github.com/othree/javascript-libraries-syntax.vim.git
@@ -73,12 +74,16 @@
 [submodule "modules/editorconfig-vim"]
 	path = modules/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+    ignore = dirty
 [submodule "modules/vim-trailing-whitespace"]
 	path = modules/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
+    ignore = dirty
 [submodule "modules/vim-gitgutter"]
 	path = modules/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+    ignore = dirty
 [submodule "modules/vim-javascript"]
 	path = modules/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
+    ignore = dirty
