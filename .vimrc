@@ -30,6 +30,12 @@ set foldmethod=manual
 " mouse
 set mouse=a
 
+"spell checking
+" zg to add a word into dic
+" z= for autocomplete
+"set spell spelllang=en_us
+"set complete+=kspell
+
 " nerdtree also remapped on after
 map <C-n> :NERDTreeToggle<CR>
 map <S-Right> :tabn<CR>
@@ -72,6 +78,12 @@ au BufRead,BufNewFile *.tpl	set filetype=html
 au BufRead,BufNewFile *.mustache,*.handlebars,*.hbs,*.hogan,*.hulk,*.hjs,*.hbt,*.tpl set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
 " js libraries used
 let g:used_javascript_libs = 'jquery,underscore,requirejs,chai,handlebars'
+
+" tern mapping like <Leader> tR for rename
+let g:tern_map_keys=1
+
+" tern type hints
+let g:tern_show_argument_hints='on_hold'
 
 " mustache abbr
 let g:mustache_abbreviations = 1
