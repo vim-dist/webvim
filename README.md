@@ -68,6 +68,7 @@ Node.js and npm:
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) Support of [editorconfig](http://editorconfig.org/)
 - [Git Gutter](https://github.com/airblade/vim-gitgutter) Shows a git diff in the gutter (sign column)
 - [Trailing Whitespaces](https://github.com/bronson/vim-trailing-whitespace) Highlight trailing whitespaces in red
+- [Easy align](https://github.com/junegunn/vim-easy-align) Smart align of code
 
 
 ### TODO

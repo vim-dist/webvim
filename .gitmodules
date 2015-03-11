@@ -87,3 +87,7 @@
 	path = modules/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
     ignore = dirty
+[submodule "modules/vim-easy-align"]
+	path = modules/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+	branch = master
