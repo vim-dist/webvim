@@ -71,7 +71,7 @@ au BufRead,BufNewFile *.scss	set filetype=scss
 au BufRead,BufNewFile *.tpl	set filetype=html
 au BufRead,BufNewFile *.mustache,*.handlebars,*.hbs,*.hogan,*.hulk,*.hjs,*.hbt,*.tpl set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
 " js libraries used
-let g:used_javascript_libs = 'jquery,underscore,requirejs'
+let g:used_javascript_libs = 'jquery,underscore,requirejs,chai,handlebars'
 
 " mustache abbr
 let g:mustache_abbreviations = 1
@@ -90,15 +90,15 @@ let g:syntastic_handlebars_checkers=['handlebars']
 let g:syntastic_tpl_checkers=['handlebars']
 
 " phpcomplete
-let g:phpcomplete_parse_docblock_comments=1 
+let g:phpcomplete_parse_docblock_comments=1
 
 " ctrl-p mapped to something else than ctrl-p...
 let g:ctrlp_map = '<C-I>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" Custom 
+" Custom
 " If you want to add new configurations, you can put them into the file .vim-user
 let s:userconf = $HOME . '/.vim/.vim-user'
 if filereadable(s:userconf)
-    exec ":source ". s:userconf 
+    exec ":source ". s:userconf
 endif
