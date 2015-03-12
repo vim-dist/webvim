@@ -35,6 +35,7 @@ Then install it:
 Node.js and npm:
 
     npm install -g jshint csslint jsonlint tern handlebars
+    gem install scss-lint
 
     cd modules/YouCompleteMe
     ./install.sh --clang-completer --system-libclang
