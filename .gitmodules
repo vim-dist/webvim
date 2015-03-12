@@ -91,3 +91,7 @@
 	path = modules/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
 	branch = master
+[submodule "modules/vim-multiple-cursors"]
+	path = modules/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+	branch = master
