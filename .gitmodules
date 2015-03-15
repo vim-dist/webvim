@@ -95,3 +95,7 @@
 	path = modules/vim-jsdoc
 	url = https://github.com/krampstudio/vim-jsdoc.git
 	branch = master
+[submodule "modules/vim-multiple-cursors"]
+	path = modules/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+	branch = master
