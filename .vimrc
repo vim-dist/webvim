@@ -108,6 +108,11 @@ let g:phpcomplete_parse_docblock_comments=1
 let g:ctrlp_map = '<C-I>'
 let g:ctrlp_cmd = 'CtrlP'
 
+" jsdoc
+let g:jsdoc_allow_input_prompt=1
+let g:jsdoc_underscore_private=1
+let g:jsdoc_allow_shorthand=1
+
 " Custom
 " If you want to add new configurations, you can put them into the file .vim-user
 let s:userconf = $HOME . '/.vim/.vim-user'

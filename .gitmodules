@@ -91,3 +91,7 @@
 	path = modules/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
 	branch = master
+[submodule "modules/vim-jsdoc"]
+	path = modules/vim-jsdoc
+	url = https://github.com/krampstudio/vim-jsdoc.git
+	branch = master

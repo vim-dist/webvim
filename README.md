@@ -9,6 +9,8 @@ My Vim IDE targetting js/web development. It features :
  - tabs, file browser
  - visual and mouse interactions
  - folding, indenting, comments, etc.
+ - multi cursor
+ - jsdoc generation
  - and all the awesome vim stuffs
 
 ## Screen shots
@@ -70,6 +72,7 @@ Node.js and npm:
 - [Git Gutter](https://github.com/airblade/vim-gitgutter) Shows a git diff in the gutter (sign column)
 - [Trailing Whitespaces](https://github.com/bronson/vim-trailing-whitespace) Highlight trailing whitespaces in red
 - [Easy align](https://github.com/junegunn/vim-easy-align) Smart align of code
+- [JsDoc](https://github.com/krampstudio/vim-jsdoc) Genrates JS documentation
 
 
 ### TODO
