@@ -108,14 +108,10 @@ let g:phpcomplete_parse_docblock_comments=1
 let g:ctrlp_map = '<C-I>'
 let g:ctrlp_cmd = 'CtrlP'
 
-
-" multiple cursor
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-m>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
-
+" jsdoc
+let g:jsdoc_allow_input_prompt=1
+let g:jsdoc_underscore_private=1
+let g:jsdoc_allow_shorthand=1
 
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
@@ -124,6 +120,12 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 let g:easy_align_ignore_groups = ['Comment']
 
+" multiple cursor
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 
 " Custom
 " If you want to add new configurations, you can put them into the file .vim-user
