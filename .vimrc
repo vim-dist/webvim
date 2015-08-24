@@ -1,8 +1,168 @@
-" start Pathogen
-call pathogen#infect()
-call pathogen#helptags()
+
+" Author Bertrand Chevrier <chevrier.bertrand@gmail.com>
+" Vim configuration
+
+
+" echo something welcome message
+if !filereadable('./plugins/plugged')
+    echom ">^.^<"
+endif
+
+" Basic edition settings -------------------- {{{
+
+" wrap end of line
+set wrap
+
+" show line numbers
+set number
+
+" syntax highlighting
+syn on
+set background=dark
+set t_Co=256
+color mango
+
+"indent
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" copy/paste
+set paste
+set clipboard=unnamedplus
+
+" folding manual
+set foldmethod=manual
+
+" mouse
+set mouse=a
+
+" }}}
+
+
+" Plugins  ------------------------------- {{{
 
 filetype plugin on
+filetype indent on
+
+let s:pluginconf = './plugins/def.vim'
+if filereadable(s:pluginconf)
+    exec ":source ".s:pluginconf
+endif
+
+" }}}
+
+" Key mappings ------------------------------- {{{
+
+" leader
+let mapleader = ","
+let localmapleader = "\\"
+
+" move the current line below
+nnoremap <leader>- ddp
+
+" move the current line above
+nnoremap <leader>_ ddkP
+
+" insert mode uppercase the current word
+"  <esc> : go to normal mode
+"  v 	 : visual mode
+"  iw 	 : select the current word
+"  U 	 : uppercase selection
+"  i 	 : back to insert mode
+inoremap <c-u> <esc>viwUi
+
+" Wrap a word in double quotes
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+
+" Wrap a word in single quotes
+nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+
+" Open MYVIMRC in a vsplit
+nnoremap <leader>ev :split $MYVIMRC<cr>
+
+" Source MYVIMRC 
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Leave insert mode (like <esc>) and disable <esc>
+inoremap jk <esc>
+inoremap <esc> <nop>
+
+" Disable arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" Operator-pendings 
+
+" select inside parents
+onoremap in( :<c-u>normal! f(vi(<cr>
+
+" }}}
+
+
+" Abbreviations ------------------------------- {{{
+
+" my email
+iabbrev @@ chevrier.bertrand@gmail.com
+
+" }}}
+
+
+" JavaScrip ------------------------------- {{{
+
+augroup javascript 
+    autocmd!
+    " comment a line  
+    autocmd FileType javascript :nnoremap <buffer> <localleader>c I//<esc>
+    
+    " If snippet
+    autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
+augroup END
+
+" }}}
+
+
+" Bash ------------------------------- {{{
+
+augroup bash 
+    autocmd!
+    " Comment a line in bash
+    autocmd FileType bash       :nnoremap <buffer> <localleader>c I#<esc>
+augroup END
+
+" }}}
+
+
+" HTML  ------------------------------- {{{
+
+augroup filetype_html
+    autocmd!
+    " Fold
+    autocmd FileType html nnoremap <buffer> <localleader>f Vatzf<esc>
+augroup END
+
+" }}}
+
+
+" Vimscript  ---------------------- {{{
+"  this makes vimscript foldable using this wrapping comment (fold/unfold za)
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+" }}} 
+
+
+exit
 
 " show line numbers
 set number
@@ -29,6 +189,11 @@ set foldmethod=manual
 
 " mouse
 set mouse=a
+
+let s:pluginconf = './plugins/def.vim'
+if filereadable(s:pluginconf)
+    exec ":source ".s:pluginconf
+endif
 
 "spell checking
 " zg to add a word into dic
