@@ -1,6 +1,7 @@
 " Start plugins definition 
-call plug#begin('~/.vim/plugged')
+call plug#begin($HOME.'/.vim/plugins/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
