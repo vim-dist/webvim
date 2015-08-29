@@ -1,34 +1,38 @@
-
 " Author Bertrand Chevrier <chevrier.bertrand@gmail.com>
 " Vim configuration
 
 
-" echo something welcome message
-if !filereadable('./plugins/plugged')
-    echom "Welcome to dotvim"
-else 
-    return
-endif
-
 " Basic edition settings -------------------- {{{
 
 " wrap end of line
-set wrap
+set nowrap
 
 " show line numbers
 set number
 
 " syntax highlighting
-syn on
+syntax on
 set background=dark
 set t_Co=256
-"color mango
+color mango
 
 "indent
 set smartindent
-set tabstop=4
+set autoindent    
+set copyindent 
 set shiftwidth=4
+set shiftround
+set backspace=indent,eol,start
+set smarttab
 set expandtab
+
+"search
+set showmatch
+set smartcase
+
+set hlsearch
+set incsearch
+
 
 " copy/paste
 "set paste
@@ -45,7 +49,7 @@ set mouse=a
 
 " Plugins  ------------------------------- {{{
 
-filetype plugin on
+filetype plugin indent on
 
 let s:pluginconf = $HOME.'/.vim/plugins/def.vim'
 if filereadable(s:pluginconf)
@@ -133,6 +137,23 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " nerdtree window resize
 let NERDTreeWinSize = 35
 
+" show hidden files
+let NERDTreeShowHidden=1
+
+" single click to open nodes
+let NERDTreeMouseMode=3
+
+" ignored files
+let NERDTreeIgnore=['\.swp$', '\~$']
+nnoremap <c-n> :NERDTreeToggle<cr> 
+
+" }}}
+
+
+" NerdComment config  ------------------------------- {{{
+
+noremap <c-_> :call NERDComment(0, "Toggle")<cr> 
+
 " }}}
 
 
@@ -144,13 +165,10 @@ iabbrev @@ chevrier.bertrand@gmail.com
 " }}}
 
 
-" JavaScrip ------------------------------- {{{
+" JavaScript ------------------------------- {{{
 
 augroup javascript 
     autocmd!
-    " comment a line  
-    autocmd FileType javascript :nnoremap <buffer> <localleader>c I//<esc>
-    
     " If snippet
     autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
 augroup END
@@ -185,6 +203,7 @@ augroup END
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
+    autocmd FileType vim setlocal foldlevel=99
 augroup END
 
 " }}} 

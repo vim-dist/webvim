@@ -1,1 +1,1 @@
-../modules/mango.vim/colors/mango.vim
+../plugins/plugged/mango.vim/colors/mango.vim
