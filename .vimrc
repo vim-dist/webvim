@@ -1,222 +1,99 @@
-" Author Bertrand Chevrier <chevrier.bertrand@gmail.com>
-" Vim configuration
+"
+" WebVim Configuration entry point
+"  
+" author: Bertrand Chevrier <chevrier.bertrand@gmail.com>
+" source: https://github.com/krampstudio/dotvim
+" year  : 2015
+" 
 
 
-" Basic edition settings -------------------- {{{
 
-" wrap end of line
-set nowrap
-
-" show line numbers
-set number
-
-" syntax highlighting
-syntax on
-set background=dark
-set t_Co=256
-color mango
-
-"indent
-set smartindent
-set autoindent    
-set copyindent 
-set shiftwidth=4
-set shiftround
-set backspace=indent,eol,start
-set smarttab
-set expandtab
-
-"search
-set showmatch
-set smartcase
-
-set hlsearch
-set incsearch
+" You won't find any configuration here directly,
+" please look at files under the config folder for global config
+" and under plugins for plugins configuration
 
 
-" copy/paste
-"set paste
-set clipboard=unnamedplus
+filetype plugin on
 
-" folding manual
-set foldmethod=manual
+let s:vimDir = $HOME.'/.vim'
 
-" mouse
-set mouse=a
+let s:pluginDir = s:vimDir.'/plugins/plugged'
+let s:pluginDef = s:vimDir.'/plugins/def.vim'
+let s:pluginConf = s:vimDir.'/plugins/config.vim'
 
-" }}}
+let s:configSetting = s:vimDir.'/config/setting.vim'
+let s:configMapping = s:vimDir.'/config/mapping.vim'
+let s:configAbbrev = s:vimDir.'/config/abbrev.vim'
 
 
-" Plugins  ------------------------------- {{{
-
-filetype plugin indent on
-
-let s:pluginconf = $HOME.'/.vim/plugins/def.vim'
-if filereadable(s:pluginconf)
-    exec ":source ".s:pluginconf
+if !isdirectory(s:pluginDir)
+    " Welcome message when plugins are not yet installed
+    echom " "
+    echom "Welcome to WebVim"
+    echom " > the vim IDE for web dev <"
+    echom " "
+    echom "Before getting started, you need to run the install : "
+    echom " 1. :PlugInstall"
+    echom " 2. take a coffee"
+    echom " 3. reload vim"
+    echom " 4. enjoy"
+    
+    exec ":source ".s:pluginDef
 else
-    echom "unable to load ".s:pluginconf
+
+    exec ":source ".s:configSetting
+    exec ":source ".s:configMapping
+    exec ":source ".s:configAbbrev
+
+    exec ":source ".s:pluginDef
+    exec ":source ".s:pluginConf
+    exec ":source ".s:pluginDef
+
 endif
 
-" }}}
 
-
-" Key mappings ------------------------------- {{{
-
-" leader
-let mapleader = ","
-let localmapleader = "\\"
-
-" move the current line below
-nnoremap <leader>- ddp
-
-" move the current line above
-nnoremap <leader>_ ddkP
-
-" switch tab
-nnoremap <S-right> :tabn<CR>
-nnoremap <S-left> :tabp<CR>
-
-" insert mode uppercase the current word
-"  <esc> : go to normal mode
-"  v 	 : visual mode
-"  iw 	 : select the current word
-"  U 	 : uppercase selection
-"  i 	 : back to insert mode
-inoremap <c-u> <esc>viwUi
-
-" Wrap a word in double quotes
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-
-" Wrap a word in single quotes
-nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-
-" Open MYVIMRC in a vsplit
-nnoremap <leader>ev :split $MYVIMRC<cr>
-
-" Source MYVIMRC 
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" Leave insert mode (like <esc>) and disable <esc>
-inoremap jk <esc>
-inoremap <special> <esc> <nop>
-
-" Disable arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
-" Operator-pendings 
-
-" select inside parents
-onoremap in( :<c-u>normal! f(vi(<cr>
-
-" }}}
-
-
-" NerdTree config  ------------------------------- {{{
-
-" on vim enter opens nerd tree
-function! OpenNerdTree()
-    if match(expand('%t'), 'COMMIT_EDITMSG') < 0
-        NERDTreeFind
-        exec "normal! \<c-w>\<c-w>"
-    endif
-endfunction
-autocmd VimEnter * call OpenNerdTree()
-
-" nerdtree autoclose if it is the last opened buffer
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" nerdtree window resize
-let NERDTreeWinSize = 35
-
-" show hidden files
-let NERDTreeShowHidden=1
-
-" single click to open nodes
-let NERDTreeMouseMode=3
-
-" ignored files
-let NERDTreeIgnore=['\.swp$', '\~$']
-nnoremap <c-n> :NERDTreeToggle<cr> 
-
-" }}}
-
-
-" NerdComment config  ------------------------------- {{{
-
-noremap <c-_> :call NERDComment(0, "Toggle")<cr> 
-
-" }}}
-
-" Status line (airline) ----------------------------- {{{
-
-" status line always opened
-set laststatus=2
- 
-"let g:airline#extensions#tabline#enabled = 1
-
-"  powerline font
-let g:airline_powerline_fonts=1
-
-" }}}
-
-
-" Abbreviations ------------------------------- {{{
-
-" my email
-iabbrev @@ chevrier.bertrand@gmail.com
-
-" }}}
 
 
 " JavaScript ------------------------------- {{{
 
-augroup javascript 
-    autocmd!
-    " If snippet
-    autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
-augroup END
+"augroup javascript 
+    "autocmd!
+    "" If snippet
+    "autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
+"augroup END
 
 " }}}
 
 
 " Bash ------------------------------- {{{
 
-augroup bash 
-    autocmd!
-    " Comment a line in bash
-    autocmd FileType bash       :nnoremap <buffer> <localleader>c I#<esc>
-augroup END
+"augroup bash 
+    "autocmd!
+    "" Comment a line in bash
+    "autocmd FileType bash       :nnoremap <buffer> <localleader>c I#<esc>
+"augroup END
 
 " }}}
 
 
 " HTML  ------------------------------- {{{
 
-augroup filetype_html
-    autocmd!
-    " Fold
-    autocmd FileType html nnoremap <buffer> <localleader>f Vatzf<esc>
-augroup END
+"augroup filetype_html
+    "autocmd!
+    "" Fold
+    "autocmd FileType html nnoremap <buffer> <localleader>f Vatzf<esc>
+"augroup END
 
 " }}}
 
 
 " Vimscript  ---------------------- {{{
 "  this makes vimscript foldable using this wrapping comment (fold/unfold za)
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-    autocmd FileType vim setlocal foldlevel=99
-augroup END
+"augroup filetype_vim
+    "autocmd!
+    "autocmd FileType vim setlocal foldmethod=marker
+    "autocmd FileType vim setlocal foldlevel=99
+"augroup END
 
 " }}} 
 
