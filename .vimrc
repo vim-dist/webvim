@@ -156,6 +156,18 @@ noremap <c-_> :call NERDComment(0, "Toggle")<cr>
 
 " }}}
 
+" Status line (airline) ----------------------------- {{{
+
+" status line always opened
+set laststatus=2
+ 
+"let g:airline#extensions#tabline#enabled = 1
+
+"  powerline font
+let g:airline_powerline_fonts=1
+
+" }}}
+
 
 " Abbreviations ------------------------------- {{{
 
