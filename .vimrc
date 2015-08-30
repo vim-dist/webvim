@@ -36,7 +36,8 @@ if !isdirectory(s:pluginDir)
     echom " 1. :PlugInstall"
     echom " 2. take a coffee"
     echom " 3. reload vim"
-    echom " 4. enjoy"
+    echom " 4. enjoy WebVim"
+    echom " "
     
     exec ":source ".s:pluginDef
 else
