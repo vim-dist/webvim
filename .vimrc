@@ -1,10 +1,10 @@
 "
 " WebVim Configuration entry point
-"  
+"
 " author: Bertrand Chevrier <chevrier.bertrand@gmail.com>
 " source: https://github.com/krampstudio/dotvim
 " year  : 2015
-" 
+"
 
 
 
@@ -38,7 +38,7 @@ if !isdirectory(s:pluginDir)
     echom " 3. reload vim"
     echom " 4. enjoy WebVim"
     echom " "
-    
+
     exec ":source ".s:pluginDef
 else
 
@@ -57,7 +57,7 @@ endif
 
 " JavaScript ------------------------------- {{{
 
-"augroup javascript 
+"augroup javascript
     "autocmd!
     "" If snippet
     "autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
@@ -68,7 +68,7 @@ endif
 
 " Bash ------------------------------- {{{
 
-"augroup bash 
+"augroup bash
     "autocmd!
     "" Comment a line in bash
     "autocmd FileType bash       :nnoremap <buffer> <localleader>c I#<esc>
@@ -96,7 +96,7 @@ endif
     "autocmd FileType vim setlocal foldlevel=99
 "augroup END
 
-" }}} 
+" }}}
 
 
 " show line numbers

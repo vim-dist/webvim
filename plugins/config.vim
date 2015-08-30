@@ -52,3 +52,20 @@ let g:airline#extensions#tabline#enabled = 1
 "  powerline font
 let g:airline_powerline_fonts=1
 
+
+" [> EditorConfig <] 
+
+" to avoid issues with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+
+" [> Airline <] 
+
+" [> Airline <] 
+
+
+" [> Airline <] 
+
+
+" [> Airline <] 
+
