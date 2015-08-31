@@ -32,14 +32,24 @@ if !isdirectory(s:pluginDir)
     echom "Welcome to WebVim"
     echom " > the vim IDE for web dev <"
     echom " "
-    echom "Before getting started, you need to run the install : "
-    echom " 1. :PlugInstall"
-    echom " 2. take a coffee"
-    echom " 3. reload vim"
-    echom " 4. enjoy WebVim"
-    echom " "
+    echom "Checking dependencies :"
+    if !executable('node') || !executable('npm')
+        echom " [ERR] node.js and npm are required, please install them before continuing."
+	echom " "
+    else
 
-    exec ":source ".s:pluginDef
+        echom " done."
+
+	echom " "
+        echom "Before getting started, you need to run the install : "
+        echom " 1. :PlugInstall"
+        echom " 2. take a coffee"
+        echom " 3. reload vim"
+        echom " 4. enjoy WebVim"
+        echom " "
+
+        exec ":source ".s:pluginDef
+    endif
 else
 
     exec ":source ".s:configSetting

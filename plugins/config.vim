@@ -1,15 +1,15 @@
 "
 " WebVim Configuration : Plugins configuration
-"  
+"
 " author: Bertrand Chevrier <chevrier.bertrand@gmail.com>
 " source: https://github.com/krampstudio/dotvim
 " year  : 2015
-" 
+"
 
-" TODO split by plugin ? 
+" TODO split by plugin ?
 
 
-" [> NERDTree <] 
+" [> NERDTree <]
 
 " on vim enter opens nerd tree
 function! OpenNerdTree()
@@ -34,38 +34,43 @@ let NERDTreeMouseMode=3
 
 " ignored files
 let NERDTreeIgnore=['\.swp$', '\~$']
-nnoremap <c-n> :NERDTreeToggle<cr> 
+nnoremap <c-n> :NERDTreeToggle<cr>
 
 
-" [> NERDCommenter <] 
+" [> NERDCommenter <]
 
-noremap <c-_> :call NERDComment(0, "Toggle")<cr> 
+noremap <c-_> :call NERDComment(0, "Toggle")<cr>
 
 
-" [> Airline <] 
+" [> Airline <]
 
 " status line always opened
 set laststatus=2
- 
+
 let g:airline#extensions#tabline#enabled = 1
 
 "  powerline font
 let g:airline_powerline_fonts=1
 
 
-" [> EditorConfig <] 
+" [> EditorConfig <]
 
 " to avoid issues with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 
-" [> Airline <] 
+" [> Syntastic <]
 
-" [> Airline <] 
-
-
-" [> Airline <] 
-
-
-" [> Airline <] 
+"" Syntax checkers
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+"let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+"let g:syntastic_html_checkers=['jshint']
+let g:syntastic_javascript_checkers=['eslint']
+"let g:syntastic_javascript_jshint_args = '--config ~/.vim/.jshintrc'
+let g:syntastic_json_checkers=['jsonlint']
+"let g:syntastic_scss_checkers=['scss_lint']
+"let g:syntastic_css_checkers=['csslint']
+"let g:syntastic_handlebars_checkers=['handlebars']
+"let g:syntastic_tpl_checkers=['handlebars']
 

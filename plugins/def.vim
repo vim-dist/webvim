@@ -1,4 +1,4 @@
-" Start plugins definition 
+" Start plugins definition
 call plug#begin($HOME.'/.vim/plugins/plugged')
 
 Plug 'scrooloose/nerdtree'
@@ -9,5 +9,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
