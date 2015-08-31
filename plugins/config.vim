@@ -64,13 +64,14 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 "" Syntax checkers
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
-"let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
-"let g:syntastic_html_checkers=['jshint']
+let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_html_checkers=['tidy', 'jshint']
 let g:syntastic_javascript_checkers=['eslint']
 "let g:syntastic_javascript_jshint_args = '--config ~/.vim/.jshintrc'
 let g:syntastic_json_checkers=['jsonlint']
-"let g:syntastic_scss_checkers=['scss_lint']
-"let g:syntastic_css_checkers=['csslint']
-"let g:syntastic_handlebars_checkers=['handlebars']
-"let g:syntastic_tpl_checkers=['handlebars']
+let g:syntastic_yaml_checkers=['js-yaml']
+let g:syntastic_scss_checkers=['scss-lint']
+let g:syntastic_css_checkers=['csslint']
+let g:syntastic_handlebars_checkers=['handlebars']
+let g:syntastic_tpl_checkers=['handlebars']
 

@@ -38,6 +38,8 @@ if !isdirectory(s:pluginDir)
 	echom " "
     else
 
+        " needs to check linting : npm's eslint, jshint, csslint, jsonlint, handlebar,scss-lint, js-yaml
+        " needs to check linting : others : phpcs, phpmd, tidy , tidy5
         echom " done."
 
 	echom " "
