@@ -65,8 +65,9 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
-let g:syntastic_html_checkers=['tidy', 'jshint']
+let g:syntastic_html_checkers=['tidy']
 let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_js_checkers=['eslint']
 "let g:syntastic_javascript_jshint_args = '--config ~/.vim/.jshintrc'
 let g:syntastic_json_checkers=['jsonlint']
 let g:syntastic_yaml_checkers=['js-yaml']
@@ -93,3 +94,17 @@ let g:multi_cursor_next_key='<C-m>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
+
+
+" [> JsBeautify <]
+
+" format selection
+autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+" format the whole file
+autocmd FileType javascript nnoremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType html nnoremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType css nnoremap <buffer> <c-f> :call CSSBeautify()<cr>
+

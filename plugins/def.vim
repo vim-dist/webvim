@@ -12,5 +12,6 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'scrooloose/syntastic'
 Plug 'junegunn/vim-easy-align'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'maksimr/vim-jsbeautify', { 'do' : 'git submodule update --init --recursive' }
 
 call plug#end()
