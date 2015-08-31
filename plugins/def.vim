@@ -13,5 +13,6 @@ Plug 'scrooloose/syntastic'
 Plug 'junegunn/vim-easy-align'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'maksimr/vim-jsbeautify', { 'do' : 'git submodule update --init --recursive' }
+Plug 'maxbrunsfeld/vim-yankstack'
 
 call plug#end()
