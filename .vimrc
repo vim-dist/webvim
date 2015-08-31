@@ -17,17 +17,19 @@ filetype plugin on
 
 let s:vimDir = $HOME.'/.vim'
 
-let s:pluginDir = s:vimDir.'/plugins/plugged'
-let s:pluginDef = s:vimDir.'/plugins/def.vim'
+let s:pluginDir  = s:vimDir.'/plugins/plugged'
+let s:pluginDef  = s:vimDir.'/plugins/def.vim'
 let s:pluginConf = s:vimDir.'/plugins/config.vim'
 
 let s:configSetting = s:vimDir.'/config/setting.vim'
 let s:configMapping = s:vimDir.'/config/mapping.vim'
-let s:configAbbrev = s:vimDir.'/config/abbrev.vim'
+let s:configAbbrev  = s:vimDir.'/config/abbrev.vim'
 
 
 if !isdirectory(s:pluginDir)
+
     " Welcome message when plugins are not yet installed
+
     echom " "
     echom "Welcome to WebVim"
     echom " > the vim IDE for web dev <"
@@ -35,14 +37,15 @@ if !isdirectory(s:pluginDir)
     echom "Checking dependencies :"
     if !executable('node') || !executable('npm')
         echom " [ERR] node.js and npm are required, please install them before continuing."
-	echom " "
+    	echom " "
     else
 
-        " needs to check linting : npm's eslint, jshint, csslint, jsonlint, handlebar,scss-lint, js-yaml
-        " needs to check linting : others : phpcs, phpmd, tidy , tidy5
+        echom "  - eslint :" . executable('eslint') ? "ok" : "ko"
+        echom "  - jsonlint :" . executable('eslint') ? "ok" : "ko"
+        echom "  - csslint :" . executable('eslint') ? "ok" : "ko"
         echom " done."
 
-	echom " "
+        echom " "
         echom "Before getting started, you need to run the install : "
         echom " 1. :PlugInstall"
         echom " 2. take a coffee"
@@ -54,13 +57,14 @@ if !isdirectory(s:pluginDir)
     endif
 else
 
+    " Loads the global config, mapping and settings
     exec ":source ".s:configSetting
     exec ":source ".s:configMapping
     exec ":source ".s:configAbbrev
 
+    " Loads plugins def and config
     exec ":source ".s:pluginDef
     exec ":source ".s:pluginConf
-    exec ":source ".s:pluginDef
 
 endif
 
@@ -197,17 +201,17 @@ endif
 "let g:mustache_abbreviations = 1
 "
 "" Syntax checkers
-"let g:syntastic_check_on_open=1
-"let g:syntastic_enable_signs=1
-"let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
-"let g:syntastic_html_checkers=['jshint']
-"let g:syntastic_javascript_checkers=['jshint']
-"let g:syntastic_javascript_jshint_args = '--config ~/.vim/.jshintrc'
-"let g:syntastic_json_checkers=['jsonlint']
-"let g:syntastic_scss_checkers=['scss_lint']
-"let g:syntastic_css_checkers=['csslint']
-"let g:syntastic_handlebars_checkers=['handlebars']
-"let g:syntastic_tpl_checkers=['handlebars']
+let g:syntastic_check_on_open          = 1
+let g:syntastic_enable_signs           = 1
+let g:syntastic_php_checkers           = ['php', 'phpcs', 'phpmd']
+let g:syntastic_html_checkers          = ['jshint']
+let g:syntastic_javascript_checkers    = ['jshint']
+let g:syntastic_javascript_jshint_args = '--config ~/.vim/.jshintrc'
+let g:syntastic_json_checkers          = ['jsonlint']
+let g:syntastic_scss_checkers          = ['scss_lint']
+let g:syntastic_css_checkers           = ['csslint']
+let g:syntastic_handlebars_checkers    = ['handlebars']
+let g:syntastic_tpl_checkers           = ['handlebars']
 "
 "" phpcomplete
 "let g:phpcomplete_parse_docblock_comments=1
