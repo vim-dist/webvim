@@ -114,3 +114,8 @@ nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 
+" [> Javascript libraries syntax <]
+
+let g:used_javascript_libs = 'jquery,underscore,requirejs,chai,handlebars'
+
+

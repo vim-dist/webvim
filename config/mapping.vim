@@ -1,10 +1,10 @@
 "
 " WebVim Configuration : global mapping
-"  
+"
 " author: Bertrand Chevrier <chevrier.bertrand@gmail.com>
 " source: https://github.com/krampstudio/dotvim
 " year  : 2015
-" 
+"
 
 " leader
 let mapleader = ","
@@ -29,7 +29,7 @@ nnoremap <S-left> :tabp<CR>
 inoremap <c-u> <esc>viwUi
 
 " remove last search highlight
-nnoremap <C-L> :nohlsearch<CR><C-L>
+nnoremap <C-l> :nohlsearch<CR><C-l>
 
 " Wrap a word in double quotes
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
@@ -40,7 +40,7 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 " Open MYVIMRC in a vsplit
 nnoremap <leader>ev :split $MYVIMRC<cr>
 
-" Source MYVIMRC 
+" Source MYVIMRC
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Leave insert mode (like <esc>) and disable <esc>
@@ -58,7 +58,7 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
-" Operator-pendings 
+" Operator-pendings
 
 " select inside parents
 onoremap in( :<c-u>normal! f(vi(<cr>
