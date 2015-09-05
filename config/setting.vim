@@ -1,10 +1,10 @@
 "
 " WebVim Configuration : global settings
-"  
+"
 " author: Bertrand Chevrier <chevrier.bertrand@gmail.com>
 " source: https://github.com/krampstudio/dotvim
 " year  : 2015
-" 
+"
 
 " wrap end of line
 set wrap
@@ -20,8 +20,8 @@ color mango
 
 "indent
 set smartindent
-set autoindent    
-set copyindent 
+set autoindent
+set copyindent
 set shiftwidth=4
 set shiftround
 set backspace=indent,eol,start
@@ -46,3 +46,6 @@ set foldmethod=manual
 " mouse
 set mouse=a
 
+" spell check, to be activated manually
+set spelllang=en_us
+set nospell

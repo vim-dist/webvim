@@ -175,3 +175,19 @@ effacer sour cursuer: x
 effacer mot dw
 effacer vers fin d$
 -->
+
+
+### Usage
+
+|                                                 | Command          | Mode | FileType |
+|-------------------------------------------------|------------------|:----:|----------|
+|                                                                                      |
+|#Spell Check#                                                                         |
+|                                                                                      |
+|Enable checking                                  | `set spell`      | n    |          |
+|move to the next mispelled word                  | `]s`             | n    |          |
+|move to the previous mispelled word              | `[s`             | n    |          |
+|add a word to the dictionary                     | `zg`             | n    |          |
+|undo the addition of a word to the dictionary    | `zug`            | n    |          |
+|view spelling suggestions for a mispelled word   | `z=`             | n    |          |
+

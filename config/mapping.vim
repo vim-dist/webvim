@@ -2,8 +2,6 @@
 " WebVim Configuration : global mapping
 "
 " author: Bertrand Chevrier <chevrier.bertrand@gmail.com>
-" source: https://github.com/krampstudio/dotvim
-" year  : 2015
 "
 
 " leader
@@ -37,28 +35,39 @@ nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 " Wrap a word in single quotes
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 
-" Open MYVIMRC in a vsplit
+" select inside parents
+onoremap in( :<c-u>normal! f(vi(<cr>
+
+" select inside braces
+onoremap in{ :<c-u>normal! f{vi{<cr>
+
+" select inside brackets
+onoremap in[ :<c-u>normal! f[vi[<cr>
+
+" Open MYVIMRC in a vsplitjkjk
 nnoremap <leader>ev :split $MYVIMRC<cr>
 
 " Source MYVIMRC
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" Leave insert mode (like <esc>) and disable <esc>
-inoremap jk <esc>
-inoremap <special> <esc> <nop>
 
-" Disable arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+if g:hardcoreMode == 1
 
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+    " Leave insert mode (like <esc>) and disable <esc>
+    inoremap jk <esc>
+    inoremap <special> <esc> <nop>
 
-" Operator-pendings
+    " Disable arrow keys
 
-" select inside parents
-onoremap in( :<c-u>normal! f(vi(<cr>
+    nnoremap <up> <nop>
+    nnoremap <down> <nop>
+    nnoremap <left> <nop>
+    nnoremap <right> <nop>
+
+    inoremap <up> <nop>
+    inoremap <down> <nop>
+    inoremap <left> <nop>
+    inoremap <right> <nop>
+endif
+
+

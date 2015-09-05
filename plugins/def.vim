@@ -23,5 +23,6 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'othree/html5.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'marijnh/tern_for_vim', { 'do' : 'npm install' }
+Plug 'moll/vim-node'
 
 call plug#end()
