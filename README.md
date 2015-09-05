@@ -1,95 +1,140 @@
-dotvim
+WebVim
 ======
 
-My Vim IDE targetting js/web development. It features :
+![WebVim](resources/WebVim.svg)
+
+WebVim is my vim based IDE for web development.
+
+It targets :
+ - JavaScript development (ES5, ES6, node.js)
+ - HTML5
+ - CSS3 and SCSS
+
+And contains the features you expect from a modern code editor :
 
  - syntax highighting
- - syntax error checking
- - autocomplete
- - tabs, file browser
- - visual and mouse interactions
- - folding, indenting, comments, etc.
+ - syntax and error checking
+ - autocompletion
  - multi cursor
- - jsdoc generation
- - and all the awesome vim stuffs
-
-## Screen shots
-
-![editing javascript with autocomplete](https://raw.githubusercontent.com/krampstudio/dotvim/screenshots/img/vim-js-tern.png "Editing javascript with autocomplete")
-![tree and nice color theme](https://raw.githubusercontent.com/krampstudio/dotvim/screenshots/img/vim-tree.png "Tree and nice color theme")
-
-## Install (Debian/Ubuntu)
-
-	aptitude install vim vim-runtime vim-gui-common build-essential cmake python-dev exuberant-ctags libclang3.4-dev
-
-or compile a recent version with `xterm_clipboard` support.
-
-Then install it:
-
-	git clone https://github.com/krampstudio/dotvim.git ~/.vim
-    cd ~/.vim && git submodule update --init --recursive
-    ln -s ~/.vim/.vimrc ~/.vimrc
+ - git support
+ - code format
+ - support coding conventions (editorconfig)
+ - hardcore mode (for real vim users)
+ - jsdoc generation (coming soon)
+ - debugging (coming soon)
+ - grunt/gulp support (coming soon)
+ - all the awesomess from Vim
 
 
+## Install
+
+__Only tested on linux__ (Ubuntu and Debian)
 
 ### Dependencies
 
-Node.js and npm:
+ 1. A modern version of vim
 
-    npm install -g jshint csslint jsonlint tern handlebars
-    gem install scss-lint
+	apt-get install vim vim-runtime vim-gui-common
 
-    cd modules/YouCompleteMe
-    ./install.sh --clang-completer --system-libclang
+or compile a recent version with `xterm_clipboard` and `ruby` or `python` support.
 
-    cd modules/tern_for_vim
-    npm install
+ 2. Some tools to compile YouCompleteMe
 
-    cd fonts
-    ./install
+    apt-get install build-essential cmake python-dev exuberant-ctags libclang3.4-dev
 
+ 3. Node.js and npm
 
-## Content
+    curl -sL https://deb.nodesource.com/setup_0.12 | bash -
+    apt-get install -y nodejs
 
-- [NerdTree](https://github.com/scrooloose/nerdtree) File system navigation
-- [NerdCommenter](https://github.com/scrooloose/nerdcommenter) Smart comments
-- [YankRing](https://github.com/vim-scripts/YankRing.vim) Yank regsiter
-- [Vim-JsBeautify](https://github.com/maksimr/vim-jsbeautify) Format JS, CSS and HTML files
-- [Mango](https://github.com/goatslacker/mango.vim) Color theme
-- [Vim-Node](https://github.com/moll/vim-node) Node.js module navigation
-- [Vim-JavaScript-Syntax](https://github.com/jelera/vim-javascript-syntax.git) JavaScript Syntax Improved
-- [JavaScript-Libraries-Syntax](https://github.com/othree/javascript-libraries-syntax.vim) Syntax Improved for 3rd party libraries
-- [Syntastic](https://github.com/scrooloose/syntastic) Generic syntax checker wrapper
-- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) AutoCompletion for C base languages
-- [Tern_For_Vim](https://github.com/marijnh/tern_for_vim) Better autocompletion for Javascript (hook omni or YCM)
-- [Vim-json](https://github.com/elzr/vim-json) Nice json(p) file support
-- [Scss-Syntax](https://github.com/cakebaker/scss-syntax.vim) SASS/SCSS syntax support
-- [Mustache-Handlebar](https://github.com/mustache/vim-mustache-handlebars) Mustache and handlebar support
-- [Airline](https://github.com/bling/vim-airline.git) Lean & mean status/tabline for vim that's light as air
-- [PhpComplete](https://github.com/shawncplus/phpcomplete.vim) PHP omincomplete
-- [CtrlP](https://github.com/kien/ctrlp.vim) Find in file
-- [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) Support of [editorconfig](http://editorconfig.org/)
-- [Git Gutter](https://github.com/airblade/vim-gitgutter) Shows a git diff in the gutter (sign column)
-- [Trailing Whitespaces](https://github.com/bronson/vim-trailing-whitespace) Highlight trailing whitespaces in red
-- [Easy align](https://github.com/junegunn/vim-easy-align) Smart align of code
-- [JsDoc](https://github.com/krampstudio/vim-jsdoc) Genrates JS documentation
+ 4. Some npm packages
+
+    npm install -g eslint csslint jshint jsonlint scss-lint handlebars
+
+### Install it:
+
+	git clone https://github.com/krampstudio/webvim.git ~/.vim
+    ln -s ~/.vim/.vimrc ~/.vimrc
+    vi
+
+Then run in webvim `:PlugInstall`
 
 
-### TODO
+### Usage
 
-- https://github.com/guileen/vim-node-dict
-- https://github.com/tpope/vim-surround
-- https://github.com/sidorares/node-vim-debugger
-- https://github.com/plasticboy/vim-markdown
-- https://github.com/othree/html5-syntax.vim
-- https://github.com/othree/html5.vim
-- https://github.com/hail2u/vim-css3-syntax
-- https://github.com/tpope/vim-fugitive
+|                                                 | Command           | Mode | Context   |
+|-------------------------------------------------|-------------------|:----:|-----------|
+|                                                                                        |
+| __Plugins__                                                                            |
+|                                                                                        |
+| Install Plugins                                  | `:PlugInstall`   | n    |           |
+| Update Plugins                                   | `:PlugUpdate`    | n    |           |
+|                                                                                        |
+| __Config__                                                                             |
+|                                                                                        |
+| Edit .vimrc                                      | `<leader>e`      | n    |           |
+| Reload .vimrc                                    | `<leader>s`      | n    |           |
+|                                                                                        |
+| __File Tree (NERDTree)__                                                               |
+|                                                                                        |
+| Toggle Tree                                      | `<c-n>`          | n    |           |
+| Open a node in a new tab                         | `t`              |      | Tree Node |
+| Tree menu                                        | `m`              |      | Tree Node |
+| Add a file                                       | `a`              |      | Tree Menu |
+| Delete a file                                    | `d`              |      | Tree Menu |
+| Move a file                                      | `m`              |      | Tree Menu |
+| Copy a file                                      | `c`              |      | Tree Menu |
+| Move to right tab                                | `<s-right>`      | n    |           |
+| Move to right tab                                | `<s-right>`      | n    |           |
+| Change window (ie. tree to tab)                  | `<c-w><c-w>`     |      |           |
+|                                                                                        |
+| __Comment__                                                                            |
+|                                                                                        |
+| Toggle comments                                  | `<c-/>`          | nv   |           |
+|                                                                                        |
+| __Git__                                                                                |
+|                                                                                        |
+| git diff                                         | `:Gdiff`        | n     |           |
+| git status                                       | `:Gstatus`      | n     |           |
+| git commit                                       | `:Gcommit`      | n     |           |
+| git blame                                        | `:Gblame`       | n     |           |
+| git mv                                           | `:Gmove`        | n     |           |
+| git rm                                           | `:Gremove`      | n     |           |
+| Open the current file in Github                  | `:Gbrowse`      | n     |           |
+|                                                                                        |
+| __Spell Check__                                                                        |
+|                                                                                        |
+| Enable checking                                  | `set spell`      | n    |           |
+| move to the next mispelled word                  | `]s`             | n    |           |
+| move to the previous mispelled word              | `[s`             | n    |           |
+| add a word to the dictionary                     | `zg`             | n    |           |
+| undo the addition of a word to the dictionary    | `zug`            | n    |           |
+| view spelling suggestions for a mispelled word   | `z=`             | n    |           |
+|                                                                                        |
+| _Next sections to come soonk_                                                          |
 
-## Cheat Sheet
+
+_Modes_ :
+ - `n` normal
+ - `i` insert
+ - `v` visual
+
+_Commands_ :
+ - `:command` a vim command
+ - `:set somthing` can also be replaced by `:setlocal something` to apply it to the current buffer only
+ - `<c-m>a` or `a` a keyboard command
+   - `<c-/>` means `CTRL and `/` (this is the vim notation)
+   - `<s-left>` means `Shift` and `left arrow`
+   - `<c-a>b` means `CTRL` and `a`, then `b`
+   - `<leader>` is mapped to `,`
+   - `<localleader>` is mapped to `\`
+
+   - `<localleader>` is mapped to `\`
 
 
 [Common usage cheat sheet](http://fprintf.net/vimCheatSheet.html)
+
+<!--
 
 ### NERDTree
 
@@ -147,11 +192,6 @@ Paste then:
 - Show all references to the variable or property under the cursor: `:TernRefs`
 - Rename the variable under the cursor: `:TernRename`
 
-### Ctrl-P
-
-- Find in file : `Ctrl-I`
-
-<!--
 Visual
 Visual line : V
 Visual block : Ctrl-V
@@ -175,19 +215,3 @@ effacer sour cursuer: x
 effacer mot dw
 effacer vers fin d$
 -->
-
-
-### Usage
-
-|                                                 | Command          | Mode | FileType |
-|-------------------------------------------------|------------------|:----:|----------|
-|                                                                                      |
-|#Spell Check#                                                                         |
-|                                                                                      |
-|Enable checking                                  | `set spell`      | n    |          |
-|move to the next mispelled word                  | `]s`             | n    |          |
-|move to the previous mispelled word              | `[s`             | n    |          |
-|add a word to the dictionary                     | `zg`             | n    |          |
-|undo the addition of a word to the dictionary    | `zug`            | n    |          |
-|view spelling suggestions for a mispelled word   | `z=`             | n    |          |
-

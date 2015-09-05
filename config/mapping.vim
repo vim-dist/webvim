@@ -44,7 +44,7 @@ onoremap in{ :<c-u>normal! f{vi{<cr>
 " select inside brackets
 onoremap in[ :<c-u>normal! f[vi[<cr>
 
-" Open MYVIMRC in a vsplitjkjk
+" Open MYVIMRC in a vsplit
 nnoremap <leader>ev :split $MYVIMRC<cr>
 
 " Source MYVIMRC
