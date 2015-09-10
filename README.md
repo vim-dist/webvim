@@ -1,9 +1,7 @@
-WebVim
-======
+![WebVim](resources/WebVim.png "WebVim")
+===============================
 
-![WebVim](https://raw.githubusercontent.com/krampstudio/webvim/master/resources/WebVim.png)
-
-WebVim is my vim based IDE for web development.
+WebVim is a vim based IDE for web development.
 
 It targets :
  - JavaScript development (ES5, ES6, node.js)
