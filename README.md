@@ -1,7 +1,7 @@
 WebVim
 ======
 
-![WebVim](https://raw.githubusercontent.com/krampstudio/dotvim/master/resources/WebVim.svg)
+![WebVim](https://raw.githubusercontent.com/krampstudio/webvim/master/resources/WebVim.png)
 
 WebVim is my vim based IDE for web development.
 
