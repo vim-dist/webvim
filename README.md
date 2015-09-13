@@ -47,7 +47,7 @@ or compile a recent version with `xterm_clipboard` and `ruby` or `python` suppor
 
  4. Some npm packages
 
-    npm install -g eslint csslint jshint jsonlint scss-lint handlebars
+    npm install -g eslint csslint jshint jsonlint handlebars
 
 ### Install it:
 
@@ -55,61 +55,76 @@ or compile a recent version with `xterm_clipboard` and `ruby` or `python` suppor
     ln -s ~/.vim/.vimrc ~/.vimrc
     vi
 
-Then run in webvim `:PlugInstall`
+## Hardcore mode
 
+The hardcore mode remap some keys to force you use vim in a productive way:
+ - no arrow keys for moving instead use the common vim movement commands.
+ - in insert mode, use `jk` to switch back to normal mode instead of `<esc>`
 
-### Usage
+Restricting commands is the best way to make your fingers learn. After one or two days, you should be more productive and have learned lots of vim commands.
 
-|                                                 | Command           | Mode | Context   |
-|-------------------------------------------------|-------------------|:----:|-----------|
-|                                                                                        |
-| __Plugins__                                                                            |
-|                                                                                        |
-| Install Plugins                                  | `:PlugInstall`   | n    |           |
-| Update Plugins                                   | `:PlugUpdate`    | n    |           |
-|                                                                                        |
-| __Config__                                                                             |
-|                                                                                        |
-| Edit .vimrc                                      | `<leader>e`      | n    |           |
-| Reload .vimrc                                    | `<leader>s`      | n    |           |
-|                                                                                        |
-| __File Tree (NERDTree)__                                                               |
-|                                                                                        |
-| Toggle Tree                                      | `<c-n>`          | n    |           |
-| Open a node in a new tab                         | `t`              |      | Tree Node |
-| Tree menu                                        | `m`              |      | Tree Node |
-| Add a file                                       | `a`              |      | Tree Menu |
-| Delete a file                                    | `d`              |      | Tree Menu |
-| Move a file                                      | `m`              |      | Tree Menu |
-| Copy a file                                      | `c`              |      | Tree Menu |
-| Move to right tab                                | `<s-right>`      | n    |           |
-| Move to right tab                                | `<s-right>`      | n    |           |
-| Change window (ie. tree to tab)                  | `<c-w><c-w>`     |      |           |
-|                                                                                        |
-| __Comment__                                                                            |
-|                                                                                        |
-| Toggle comments                                  | `<c-/>`          | nv   |           |
-|                                                                                        |
-| __Git__                                                                                |
-|                                                                                        |
-| git diff                                         | `:Gdiff`        | n     |           |
-| git status                                       | `:Gstatus`      | n     |           |
-| git commit                                       | `:Gcommit`      | n     |           |
-| git blame                                        | `:Gblame`       | n     |           |
-| git mv                                           | `:Gmove`        | n     |           |
-| git rm                                           | `:Gremove`      | n     |           |
-| Open the current file in Github                  | `:Gbrowse`      | n     |           |
-|                                                                                        |
-| __Spell Check__                                                                        |
-|                                                                                        |
-| Enable checking                                  | `set spell`      | n    |           |
-| move to the next mispelled word                  | `]s`             | n    |           |
-| move to the previous mispelled word              | `[s`             | n    |           |
-| add a word to the dictionary                     | `zg`             | n    |           |
-| undo the addition of a word to the dictionary    | `zug`            | n    |           |
-| view spelling suggestions for a mispelled word   | `z=`             | n    |           |
-|                                                                                        |
-| _Next sections to come soonk_                                                          |
+You can disable the hardcore mode by setting the value of `g:hardcoreMode` to `0` in `.vimrc`. You can also change the mappings.
+
+## Usage
+
+|                                                 | Command                | Mode | Context   |
+|-------------------------------------------------|------------------------|:----:|-----------|
+|                                                                                             |
+| __Plugins__                                                                                 |
+|                                                                                             |
+| Install Plugins                                  | `:PlugInstall`        | n    |           |
+| Update Plugins                                   | `:PlugUpdate`         | n    |           |
+|                                                                                             |
+| __Config__                                                                                  |
+|                                                                                             |
+| Edit .vimrc                                      | `<leader>e`           | n    |           |
+| Reload .vimrc                                    | `<leader>s`           | n    |           |
+|                                                                                             |
+| __File Tree (NERDTree)__                                                                    |
+|                                                                                             |
+| Toggle Tree                                      | `<c-n>`               | n    |           |
+| Open a node in a new tab                         | `t`                   |      | Tree Node |
+| Change Root                                      | `C`                   |      | Tree Node |
+| Tree menu                                        | `m`                   |      | Tree Node |
+| Add a file                                       | `a`                   |      | Tree Menu |
+| Delete a file                                    | `d`                   |      | Tree Menu |
+| Move a file                                      | `m`                   |      | Tree Menu |
+| Copy a file                                      | `c`                   |      | Tree Menu |
+| Move to right tab                                | `<s-right>`           | n    |           |
+| Move to right tab                                | `<s-right>`           | n    |           |
+| Change window (ie. tree to tab)                  | `<c-w><c-w>`          |      |           |
+| Help                                             | `?`                   |      | Tree      |
+| Documentation                                    | `:help NERDTree`      |      |           |
+|                                                                                             |
+| __Comment__                                                                                 |
+|                                                                                             |
+| Toggle comments                                  | `<c-/>`               | nv   |           |
+| Comments                                         | `<leader>cc`          | nv   |           |
+| Sexy Comments                                    | `<leader>cs`          | nv   |           |
+| UnComments                                       | `<leader>cu`          | nv   |           |
+| Yank and Comments                                | `<leader>cy`          | nv   |           |
+| Documentation                                    | `:help NERDCommenter` |      |           |
+|                                                                                             |
+| __Git__                                                                                     |
+|                                                                                             |
+| git diff                                         | `:Gdiff`              | n    |           |
+| git status                                       | `:Gstatus`            | n    |           |
+| git commit                                       | `:Gcommit`            | n    |           |
+| git blame                                        | `:Gblame`             | n    |           |
+| git mv                                           | `:Gmove`              | n    |           |
+| git rm                                           | `:Gremove`            | n    |           |
+| Open the current file in Github                  | `:Gbrowse`            | n    |           |
+|                                                                                             |
+| __Spell Check__                                                                             |
+|                                                                                             |
+| Enable checking                                  | `set spell`            | n   |           |
+| move to the next mispelled word                  | `]s`                   | n   |           |
+| move to the previous mispelled word              | `[s`                   | n   |           |
+| add a word to the dictionary                     | `zg`                   | n   |           |
+| undo the addition of a word to the dictionary    | `zug`                  | n   |           |
+| view spelling suggestions for a mispelled word   | `z=`                   | n   |           |
+|                                                                                             |
+| _Next sections to come soon_                                                               |
 
 
 _Modes_ :
@@ -127,10 +142,65 @@ _Commands_ :
    - `<leader>` is mapped to `,`
    - `<localleader>` is mapped to `\`
 
-   - `<localleader>` is mapped to `\`
-
 
 [Common usage cheat sheet](http://fprintf.net/vimCheatSheet.html)
+
+
+## Plugins
+
+WebVim is only a distribution that contains plugins. The plugin authors have made the hard work. _Plugin authors, you rocks!_
+
+### User interface
+
+ - [Mango](https://github.com/goatslacker/mango.vim) A nice color scheme
+ - [VimAirline](https://github.com/bling/vim-airline) Lean and mean statusbars
+
+### Manage your project
+
+ - [NERDTree](https://github.com/scrooloose/nerdtree) Manage your project files
+ - [VimFugitive](https://github.com/tpope/vim-fugitive) Git integration
+ - [VimGitGutter](https://github.com/airblade/vim-gitgutter) Git diff in the gutter
+ - [EditorconfigVim](https://github.com/editorconfig/editorconfig-vim) Shared coding conventions
+
+### Code writing
+
+ - [NERDCommenter](https://github.com/scrooloose/nerdcommenter) Comments made easy
+ - [VimTrailingWhitespace](https://github.com/bronson/vim-trailing-whitespace) Highlight trailing spaces
+ - [Syntastic](https://github.com/scrooloose/syntastic) Syntax check and validation
+ - [VimEasyAlign](https://github.com/junegunn/vim-easy-align) Realign pieces of code
+ - [VimMultipleCursors](https://github.com/terryma/vim-multiple-cursors) Write on multiple lines easily
+ - [VimJsBeautify](https://github.com/maksimr/vim-jsbeautify) Reformat JavaScript, HTML and JSON files
+ - [VimYankStack](https://github.com/maxbrunsfeld/vim-yankstack) Iterate over yanked stack on paste
+ - [VimSurround](https://github.com/tpope/vim-surround) Quoting and parenthesizing
+ - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) Autocompletion engine
+ - [VimForTern](https://github.com/marijnh/tern_for_vim) Smart JavaScript autocompletion
+ - [VimNode](https://github.com/moll/vim-node) Naviguate through node.js code/modules
+
+### Code reading
+
+ - [VimJson](https://github.com/elzr/vim-json) JSON highlighting and quote concealing
+ - [YaJS](https://github.com/othree/yajs.vim) JavaScript syntax (ES5 and ES6)
+ - [JavaScriptLibrariesSyntax](https://github.com/othree/javascript-libraries-syntax.vim) Syntax highlighting for well-known JS libraries
+ - [VimCSS3](https://github.com/hail2u/vim-css3-syntax) CSS3 syntax
+ - [ScssSyntax](https://github.com/cakebaker/scss-syntax.vim) SCSS syntax
+ - [HTML5](https://github.com/othree/html5.vim) HTML5 syntax
+ kj
+
+## History
+
+## Contributing
+
+Every contribution is more than welcomed. You can:
+ - [report issues](https://github.com/krampstudio/webvim/issues)
+ - Fix, improve the configuration, add new features. The best is to fork and submit a pull request.
+ - Fix my english mistakes
+ - Update the documentation
+ - Create a better logo
+ - [Offer me a coffee](https://gratipay.com/~krampstudio/)
+
+## License
+
+The content of this repository is licensed under the [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
 
 <!--
 
