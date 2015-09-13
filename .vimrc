@@ -42,20 +42,26 @@ if !isdirectory(s:pluginDir)
     	echom " "
     else
 
-        echom "  - eslint :" . executable('eslint') ? "ok" : "ko"
-        echom "  - jsonlint :" . executable('eslint') ? "ok" : "ko"
-        echom "  - csslint :" . executable('eslint') ? "ok" : "ko"
+        echom "  - nodejs   : ok"
+        echom "  - npm      : ok"
+        echom "  - eslint   : " . (executable('eslint')   ? "ok" : "no (optional)")
+        echom "  - jsonlint : " . (executable('jsonlint') ? "ok" : "no (optional)")
+        echom "  - csslint  : " . (executable('csslint')  ? "ok" : "no (optional)")
         echom " done."
 
         echom " "
-        echom "Before getting started, you need to run the install : "
-        echom " 1. :PlugInstall"
-        echom " 2. take a coffee"
-        echom " 3. reload vim"
-        echom " 4. Envoy WebVim"
+        echom "We are going to install the plugins : "
+        echom " 1. take a coffee"
+        echom " 2. reload vim"
+        echom " 3. Envoy WebVim"
+        echom " "
+        echom "Please note if you want to have the arrows keys and <esc>, disable the 'hardcoreMode' in the vimrc"
         echom " "
 
         exec ":source ".s:pluginDef
+
+	"Install plugins on first run
+	autocmd VimEnter * PlugInstall
     endif
 else
 
