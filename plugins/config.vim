@@ -79,11 +79,12 @@ let g:syntastic_tpl_checkers=['handlebars']
 
 " [> EasyAlign <]
 
-" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-"vmap <Enter> <Plug>(EasyAlign)
+" select paragraph and start easyalign on the left
+nnoremap <leader>a vip<Plug>(EasyAlign)<cr>
 
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-"nmap ga <Plug>(EasyAlign)
+" Start interactive align to the right
+vnoremap <leader>a <Plug>(EasyAlign)<cr><right>
+
 let g:easy_align_ignore_groups = ['Comment']
 
 
@@ -93,18 +94,20 @@ let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-m>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
+let g:multi_cursor_quit_key='<esc>'
 
 
 " [> JsBeautify <]
 
 " format selection
 autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer>  <c-f> :call RangeJsonBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 
 " format the whole file
 autocmd FileType javascript nnoremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType json nnoremap <buffer>  <c-f> :call JsonBeautify()<cr>
 autocmd FileType html nnoremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css nnoremap <buffer> <c-f> :call CSSBeautify()<cr>
 
