@@ -10,7 +10,7 @@ It targets :
 
 And contains the features you expect from a modern code editor :
 
- - syntax highighting
+ - syntax highlighting
  - syntax and error checking
  - autocompletion
  - multi cursor
@@ -21,7 +21,7 @@ And contains the features you expect from a modern code editor :
  - jsdoc generation (coming soon)
  - debugging (coming soon)
  - grunt/gulp support (coming soon)
- - all the awesomess from Vim
+ - all the awesomeness from Vim
 
 
 ## Install
@@ -67,64 +67,91 @@ You can disable the hardcore mode by setting the value of `g:hardcoreMode` to `0
 
 ## Usage
 
-|                                                 | Command                | Mode | Context   |
-|-------------------------------------------------|------------------------|:----:|-----------|
-|                                                                                             |
-| __Plugins__                                                                                 |
-|                                                                                             |
-| Install Plugins                                  | `:PlugInstall`        | n    |           |
-| Update Plugins                                   | `:PlugUpdate`         | n    |           |
-|                                                                                             |
-| __Config__                                                                                  |
-|                                                                                             |
-| Edit .vimrc                                      | `<leader>e`           | n    |           |
-| Reload .vimrc                                    | `<leader>s`           | n    |           |
-|                                                                                             |
-| __File Tree (NERDTree)__                                                                    |
-|                                                                                             |
-| Toggle Tree                                      | `<c-n>`               | n    |           |
-| Open a node in a new tab                         | `t`                   |      | Tree Node |
-| Change Root                                      | `C`                   |      | Tree Node |
-| Tree menu                                        | `m`                   |      | Tree Node |
-| Add a file                                       | `a`                   |      | Tree Menu |
-| Delete a file                                    | `d`                   |      | Tree Menu |
-| Move a file                                      | `m`                   |      | Tree Menu |
-| Copy a file                                      | `c`                   |      | Tree Menu |
-| Move to right tab                                | `<s-right>`           | n    |           |
-| Move to right tab                                | `<s-right>`           | n    |           |
-| Change window (ie. tree to tab)                  | `<c-w><c-w>`          |      |           |
-| Help                                             | `?`                   |      | Tree      |
-| Documentation                                    | `:help NERDTree`      |      |           |
-|                                                                                             |
-| __Comment__                                                                                 |
-|                                                                                             |
-| Toggle comments                                  | `<c-/>`               | nv   |           |
-| Comments                                         | `<leader>cc`          | nv   |           |
-| Sexy Comments                                    | `<leader>cs`          | nv   |           |
-| UnComments                                       | `<leader>cu`          | nv   |           |
-| Yank and Comments                                | `<leader>cy`          | nv   |           |
-| Documentation                                    | `:help NERDCommenter` |      |           |
-|                                                                                             |
-| __Git__                                                                                     |
-|                                                                                             |
-| git diff                                         | `:Gdiff`              | n    |           |
-| git status                                       | `:Gstatus`            | n    |           |
-| git commit                                       | `:Gcommit`            | n    |           |
-| git blame                                        | `:Gblame`             | n    |           |
-| git mv                                           | `:Gmove`              | n    |           |
-| git rm                                           | `:Gremove`            | n    |           |
-| Open the current file in Github                  | `:Gbrowse`            | n    |           |
-|                                                                                             |
-| __Spell Check__                                                                             |
-|                                                                                             |
-| Enable checking                                  | `set spell`            | n   |           |
-| move to the next mispelled word                  | `]s`                   | n   |           |
-| move to the previous mispelled word              | `[s`                   | n   |           |
-| add a word to the dictionary                     | `zg`                   | n   |           |
-| undo the addition of a word to the dictionary    | `zug`                  | n   |           |
-| view spelling suggestions for a mispelled word   | `z=`                   | n   |           |
-|                                                                                             |
-| _Next sections to come soon_                                                               |
+|                                                 | Command                | Mode | Context          |
+|-------------------------------------------------|------------------------|:----:|------------------|
+|                                                                                                    |
+| __Plugins__                                                                                        |
+|                                                                                                    |
+| Install Plugins                                  | `:PlugInstall`        | n    |                  |
+| Update Plugins                                   | `:PlugUpdate`         | n    |                  |
+|                                                                                                    |
+| __Config__                                                                                         |
+|                                                                                                    |
+| Edit .vimrc                                      | `<leader>e`           | n    |                  |
+| Reload .vimrc                                    | `<leader>s`           | n    |                  |
+|                                                                                                    |
+| __File Tree (NERDTree)__                                                                           |
+|                                                                                                    |
+| Toggle Tree                                      | `<c-n>`               | n    |                  |
+| Open a node in a new tab                         | `t`                   |      | Tree Node        |
+| Change Root                                      | `C`                   |      | Tree Node        |
+| Tree menu                                        | `m`                   |      | Tree Node        |
+| Add a file                                       | `a`                   |      | Tree Menu        |
+| Delete a file                                    | `d`                   |      | Tree Menu        |
+| Move a file                                      | `m`                   |      | Tree Menu        |
+| Copy a file                                      | `c`                   |      | Tree Menu        |
+| Move to right tab                                | `<s-right>`           | n    |                  |
+| Move to right tab                                | `<s-right>`           | n    |                  |
+| Change window (ie. tree to tab)                  | `<c-w><c-w>`          |      |                  |
+| Help                                             | `?`                   |      | Tree             |
+| Documentation                                    | `:help NERDTree`      |      |                  |
+|                                                                                                    |
+| __Comment__                                                                                        |
+|                                                                                                    |
+| Toggle comments                                  | `<c-/>`               | nv   |                  |
+| Comments                                         | `<leader>cc`          | nv   |                  |
+| Sexy Comments                                    | `<leader>cs`          | nv   |                  |
+| UnComments                                       | `<leader>cu`          | nv   |                  |
+| Yank and Comments                                | `<leader>cy`          | nv   |                  |
+| Documentation                                    | `:help NERDCommenter` |      |                  |
+|                                                                                                    |
+| __Align__                                                                                          |
+|                                                                                                    |
+| Start interactive alignment                      | `EasyAlign`           | v    | selection        |
+| Align next paragraph on =                        | `<leader>a=`          | n    |                  |
+| Align next paragraph on :                        | `<leader>a:`          | n    |                  |
+| Align next paragraph on delimiter _x_            | `<leader>ax`          | n    |                  |
+| Right align selection on =                       | `<leader>a=`          | v    |                  |
+| Right align selection on :                       | `<leader>a:`          | v    |                  |
+| Right align selection on _x_                     | `<leader>ax`          | v    |                  |
+| Documentation                                    | `:help :EasyAlign`    |      |                  |
+|                                                                                                    |
+| __Format__                                                                                         |
+|                                                                                                    |
+| Format the file                                  | `<c-f>`               | n    | js,json,html,css |
+| Format the selection                             | `<c-f>`               | n    | js,json,html,css |
+|                                                                                                    |
+| __Multiple Cursor__                                                                                |
+|                                                                                                    |
+| Start multiple cursor                            | `<c-m>`               | v    | Visual Bloc      |
+| Multiple cursor insert                           | `i`                   |      | multiple cursor  |
+| Multiple cursor remove                           | `x`                   |      | multiple cursor  |
+| Leave multiple cursor                            | `<esc>`               |      | multiple cursor  |
+|                                                                                                    |
+| __AutoCompletion__                                                                                 |
+|                                                                                                    |
+| Select next proposal in menu                     | `<tab>`               | i    |                  |
+|                                                                                                    |
+| __Git__                                                                                            |
+|                                                                                                    |
+| git diff                                         | `:Gdiff`              | n    |                  |
+| git status                                       | `:Gstatus`            | n    |                  |
+| git commit                                       | `:Gcommit`            | n    |                  |
+| git blame                                        | `:Gblame`             | n    |                  |
+| git mv                                           | `:Gmove`              | n    |                  |
+| git rm                                           | `:Gremove`            | n    |                  |
+| Open the current file in Github                  | `:Gbrowse`            | n    |                  |
+|                                                                                                    |
+| __Spell Check__                                                                                    |
+|                                                                                                    |
+| Enable checking                                  | `set spell`            | n   |                  |
+| move to the next misspelled word                  | `]s`                   | n   |                  |
+| move to the previous misspelled word              | `[s`                   | n   |                  |
+| add a word to the dictionary                     | `zg`                   | n   |                  |
+| undo the addition of a word to the dictionary    | `zug`                  | n   |                  |
+| view spelling suggestions for a misspelled word   | `z=`                   | n   |                  |
+|                                                                                                    |
+| _Next sections to come soon_                                                                       |
 
 
 _Modes_ :
@@ -174,7 +201,7 @@ WebVim is only a distribution that contains plugins. The plugin authors have mad
  - [VimSurround](https://github.com/tpope/vim-surround) Quoting and parenthesizing
  - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) Autocompletion engine
  - [VimForTern](https://github.com/marijnh/tern_for_vim) Smart JavaScript autocompletion
- - [VimNode](https://github.com/moll/vim-node) Naviguate through node.js code/modules
+ - [VimNode](https://github.com/moll/vim-node) Navigate through node.js code/modules
 
 ### Code reading
 
@@ -184,7 +211,6 @@ WebVim is only a distribution that contains plugins. The plugin authors have mad
  - [VimCSS3](https://github.com/hail2u/vim-css3-syntax) CSS3 syntax
  - [ScssSyntax](https://github.com/cakebaker/scss-syntax.vim) SCSS syntax
  - [HTML5](https://github.com/othree/html5.vim) HTML5 syntax
- kj
 
 ## History
 
@@ -193,7 +219,7 @@ WebVim is only a distribution that contains plugins. The plugin authors have mad
 Every contribution is more than welcomed. You can:
  - [report issues](https://github.com/krampstudio/webvim/issues)
  - Fix, improve the configuration, add new features. The best is to fork and submit a pull request.
- - Fix my english mistakes
+ - Fix my English mistakes
  - Update the documentation
  - Create a better logo
  - [Offer me a coffee](https://gratipay.com/~krampstudio/)
