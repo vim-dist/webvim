@@ -198,6 +198,8 @@ Every contribution is more than welcomed. You can:
  - Create a better logo
  - [Offer me a coffee](https://gratipay.com/~krampstudio/)
 
+[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/USERNAME/)
+
 ## License
 
 The content of this repository is licensed under the [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
