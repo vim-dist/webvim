@@ -18,7 +18,7 @@ function! OpenNerdTree()
         exec "normal! \<c-w>\<c-w>"
     endif
 endfunction
-autocmd VimEnter * call OpenNerdTree()
+"autocmd VimEnter * call OpenNerdTree()
 
 " nerdtree autoclose if it is the last opened buffer
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -62,6 +62,45 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " [> Syntastic <]
 
 "" Syntax checkers
+function! GetJslinters()
+    let l:linters = [ ['eslint', '.eslintrc'], ['jshint', '.jshintrc'] ]
+    let l:linter = ''
+    let l:available = []
+    for l:linter in l:linters
+       if executable(l:linter)
+            echom l:linter . ' found'
+            call add(l:available, l:linter)
+       endif
+    endfor
+    return l:available
+endfunction
+
+function! Jslinter(path, linters)
+    let l:linter = ''
+    let l:selected = []
+    let l:dir = fnamemodify(a:path, ':p:h')
+
+    if(l:dir == '/')
+        return
+    endif
+
+    for l:linter in l:linters
+        echom 'checking ' . l:dir . '/' . get(l:linter, 1)
+        if(filereadable(l:cwd . '/' j. get(l:linter, 1)))
+            return get(l:linter, 0)
+        endif
+    endfor
+    "elseif(filereadable(l:cwd . '/.eslintrc'))
+        "echom 'has eslint'
+    "else
+        "call Jslinter(fnamemodify(l:cwd, ':h'))
+    "endif
+endfunction
+
+
+call Jslinter(expand('%p'), GetJslinters())
+
+
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
