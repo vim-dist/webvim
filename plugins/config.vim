@@ -13,26 +13,27 @@
 
 " on vim enter opens nerd tree
 function! OpenNerdTree()
-    if match(expand('%t'), 'COMMIT_EDITMSG') < 0
+    if match(expand('%:t'), 'COMMIT_EDITMSG') < 0
         NERDTreeFind
         exec "normal! \<c-w>\<c-w>"
     endif
 endfunction
+autocmd VimEnter * call OpenNerdTree()
 
 " nerdtree autoclose if it is the last opened buffer
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " nerdtree window resize
-let NERDTreeWinSize = 35
+let g:NERDTreeWinSize = 35
 
 " show hidden files
-let NERDTreeShowHidden=1
+let g:NERDTreeShowHidden=1
 
 " single click to open nodes
-let NERDTreeMouseMode=3
+let g:NERDTreeMouseMode=3
 
 " ignored files
-let NERDTreeIgnore=['\.swp$', '\~$']
+let g:NERDTreeIgnore=['\.swp$', '\~$']
 nnoremap <c-n> :NERDTreeToggle<cr>
 
 
@@ -88,7 +89,6 @@ endfunction
 
 " check if the path to see if a linter config is present
 function! Jslinter(path, linters)
-    let l:selected = []
     let l:dir = fnamemodify(a:path, ':p:h')
 
     if(l:dir == '/')
@@ -110,7 +110,7 @@ function! SyntasticSetJsLinter()
     let l:availableLinters = GetJslinters()
 
     " look for linter config in the current folder
-    let l:jslinter = Jslinter(expand('%p'), l:availableLinters)
+    let l:jslinter = Jslinter(expand('%:p'), l:availableLinters)
     if l:jslinter == ''
         " otherwise look into the home dir
         let l:jslinter = Jslinter($HOME, l:availableLinters)

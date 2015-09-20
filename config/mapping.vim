@@ -5,8 +5,8 @@
 "
 
 " leader
-let mapleader = ","
-let localmapleader = "\\"
+let g:mapleader = ","
+let g:localmapleader = "\\"
 
 " move the current line below
 nnoremap <leader>- ddp

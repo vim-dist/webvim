@@ -77,13 +77,6 @@ else
 endif
 
 
-"spell checking
-" zg to add a word into dic
-" z= for autocomplete
-"set spell spelllang=en_us
-"set complete+=kspell
-
-"
 
 "" If you prefer the Omni-Completion tip window to close when a selection is
 "" made, these lines close it on movement in insert mode or when leaving
