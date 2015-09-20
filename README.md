@@ -202,6 +202,8 @@ WebVim is only a distribution that contains plugins. The plugin authors have mad
  - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) Autocompletion engine
  - [VimForTern](https://github.com/marijnh/tern_for_vim) Smart JavaScript autocompletion
  - [VimNode](https://github.com/moll/vim-node) Navigate through node.js code/modules
+ - [VimLint](https://github.com/syngan/vim-vimlint) Linter used by syntastic for vimscripts
+ - [VimLParser](https://github.com/ynkdir/vim-vimlparser) VimL parser (required by VimLint)
 
 ### Code reading
 
