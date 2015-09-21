@@ -171,7 +171,7 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | view spelling suggestions for a misspelled word  | `z=`                   | n   |                  |
 |                                                                                                    |
 | __Search__                                                                                         |
-| clear hightlights                                | `<c-l>`               | n    |                  |
+| clear highlights                                 | `<c-l>`               | n    |                  |
 |                                                                                                    |
 | __Editing__                                                                                        |
 | Move line up                                     | `<leader>-`           | nv   |                  |
