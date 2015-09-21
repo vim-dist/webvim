@@ -1,297 +1,937 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Dotvim by krampstudio</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta charset="UTF-8">
+    <title>WebVim by krampstudio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/krampstudio/dotvim">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/krampstudio/dotvim/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/krampstudio/dotvim/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <section class="page-header">
+      <h1 class="project-name">WebVim</h1>
+      <h2 class="project-tagline">WebVim is a vim based IDE for web development.</h2>
+      <a href="https://github.com/krampstudio/webvim" class="btn">View on GitHub</a>
+      <a href="https://github.com/krampstudio/webvim/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/krampstudio/webvim/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div class="wrapper">
+    <section class="main-content">
+      <h1>
+<a id="" class="anchor" href="#" aria-hidden="true"><span class="octicon octicon-link"></span></a><img src="https://github.com/krampstudio/webvim/raw/master/resources/WebVim.png" alt="WebVim" title="WebVim">
+</h1>
 
-      <section>
-        <div id="title">
-          <h1>Dotvim</h1>
-          <p>my vim based IDE for Node.js and Web Development</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/krampstudio">krampstudio</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+<p>WebVim is a Vim based IDE for web development.</p>
 
-        <h1>
-<a id="dotvim" class="anchor" href="#dotvim" aria-hidden="true"><span class="octicon octicon-link"></span></a>dotvim</h1>
-
-<p>My Vim IDE targetting js/web development. It features :</p>
+<p>It targets :</p>
 
 <ul>
-<li>syntax highighting</li>
-<li>syntax error checking</li>
-<li>autocomplete</li>
-<li>tabs, file browser</li>
-<li>visual and mouse interactions</li>
-<li>folding, indenting, comments, etc.</li>
+<li>JavaScript development (ES5, ES6, node.js)</li>
+<li>HTML5</li>
+<li>CSS3 and SCSS</li>
+</ul>
+
+<p>And contains the features you expect from a modern code editor :</p>
+
+<ul>
+<li>syntax highlighting</li>
+<li>syntax and error checking</li>
+<li>autocompletion</li>
 <li>multi cursor</li>
-<li>jsdoc generation</li>
-<li>and all the awesome vim stuffs</li>
+<li>git support</li>
+<li>code format</li>
+<li>support coding conventions (editorconfig)</li>
+<li>hardcore mode (for real Vim users)</li>
+<li>jsdoc generation (coming soon)</li>
+<li>debugging (coming soon)</li>
+<li>grunt/gulp support (coming soon)</li>
+<li>all the awesomeness from Vim</li>
 </ul>
 
 <h2>
-<a id="screen-shots" class="anchor" href="#screen-shots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screen shots</h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
 
-<p><img src="https://raw.githubusercontent.com/krampstudio/dotvim/screenshots/img/vim-js-tern.png" alt="editing javascript with autocomplete" title="Editing javascript with autocomplete">
-<img src="https://raw.githubusercontent.com/krampstudio/dotvim/screenshots/img/vim-tree.png" alt="tree and nice color theme" title="Tree and nice color theme"></p>
-
-<h2>
-<a id="install-debianubuntu" class="anchor" href="#install-debianubuntu" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install (Debian/Ubuntu)</h2>
-
-<pre><code>aptitude install vim vim-runtime vim-gui-common build-essential cmake python-dev exuberant-ctags libclang3.4-dev
-</code></pre>
-
-<p>or compile a recent version with <code>xterm_clipboard</code> support.</p>
-
-<p>Then install it:</p>
-
-<pre><code>git clone https://github.com/krampstudio/dotvim.git ~/.vim
-cd ~/.vim &amp;&amp; git submodule update --init --recursive
-ln -s ~/.vim/.vimrc ~/.vimrc
-</code></pre>
+<p><strong>Only tested on linux</strong> (Ubuntu and Debian)</p>
 
 <h3>
 <a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h3>
 
-<p>Node.js and npm:</p>
+<ol>
+<li>
+<p>A modern version of Vim</p>
 
-<pre><code>npm install -g jshint csslint jsonlint tern handlebars
-gem install scss-lint
+<p>apt-get install vim vim-runtime vim-gui-common</p>
+</li>
+</ol>
 
-cd modules/YouCompleteMe
-./install.sh --clang-completer --system-libclang
+<p>or compile a recent version with <code>xterm_clipboard</code> and <code>ruby</code> or <code>python</code> support.</p>
 
-cd modules/tern_for_vim
-npm install
+<ol>
+<li>
+<p>Some tools to compile YouCompleteMe</p>
 
-cd fonts
-./install
+<p>apt-get install build-essential cmake python-dev exuberant-ctags libclang3.4-dev</p>
+</li>
+<li>
+<p>Node.js and npm</p>
+
+<p>curl -sL <a href="https://deb.nodesource.com/setup_0.12">https://deb.nodesource.com/setup_0.12</a> | bash -
+apt-get install -y nodejs</p>
+</li>
+<li>
+<p>Some npm packages</p>
+
+<p>npm install -g eslint csslint jshint jsonlint handlebars</p>
+</li>
+</ol>
+
+<h3>
+<a id="install-it" class="anchor" href="#install-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install it:</h3>
+
+<pre><code>git clone https://github.com/krampstudio/webvim.git ~/.vim
+ln -s ~/.vim/.vimrc ~/.vimrc
+vi
 </code></pre>
 
 <h2>
-<a id="content" class="anchor" href="#content" aria-hidden="true"><span class="octicon octicon-link"></span></a>Content</h2>
+<a id="hardcore-mode" class="anchor" href="#hardcore-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardcore mode</h2>
+
+<p>The hardcore mode remap some keys to force you use Vim in a productive way:</p>
 
 <ul>
-<li>
-<a href="https://github.com/scrooloose/nerdtree">NerdTree</a> File system navigation</li>
-<li>
-<a href="https://github.com/scrooloose/nerdcommenter">NerdCommenter</a> Smart comments</li>
-<li>
-<a href="https://github.com/vim-scripts/YankRing.vim">YankRing</a> Yank regsiter</li>
-<li>
-<a href="https://github.com/maksimr/vim-jsbeautify">Vim-JsBeautify</a> Format JS, CSS and HTML files</li>
-<li>
-<a href="https://github.com/goatslacker/mango.vim">Mango</a> Color theme</li>
-<li>
-<a href="https://github.com/moll/vim-node">Vim-Node</a> Node.js module navigation</li>
-<li>
-<a href="https://github.com/jelera/vim-javascript-syntax.git">Vim-JavaScript-Syntax</a> JavaScript Syntax Improved</li>
-<li>
-<a href="https://github.com/othree/javascript-libraries-syntax.vim">JavaScript-Libraries-Syntax</a> Syntax Improved for 3rd party libraries</li>
-<li>
-<a href="https://github.com/scrooloose/syntastic">Syntastic</a> Generic syntax checker wrapper</li>
-<li>
-<a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> AutoCompletion for C base languages</li>
-<li>
-<a href="https://github.com/marijnh/tern_for_vim">Tern_For_Vim</a> Better autocompletion for Javascript (hook omni or YCM)</li>
-<li>
-<a href="https://github.com/elzr/vim-json">Vim-json</a> Nice json(p) file support</li>
-<li>
-<a href="https://github.com/cakebaker/scss-syntax.vim">Scss-Syntax</a> SASS/SCSS syntax support</li>
-<li>
-<a href="https://github.com/mustache/vim-mustache-handlebars">Mustache-Handlebar</a> Mustache and handlebar support</li>
-<li>
-<a href="https://github.com/bling/vim-airline.git">Airline</a> Lean &amp; mean status/tabline for vim that's light as air</li>
-<li>
-<a href="https://github.com/shawncplus/phpcomplete.vim">PhpComplete</a> PHP omincomplete</li>
-<li>
-<a href="https://github.com/kien/ctrlp.vim">CtrlP</a> Find in file</li>
-<li>
-<a href="https://github.com/editorconfig/editorconfig-vim">editorconfig-vim</a> Support of <a href="http://editorconfig.org/">editorconfig</a>
+<li>no arrow keys for moving instead use the common Vim movement commands.</li>
+<li>in insert mode, use <code>jk</code> to switch back to normal mode instead of <code>&lt;esc&gt;</code>
 </li>
-<li>
-<a href="https://github.com/airblade/vim-gitgutter">Git Gutter</a> Shows a git diff in the gutter (sign column)</li>
-<li>
-<a href="https://github.com/bronson/vim-trailing-whitespace">Trailing Whitespaces</a> Highlight trailing whitespaces in red</li>
-<li>
-<a href="https://github.com/junegunn/vim-easy-align">Easy align</a> Smart align of code</li>
-<li>
-<a href="https://github.com/krampstudio/vim-jsdoc">JsDoc</a> Genrates JS documentation</li>
 </ul>
 
+<p>Restricting commands is the best way to make your fingers learn. After one or two days, you should be more productive and have learned lots of Vim commands.</p>
+
+<p>You can disable the hardcore mode by setting the value of <code>g:hardcoreMode</code> to <code>0</code> in <code>.vimrc</code>. You can also change the mappings.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
 <h3>
-<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO</h3>
+<a id="vim" class="anchor" href="#vim" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vim</h3>
+
+<p>WebVim is only a Vim distribution with plugins and configuration, so all common Vim commands and basic mapping are available. You must know how to use Vim before using this IDE. If you're not comfortable with Vim enough I suggest you to take the interactive Vim tutorial (run <code>vimtutor</code> in a terminal), and keep a <a href="http://fprintf.net/vimCheatSheet.html">common usage cheat sheet</a> close to you until your fingers get all the mappings in memory.</p>
+
+<h3>
+<a id="webvim" class="anchor" href="#webvim" aria-hidden="true"><span class="octicon octicon-link"></span></a>WebVim</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Command</th>
+<th align="center">Mode</th>
+<th>Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plugins</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Install Plugins</td>
+<td><code>:PlugInstall</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Update Plugins</td>
+<td><code>:PlugUpdate</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Config</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Edit .vimrc</td>
+<td><code>&lt;leader&gt;e</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Reload .vimrc</td>
+<td><code>&lt;leader&gt;s</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>File Tree (NERDTree)</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Toggle Tree</td>
+<td><code>&lt;c-n&gt;</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Open a node in a new tab</td>
+<td><code>t</code></td>
+<td align="center"></td>
+<td>Tree Node</td>
+</tr>
+<tr>
+<td>Change Root</td>
+<td><code>C</code></td>
+<td align="center"></td>
+<td>Tree Node</td>
+</tr>
+<tr>
+<td>Tree menu</td>
+<td><code>m</code></td>
+<td align="center"></td>
+<td>Tree Node</td>
+</tr>
+<tr>
+<td>Add a file</td>
+<td><code>a</code></td>
+<td align="center"></td>
+<td>Tree Menu</td>
+</tr>
+<tr>
+<td>Delete a file</td>
+<td><code>d</code></td>
+<td align="center"></td>
+<td>Tree Menu</td>
+</tr>
+<tr>
+<td>Move a file</td>
+<td><code>m</code></td>
+<td align="center"></td>
+<td>Tree Menu</td>
+</tr>
+<tr>
+<td>Copy a file</td>
+<td><code>c</code></td>
+<td align="center"></td>
+<td>Tree Menu</td>
+</tr>
+<tr>
+<td>Move to right tab</td>
+<td><code>&lt;s-right&gt;</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Move to right tab</td>
+<td><code>&lt;s-right&gt;</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Change window (ie. tree to tab)</td>
+<td><code>&lt;c-w&gt;&lt;c-w&gt;</code></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Help</td>
+<td><code>?</code></td>
+<td align="center"></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><code>:help NERDTree</code></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comment</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Toggle comments</td>
+<td><code>&lt;c-/&gt;</code></td>
+<td align="center">nv</td>
+<td></td>
+</tr>
+<tr>
+<td>Comments</td>
+<td><code>&lt;leader&gt;cc</code></td>
+<td align="center">nv</td>
+<td></td>
+</tr>
+<tr>
+<td>Sexy Comments</td>
+<td><code>&lt;leader&gt;cs</code></td>
+<td align="center">nv</td>
+<td></td>
+</tr>
+<tr>
+<td>UnComments</td>
+<td><code>&lt;leader&gt;cu</code></td>
+<td align="center">nv</td>
+<td></td>
+</tr>
+<tr>
+<td>Yank and Comments</td>
+<td><code>&lt;leader&gt;cy</code></td>
+<td align="center">nv</td>
+<td></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><code>:help NERDCommenter</code></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Align</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Start interactive alignment</td>
+<td><code>EasyAlign</code></td>
+<td align="center">v</td>
+<td>selection</td>
+</tr>
+<tr>
+<td>Align next paragraph on =</td>
+<td><code>&lt;leader&gt;a=</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Align next paragraph on :</td>
+<td><code>&lt;leader&gt;a:</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Align next paragraph on delimiter <em>x</em>
+</td>
+<td><code>&lt;leader&gt;ax</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Right align selection on =</td>
+<td><code>&lt;leader&gt;a=</code></td>
+<td align="center">v</td>
+<td></td>
+</tr>
+<tr>
+<td>Right align selection on :</td>
+<td><code>&lt;leader&gt;a:</code></td>
+<td align="center">v</td>
+<td></td>
+</tr>
+<tr>
+<td>Right align selection on <em>x</em>
+</td>
+<td><code>&lt;leader&gt;ax</code></td>
+<td align="center">v</td>
+<td></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><code>:help :EasyAlign</code></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Format</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Format the file</td>
+<td><code>&lt;c-f&gt;</code></td>
+<td align="center">n</td>
+<td>js,json,html,css</td>
+</tr>
+<tr>
+<td>Format the selection</td>
+<td><code>&lt;c-f&gt;</code></td>
+<td align="center">n</td>
+<td>js,json,html,css</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Multiple Cursor</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Start multiple cursor</td>
+<td><code>&lt;c-m&gt;</code></td>
+<td align="center">v</td>
+<td>Visual Bloc</td>
+</tr>
+<tr>
+<td>Multiple cursor insert</td>
+<td><code>i</code></td>
+<td align="center"></td>
+<td>multiple cursor</td>
+</tr>
+<tr>
+<td>Multiple cursor remove</td>
+<td><code>x</code></td>
+<td align="center"></td>
+<td>multiple cursor</td>
+</tr>
+<tr>
+<td>Leave multiple cursor</td>
+<td><code>&lt;esc&gt;</code></td>
+<td align="center"></td>
+<td>multiple cursor</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Paste</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>cycle backward through your history of yanks</td>
+<td><code>&lt;leader&gt;p</code></td>
+<td align="center">nv</td>
+<td>after paste <code>p</code>
+</td>
+</tr>
+<tr>
+<td>cycle forward through your history of yanks</td>
+<td><code>&lt;leader&gt;P</code></td>
+<td align="center">nv</td>
+<td>after paste <code>p</code>
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AutoCompletion</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Select next proposal in menu</td>
+<td><code>&lt;tab&gt;</code></td>
+<td align="center">i</td>
+<td>complete menu</td>
+</tr>
+<tr>
+<td>Select previous proposal in menu</td>
+<td><code>&lt;shift&gt;&lt;tab&gt;</code></td>
+<td align="center">i</td>
+<td>complete menu</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Syntax checking</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Checkers infos</td>
+<td><code>:SyntasticInfo</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Check</td>
+<td><code>:SyntasticCheck</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Toggle check</td>
+<td><code>:SyntasticToggleMode</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Error window</td>
+<td><code>:Errors</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Jump next error</td>
+<td><code>:lnext</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Jump previous error</td>
+<td><code>:lprev</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>JavaScript</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Jump to the definition</td>
+<td><code>:TernDef</code></td>
+<td align="center">n</td>
+<td>under cursor</td>
+</tr>
+<tr>
+<td>Look up the documentation</td>
+<td><code>:TernDoc</code></td>
+<td align="center">n</td>
+<td>under cursor</td>
+</tr>
+<tr>
+<td>Find the type</td>
+<td><code>:TernType</code></td>
+<td align="center">n</td>
+<td>under cursor</td>
+</tr>
+<tr>
+<td>Show all references to the variable or prop</td>
+<td><code>:TernRefs</code></td>
+<td align="center">n</td>
+<td>under cursor</td>
+</tr>
+<tr>
+<td>Rename the variable</td>
+<td><code>:TernRename</code></td>
+<td align="center">n</td>
+<td>under cursor</td>
+</tr>
+<tr>
+<td>jump to the source of a <code>require</code>
+</td>
+<td><code>gf</code></td>
+<td align="center">n</td>
+<td>node.js, cursor</td>
+</tr>
+<tr>
+<td>Edit the main file of a CJS module</td>
+<td><code>:Nedit module</code></td>
+<td align="center">n</td>
+<td>node.js</td>
+</tr>
+<tr>
+<td>Edit a file of a CJS module</td>
+<td><code>:Nedit module/foo.js</code></td>
+<td align="center">n</td>
+<td>node.js</td>
+</tr>
+<tr>
+<td>Edit projects main (from package.json)</td>
+<td><code>:Nedit</code></td>
+<td align="center">n</td>
+<td>node.js</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Git</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>git diff</td>
+<td><code>:Gdiff</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>git status</td>
+<td><code>:Gstatus</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>git commit</td>
+<td><code>:Gcommit</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>git blame</td>
+<td><code>:Gblame</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>git mv</td>
+<td><code>:Gmove</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>git rm</td>
+<td><code>:Gremove</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>Open the current file in Github</td>
+<td><code>:Gbrowse</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Spell Check</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Enable checking</td>
+<td><code>set spell</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>move to the next misspelled word</td>
+<td><code>]s</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>move to the previous misspelled word</td>
+<td><code>[s</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>add a word to the dictionary</td>
+<td><code>zg</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>undo the addition of a word to the dictionary</td>
+<td><code>zug</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td>view spelling suggestions for a misspelled word</td>
+<td><code>z=</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Search</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>clear highlights</td>
+<td><code>&lt;c-l&gt;</code></td>
+<td align="center">n</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Editing</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Move line up</td>
+<td><code>&lt;leader&gt;-</code></td>
+<td align="center">nv</td>
+<td></td>
+</tr>
+<tr>
+<td>Move line down</td>
+<td><code>&lt;leader&gt;_</code></td>
+<td align="center">nv</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Next sections to come soon</em></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p><em>Modes</em> :</p>
 
 <ul>
-<li><a href="https://github.com/guileen/vim-node-dict">https://github.com/guileen/vim-node-dict</a></li>
-<li><a href="https://github.com/tpope/vim-surround">https://github.com/tpope/vim-surround</a></li>
-<li><a href="https://github.com/sidorares/node-vim-debugger">https://github.com/sidorares/node-vim-debugger</a></li>
-<li><a href="https://github.com/plasticboy/vim-markdown">https://github.com/plasticboy/vim-markdown</a></li>
-<li><a href="https://github.com/othree/html5-syntax.vim">https://github.com/othree/html5-syntax.vim</a></li>
-<li><a href="https://github.com/othree/html5.vim">https://github.com/othree/html5.vim</a></li>
-<li><a href="https://github.com/hail2u/vim-css3-syntax">https://github.com/hail2u/vim-css3-syntax</a></li>
-<li><a href="https://github.com/tpope/vim-fugitive">https://github.com/tpope/vim-fugitive</a></li>
+<li>
+<code>n</code> normal</li>
+<li>
+<code>i</code> insert</li>
+<li>
+<code>v</code> visual</li>
+</ul>
+
+<p><em>Commands</em> :</p>
+
+<ul>
+<li>
+<code>:command</code> a Vim command</li>
+<li>
+<code>:set somthing</code> can also be replaced by <code>:setlocal something</code> to apply it to the current buffer only</li>
+<li>
+<code>&lt;c-m&gt;a</code> or <code>a</code> a keyboard command
+
+<ul>
+<li>
+<code>&lt;c-/&gt;</code> means <code>CTRL and</code>/` (this is the Vim notation)</li>
+<li>
+<code>&lt;s-left&gt;</code> means <code>Shift</code> and <code>left arrow</code>
+</li>
+<li>
+<code>&lt;c-a&gt;b</code> means <code>CTRL</code> and <code>a</code>, then <code>b</code>
+</li>
+<li>
+<code>&lt;leader&gt;</code> is mapped to <code>,</code>
+</li>
+<li>
+<code>&lt;localleader&gt;</code> is mapped to <code>\</code>
+</li>
+</ul>
+</li>
 </ul>
 
 <h2>
-<a id="cheat-sheet" class="anchor" href="#cheat-sheet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cheat Sheet</h2>
+<a id="plugins" class="anchor" href="#plugins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugins</h2>
 
-<p><a href="http://fprintf.net/vimCheatSheet.html">Common usage cheat sheet</a></p>
-
-<h3>
-<a id="nerdtree" class="anchor" href="#nerdtree" aria-hidden="true"><span class="octicon octicon-link"></span></a>NERDTree</h3>
-
-<ul>
-<li>open: <code>Ctrl-n</code>
-</li>
-<li>menu: <code>m</code>
-
-<ul>
-<li>then <code>g</code> to grep, <code>a</code> to add, <code>c</code> to copy, <code>m</code> to moven, <code>d</code> to delete</li>
-</ul>
-</li>
-<li>open in a tab: <code>t</code>
-</li>
-<li>tab nav: <code>Shift-left|right</code>
-</li>
-<li>switch  win: <code>Ctrl-w</code>
-</li>
-<li>horizontal split: <code>i</code>
-</li>
-<li>vertival split: <code>v</code>
-</li>
-</ul>
+<p>WebVim is only a distribution that contains plugins. The plugin authors have made the hard work. <em>Plugin authors, you rocks!</em></p>
 
 <h3>
-<a id="nerdcomment" class="anchor" href="#nerdcomment" aria-hidden="true"><span class="octicon octicon-link"></span></a>NerdComment</h3>
-
-<ul>
-<li>toggle: <code>Ctrl-_</code> or <code>Ctrl-Shift-/</code>
-</li>
-<li>comment: ̀<code>\cn</code>
-</li>
-<li>alt comment: <code>\cs</code>
-</li>
-<li>uncomment: <code>\ci</code>
-</li>
-</ul>
-
-<h3>
-<a id="yankring" class="anchor" href="#yankring" aria-hidden="true"><span class="octicon octicon-link"></span></a>YankRing</h3>
-
-<p>Paste then:</p>
-
-<ul>
-<li>move backwards through the yankring : <code>Ctrl-P</code>
-</li>
-<li>move forwards through the yankring : <code>Ctrl-PN</code>
-</li>
-</ul>
-
-<h3>
-<a id="jsbeautify" class="anchor" href="#jsbeautify" aria-hidden="true"><span class="octicon octicon-link"></span></a>JsBeautify</h3>
-
-<ul>
-<li>beautify: <code>Ctrl-f</code>
-</li>
-</ul>
-
-<h3>
-<a id="vim-node" class="anchor" href="#vim-node" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vim-Node</h3>
-
-<ul>
-<li>Inside require("...") to jump to source and module files: <code>gf</code>
-</li>
-<li>Use [I on any keyword to look for it in the current and required files: <code>[I</code>
-</li>
-<li>Edit the main file of a module: <code>:Nedit module_name</code>
-</li>
-<li>Edit its lib/foo.js file: <code>:Nedit module_name/lib/foo</code>
-</li>
-<li>Edit your Node projects main (usually index.js) file: <code>:Nedit .</code>
-</li>
-</ul>
-
-<h3>
-<a id="syntastic" class="anchor" href="#syntastic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Syntastic</h3>
-
-<ul>
-<li>Checkers infos: <code>:SyntasticInfo</code>
-</li>
-<li>Check:  <code>:SyntasticCheck</code>
-</li>
-<li>Toggle check: <code>:SyntasticToggleMode</code>
-</li>
-<li>Error window: <code>:Errors</code>
-</li>
-<li>Jump next/previous error: <code>:help :lnext</code> or <code>:help :lprev</code>
-</li>
-</ul>
-
-<h3>
-<a id="youcompleteme" class="anchor" href="#youcompleteme" aria-hidden="true"><span class="octicon octicon-link"></span></a>YouCompleteMe</h3>
+<a id="user-interface" class="anchor" href="#user-interface" aria-hidden="true"><span class="octicon octicon-link"></span></a>User interface</h3>
 
 <ul>
 <li>
-<code>TAB</code> and <code>Shift-TAB</code>
-</li>
+<a href="https://github.com/goatslacker/mango.vim">Mango</a> A nice color scheme</li>
+<li>
+<a href="https://github.com/bling/vim-airline">VimAirline</a> Lean and mean statusbars</li>
 </ul>
 
 <h3>
-<a id="tern" class="anchor" href="#tern" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tern</h3>
+<a id="manage-your-project" class="anchor" href="#manage-your-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manage your project</h3>
 
 <ul>
-<li>Jump to the definition of the thing under the cursor: <code>:TernDef</code>
-</li>
-<li>Look up the documentation of something: <code>:TernDoc</code>
-</li>
-<li>Find the type of the thing under the cursor: <code>:TernType</code>
-</li>
-<li>Show all references to the variable or property under the cursor: <code>:TernRefs</code>
-</li>
-<li>Rename the variable under the cursor: <code>:TernRename</code>
-</li>
+<li>
+<a href="https://github.com/scrooloose/nerdtree">NERDTree</a> Manage your project files</li>
+<li>
+<a href="https://github.com/tpope/vim-fugitive">VimFugitive</a> Git integration</li>
+<li>
+<a href="https://github.com/airblade/vim-gitgutter">VimGitGutter</a> Git diff in the gutter</li>
+<li>
+<a href="https://github.com/editorconfig/editorconfig-vim">EditorconfigVim</a> Shared coding conventions</li>
 </ul>
 
 <h3>
-<a id="ctrl-p" class="anchor" href="#ctrl-p" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ctrl-P</h3>
+<a id="code-writing" class="anchor" href="#code-writing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code writing</h3>
 
 <ul>
-<li>Find in file : <code>Ctrl-I</code>
-</li>
+<li>
+<a href="https://github.com/scrooloose/nerdcommenter">NERDCommenter</a> Comments made easy</li>
+<li>
+<a href="https://github.com/bronson/vim-trailing-whitespace">VimTrailingWhitespace</a> Highlight trailing spaces</li>
+<li>
+<a href="https://github.com/scrooloose/syntastic">Syntastic</a> Syntax check and validation</li>
+<li>
+<a href="https://github.com/junegunn/vim-easy-align">VimEasyAlign</a> Realign pieces of code</li>
+<li>
+<a href="https://github.com/terryma/vim-multiple-cursors">VimMultipleCursors</a> Write on multiple lines easily</li>
+<li>
+<a href="https://github.com/maksimr/vim-jsbeautify">VimJsBeautify</a> Reformat JavaScript, HTML and JSON files</li>
+<li>
+<a href="https://github.com/maxbrunsfeld/vim-yankstack">VimYankStack</a> Iterate over yanked stack on paste</li>
+<li>
+<a href="https://github.com/tpope/vim-surround">VimSurround</a> Quoting and parenthesizing</li>
+<li>
+<a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> Autocompletion engine</li>
+<li>
+<a href="https://github.com/marijnh/tern_for_vim">VimForTern</a> Smart JavaScript autocompletion</li>
+<li>
+<a href="https://github.com/moll/vim-node">VimNode</a> Navigate through node.js code/modules</li>
+<li>
+<a href="https://github.com/syngan/vim-vimlint">VimLint</a> Linter used by syntastic for VimL</li>
+<li>
+<a href="https://github.com/ynkdir/vim-vimlparser">VimLParser</a> VimL parser (required by VimLint)</li>
 </ul>
 
+<h3>
+<a id="code-reading" class="anchor" href="#code-reading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code reading</h3>
 
-      </section>
+<ul>
+<li>
+<a href="https://github.com/elzr/vim-json">VimJson</a> JSON highlighting and quote concealing</li>
+<li>
+<a href="https://github.com/othree/yajs.vim">YaJS</a> JavaScript syntax (ES5 and ES6)</li>
+<li>
+<a href="https://github.com/othree/javascript-libraries-syntax.vim">JavaScriptLibrariesSyntax</a> Syntax highlighting for well-known JS libraries</li>
+<li>
+<a href="https://github.com/hail2u/vim-css3-syntax">VimCSS3</a> CSS3 syntax</li>
+<li>
+<a href="https://github.com/cakebaker/scss-syntax.vim">ScssSyntax</a> SCSS syntax</li>
+<li>
+<a href="https://github.com/othree/html5.vim">HTML5</a> HTML5 syntax</li>
+</ul>
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+<h2>
+<a id="history" class="anchor" href="#history" aria-hidden="true"><span class="octicon octicon-link"></span></a>History</h2>
+
+<ul>
+<li>
+<strong>1.0.0</strong> Becomes <code>webvim</code> with an install process, a better configuration system, better plugins neighborhood</li>
+<li>
+<strong>0.1.0</strong> A basic <code>dotvim</code> repository with my own Vim configuration</li>
+</ul>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Every contribution is more than welcomed. You can:</p>
+
+<ul>
+<li><a href="https://github.com/krampstudio/webvim/issues">report issues</a></li>
+<li>Fix, improve the configuration, add new features. The best is to fork and submit a pull request</li>
+<li>Test and adapt to other OS</li>
+<li>Fix my English mistakes</li>
+<li>Update the documentation</li>
+<li>Create a better logo</li>
+<li><a href="https://gratipay.com/%7Ekrampstudio/">Offer me a coffee</a></li>
+</ul>
+
+<p><a href="https://gratipay.com/USERNAME/"><img src="https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png" alt="Support via Gratipay"></a></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The content of this repository is licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/krampstudio/webvim">WebVim</a> is maintained by <a href="https://github.com/krampstudio">krampstudio</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-3993348-8");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
