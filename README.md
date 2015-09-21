@@ -1,7 +1,7 @@
 ![WebVim](resources/WebVim.png "WebVim")
 ===============================
 
-WebVim is a vim based IDE for web development.
+WebVim is a Vim based IDE for web development.
 
 It targets :
  - JavaScript development (ES5, ES6, node.js)
@@ -17,7 +17,7 @@ And contains the features you expect from a modern code editor :
  - git support
  - code format
  - support coding conventions (editorconfig)
- - hardcore mode (for real vim users)
+ - hardcore mode (for real Vim users)
  - jsdoc generation (coming soon)
  - debugging (coming soon)
  - grunt/gulp support (coming soon)
@@ -30,7 +30,7 @@ __Only tested on linux__ (Ubuntu and Debian)
 
 ### Dependencies
 
- 1. A modern version of vim
+ 1. A modern version of Vim
 
 	apt-get install vim vim-runtime vim-gui-common
 
@@ -57,11 +57,11 @@ or compile a recent version with `xterm_clipboard` and `ruby` or `python` suppor
 
 ## Hardcore mode
 
-The hardcore mode remap some keys to force you use vim in a productive way:
- - no arrow keys for moving instead use the common vim movement commands.
+The hardcore mode remap some keys to force you use Vim in a productive way:
+ - no arrow keys for moving instead use the common Vim movement commands.
  - in insert mode, use `jk` to switch back to normal mode instead of `<esc>`
 
-Restricting commands is the best way to make your fingers learn. After one or two days, you should be more productive and have learned lots of vim commands.
+Restricting commands is the best way to make your fingers learn. After one or two days, you should be more productive and have learned lots of Vim commands.
 
 You can disable the hardcore mode by setting the value of `g:hardcoreMode` to `0` in `.vimrc`. You can also change the mappings.
 
@@ -69,7 +69,7 @@ You can disable the hardcore mode by setting the value of `g:hardcoreMode` to `0
 
 ### Vim
 
-WebVim is only a Vim distribution with plugins and configuration, so all common Vim commands and basic mapping are available. You must know how to use vim before using this IDE. If you're not comfortable with Vim enough I suggest you to take the interactive Vim tutorial (run `vimtutor` in a terminal), and keep a [common usage cheat sheet](http://fprintf.net/vimCheatSheet.html) close to you until your fingers get all the mappings in memory.
+WebVim is only a Vim distribution with plugins and configuration, so all common Vim commands and basic mapping are available. You must know how to use Vim before using this IDE. If you're not comfortable with Vim enough I suggest you to take the interactive Vim tutorial (run `vimtutor` in a terminal), and keep a [common usage cheat sheet](http://fprintf.net/vimCheatSheet.html) close to you until your fingers get all the mappings in memory.
 
 ### WebVim
 
@@ -186,10 +186,10 @@ _Modes_ :
  - `v` visual
 
 _Commands_ :
- - `:command` a vim command
+ - `:command` a Vim command
  - `:set somthing` can also be replaced by `:setlocal something` to apply it to the current buffer only
  - `<c-m>a` or `a` a keyboard command
-   - `<c-/>` means `CTRL and `/` (this is the vim notation)
+   - `<c-/>` means `CTRL and `/` (this is the Vim notation)
    - `<s-left>` means `Shift` and `left arrow`
    - `<c-a>b` means `CTRL` and `a`, then `b`
    - `<leader>` is mapped to `,`
@@ -242,13 +242,14 @@ WebVim is only a distribution that contains plugins. The plugin authors have mad
 ## History
 
  - __1.0.0__ Becomes `webvim` with an install process, a better configuration system, better plugins neighborhood
- - __0.1.0__ A basic `dotvim` repository with my own vim configuration
+ - __0.1.0__ A basic `dotvim` repository with my own Vim configuration
 
 ## Contributing
 
 Every contribution is more than welcomed. You can:
  - [report issues](https://github.com/krampstudio/webvim/issues)
- - Fix, improve the configuration, add new features. The best is to fork and submit a pull request.
+ - Fix, improve the configuration, add new features. The best is to fork and submit a pull request
+ - Test and adapt to other OS
  - Fix my English mistakes
  - Update the documentation
  - Create a better logo
