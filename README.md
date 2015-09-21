@@ -67,6 +67,12 @@ You can disable the hardcore mode by setting the value of `g:hardcoreMode` to `0
 
 ## Usage
 
+### Vim
+
+WebVim is only a Vim distribution with plugins and configuration, so all common Vim commands and basic mapping are available. You must know how to use vim before using this IDE. If you're not comfortable with Vim enough I suggest you to take the interactive Vim tutorial (run `vimtutor` in a terminal), and keep a [common usage cheat sheet](http://fprintf.net/vimCheatSheet.html) close to you until your fingers get all the mappings in memory.
+
+### WebVim
+
 |                                                  | Command               | Mode | Context          |
 |--------------------------------------------------|-----------------------|:----:|------------------|
 | __Plugins__                                                                                        |
@@ -190,7 +196,6 @@ _Commands_ :
    - `<localleader>` is mapped to `\`
 
 
-[Common usage cheat sheet](http://fprintf.net/vimCheatSheet.html)
 
 
 ## Plugins
@@ -222,7 +227,7 @@ WebVim is only a distribution that contains plugins. The plugin authors have mad
  - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) Autocompletion engine
  - [VimForTern](https://github.com/marijnh/tern_for_vim) Smart JavaScript autocompletion
  - [VimNode](https://github.com/moll/vim-node) Navigate through node.js code/modules
- - [VimLint](https://github.com/syngan/vim-vimlint) Linter used by syntastic for vimscripts
+ - [VimLint](https://github.com/syngan/vim-vimlint) Linter used by syntastic for VimL
  - [VimLParser](https://github.com/ynkdir/vim-vimlparser) VimL parser (required by VimLint)
 
 ### Code reading
@@ -235,6 +240,9 @@ WebVim is only a distribution that contains plugins. The plugin authors have mad
  - [HTML5](https://github.com/othree/html5.vim) HTML5 syntax
 
 ## History
+
+ - __1.0.0__ Becomes `webvim` with an install process, a better configuration system, better plugins neighborhood
+ - __0.1.0__ A basic `dotvim` repository with my own vim configuration
 
 ## Contributing
 
@@ -252,15 +260,3 @@ Every contribution is more than welcomed. You can:
 
 The content of this repository is licensed under the [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
 
-<!--
-
-
-### Vim-Node
-
-- Inside require("...") to jump to source and module files: `gf`
-- Use [I on any keyword to look for it in the current and required files: `[I`
-- Edit the main file of a module: `:Nedit module_name`
-- Edit its lib/foo.js file: `:Nedit module_name/lib/foo`
-- Edit your Node projects main (usually index.js) file: `:Nedit .`
-
--->
