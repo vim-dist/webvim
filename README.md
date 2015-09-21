@@ -67,21 +67,17 @@ You can disable the hardcore mode by setting the value of `g:hardcoreMode` to `0
 
 ## Usage
 
-|                                                 | Command                | Mode | Context          |
-|-------------------------------------------------|------------------------|:----:|------------------|
-|                                                                                                    |
+|                                                  | Command               | Mode | Context          |
+|--------------------------------------------------|-----------------------|:----:|------------------|
 | __Plugins__                                                                                        |
-|                                                                                                    |
 | Install Plugins                                  | `:PlugInstall`        | n    |                  |
 | Update Plugins                                   | `:PlugUpdate`         | n    |                  |
 |                                                                                                    |
 | __Config__                                                                                         |
-|                                                                                                    |
 | Edit .vimrc                                      | `<leader>e`           | n    |                  |
 | Reload .vimrc                                    | `<leader>s`           | n    |                  |
 |                                                                                                    |
 | __File Tree (NERDTree)__                                                                           |
-|                                                                                                    |
 | Toggle Tree                                      | `<c-n>`               | n    |                  |
 | Open a node in a new tab                         | `t`                   |      | Tree Node        |
 | Change Root                                      | `C`                   |      | Tree Node        |
@@ -97,7 +93,6 @@ You can disable the hardcore mode by setting the value of `g:hardcoreMode` to `0
 | Documentation                                    | `:help NERDTree`      |      |                  |
 |                                                                                                    |
 | __Comment__                                                                                        |
-|                                                                                                    |
 | Toggle comments                                  | `<c-/>`               | nv   |                  |
 | Comments                                         | `<leader>cc`          | nv   |                  |
 | Sexy Comments                                    | `<leader>cs`          | nv   |                  |
@@ -106,7 +101,6 @@ You can disable the hardcore mode by setting the value of `g:hardcoreMode` to `0
 | Documentation                                    | `:help NERDCommenter` |      |                  |
 |                                                                                                    |
 | __Align__                                                                                          |
-|                                                                                                    |
 | Start interactive alignment                      | `EasyAlign`           | v    | selection        |
 | Align next paragraph on =                        | `<leader>a=`          | n    |                  |
 | Align next paragraph on :                        | `<leader>a:`          | n    |                  |
@@ -117,23 +111,43 @@ You can disable the hardcore mode by setting the value of `g:hardcoreMode` to `0
 | Documentation                                    | `:help :EasyAlign`    |      |                  |
 |                                                                                                    |
 | __Format__                                                                                         |
-|                                                                                                    |
 | Format the file                                  | `<c-f>`               | n    | js,json,html,css |
 | Format the selection                             | `<c-f>`               | n    | js,json,html,css |
 |                                                                                                    |
 | __Multiple Cursor__                                                                                |
-|                                                                                                    |
 | Start multiple cursor                            | `<c-m>`               | v    | Visual Bloc      |
 | Multiple cursor insert                           | `i`                   |      | multiple cursor  |
 | Multiple cursor remove                           | `x`                   |      | multiple cursor  |
 | Leave multiple cursor                            | `<esc>`               |      | multiple cursor  |
 |                                                                                                    |
-| __AutoCompletion__                                                                                 |
+| __Paste__                                                                                          |
+| cycle backward through your history of yanks     | `<leader>p`           | nv   | after paste `p`  |
+| cycle forward through your history of yanks      | `<leader>P`           | nv   | after paste `p`  |
 |                                                                                                    |
-| Select next proposal in menu                     | `<tab>`               | i    |                  |
+| __AutoCompletion__                                                                                 |
+| Select next proposal in menu                     | `<tab>`               | i    | complete menu    |
+| Select previous proposal in menu                 | `<shift><tab>`        | i    | complete menu    |
+|                                                                                                    |
+| __Syntax checking__                                                                                |
+| Checkers infos                                   | `:SyntasticInfo`      | n    |                  |
+| Check                                            | `:SyntasticCheck`     | n    |                  |
+| Toggle check                                     | `:SyntasticToggleMode`| n    |                  |
+| Error window                                     | `:Errors`             | n    |                  |
+| Jump next error                                  | `:lnext`              | n    |                  |
+| Jump previous error                              | `:lprev`              | n    |                  |
+|                                                                                                    |
+| __JavaScript__                                                                                     |
+| Jump to the definition                           | `:TernDef`            | n    | under cursor     |
+| Look up the documentation                        | `:TernDoc`            | n    | under cursor     |
+| Find the type                                    | `:TernType`           | n    | under cursor     |
+| Show all references to the variable or prop      | `:TernRefs`           | n    | under cursor     |
+| Rename the variable                              | `:TernRename`         | n    | under cursor     |
+| jump to the source of a `require`                | `gf`                  | n    | node.js, cursor  |
+| Edit the main file of a CJS module               | `:Nedit module`       | n    | node.js          |
+| Edit a file of a CJS module                      | `:Nedit module/foo.js`| n    | node.js          |
+| Edit projects main (from package.json)           | `:Nedit`              | n    | node.js          |
 |                                                                                                    |
 | __Git__                                                                                            |
-|                                                                                                    |
 | git diff                                         | `:Gdiff`              | n    |                  |
 | git status                                       | `:Gstatus`            | n    |                  |
 | git commit                                       | `:Gcommit`            | n    |                  |
@@ -143,16 +157,22 @@ You can disable the hardcore mode by setting the value of `g:hardcoreMode` to `0
 | Open the current file in Github                  | `:Gbrowse`            | n    |                  |
 |                                                                                                    |
 | __Spell Check__                                                                                    |
-|                                                                                                    |
 | Enable checking                                  | `set spell`            | n   |                  |
-| move to the next misspelled word                  | `]s`                   | n   |                  |
-| move to the previous misspelled word              | `[s`                   | n   |                  |
+| move to the next misspelled word                 | `]s`                   | n   |                  |
+| move to the previous misspelled word             | `[s`                   | n   |                  |
 | add a word to the dictionary                     | `zg`                   | n   |                  |
 | undo the addition of a word to the dictionary    | `zug`                  | n   |                  |
-| view spelling suggestions for a misspelled word   | `z=`                   | n   |                  |
+| view spelling suggestions for a misspelled word  | `z=`                   | n   |                  |
+|                                                                                                    |
+| __Search__                                                                                         |
+| clear hightlights                                | `<c-l>`               | n    |                  |
+|                                                                                                    |
+| __Editing__                                                                                        |
+| Move line up                                     | `<leader>-`           | nv   |                  |
+| Move line down                                   | `<leader>_`           | nv   |                  |
 |                                                                                                    |
 | _Next sections to come soon_                                                                       |
-
+|                                                                                                    |
 
 _Modes_ :
  - `n` normal
@@ -234,33 +254,6 @@ The content of this repository is licensed under the [GPLv3](http://www.gnu.org/
 
 <!--
 
-### NERDTree
-
-- open: `Ctrl-n`
-- menu: `m`
-  - then `g` to grep, `a` to add, `c` to copy, `m` to moven, `d` to delete
-- open in a tab: `t`
-- tab nav: `Shift-left|right`
-- switch  win: `Ctrl-w`
-- horizontal split: `i`
-- vertival split: `v`
-
-### NerdComment
-
-- toggle: `Ctrl-_` or `Ctrl-Shift-/`
-- comment: ̀`\cn`
-- alt comment: `\cs`
-- uncomment: `\ci`
-
-### YankRing
-
-Paste then:
-- move backwards through the yankring : `Ctrl-P`
-- move forwards through the yankring : `Ctrl-PN`
-
-### JsBeautify
-
-- beautify: `Ctrl-f`
 
 ### Vim-Node
 
@@ -270,46 +263,4 @@ Paste then:
 - Edit its lib/foo.js file: `:Nedit module_name/lib/foo`
 - Edit your Node projects main (usually index.js) file: `:Nedit .`
 
-### Syntastic
-
-- Checkers infos: `:SyntasticInfo`
-- Check:  `:SyntasticCheck`
-- Toggle check: `:SyntasticToggleMode`
-- Error window: `:Errors`
-- Jump next/previous error: `:help :lnext` or `:help :lprev`
-
-### YouCompleteMe
-
-- `TAB` and `Shift-TAB`
-
-### Tern
-
-- Jump to the definition of the thing under the cursor: `:TernDef`
-- Look up the documentation of something: `:TernDoc`
-- Find the type of the thing under the cursor: `:TernType`
-- Show all references to the variable or property under the cursor: `:TernRefs`
-- Rename the variable under the cursor: `:TernRename`
-
-Visual
-Visual line : V
-Visual block : Ctrl-V
-Visual multi : Shift-V
-All: ggVG
-
-s&r
-%s/OLD/NEW/g
-
-Moov
-word/token left : b
-word/token  right: w
-
-Clipboard
-copy line : "+yy
-paste : "+p
-
-
-base
-effacer sour cursuer: x
-effacer mot dw
-effacer vers fin d$
 -->
