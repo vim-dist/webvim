@@ -130,7 +130,7 @@ call SyntasticSetJsLinter()
 nnoremap <leader>a vip<Plug>(EasyAlign)<cr>
 
 " Start interactive align to the right
-vnoremap <leader>a <Plug>(EasyAlign)<cr><right>
+vmap <leader>a <Plug>(EasyAlign)<cr><right>
 
 let g:easy_align_ignore_groups = ['Comment']
 
