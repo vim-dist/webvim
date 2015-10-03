@@ -13,7 +13,8 @@
 
 " on vim enter opens nerd tree
 function! OpenNerdTree()
-    if match(expand('%:t'), 'COMMIT_EDITMSG') < 0
+    let s:exclude = ['COMMIT_EDITMSG', 'MERGE_MSG']
+    if index(s:exclude, expand('%:t')) < 0
         NERDTreeFind
         exec "normal! \<c-w>\<c-w>"
     endif
@@ -30,7 +31,7 @@ let g:NERDTreeWinSize = 35
 let g:NERDTreeShowHidden=1
 
 " single click to open nodes
-let g:NERDTreeMouseMode=3
+" let g:NERDTreeMouseMode=3
 
 " ignored files
 let g:NERDTreeIgnore=['\.swp$', '\~$']
