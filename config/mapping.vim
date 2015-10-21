@@ -56,6 +56,7 @@ if g:hardcoreMode == 1
     " Leave insert mode (like <esc>) and disable <esc>
     inoremap jk <esc>
     inoremap <special> <esc> <nop>
+    inoremap <esc>^[ <esc>^[
 
     " Disable arrow keys
 
