@@ -53,7 +53,7 @@ or compile a recent version with `xterm_clipboard` and `ruby` or `python` suppor
 
 	git clone https://github.com/krampstudio/webvim.git ~/.vim
     ln -s ~/.vim/.vimrc ~/.vimrc
-    vi
+    vim
 
 ## Hardcore mode
 
