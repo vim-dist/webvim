@@ -241,6 +241,7 @@ WebVim is only a distribution that contains plugins. The plugin authors have mad
 
 ## History
 
+ - __1.1.0__ Add user config, autocmd file, fix easyalign mapping, update Nerdtree config, better mouse support in in sert mode
  - __1.0.0__ Becomes `webvim` with an install process, a better configuration system, better plugins neighborhood
  - __0.1.0__ A basic `dotvim` repository with my own Vim configuration
 
