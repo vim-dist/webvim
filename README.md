@@ -92,7 +92,7 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | Delete a file                                    | `d`                   |      | Tree Menu        |
 | Move a file                                      | `m`                   |      | Tree Menu        |
 | Copy a file                                      | `c`                   |      | Tree Menu        |
-| Move to right tab                                | `<s-right>`           | n    |                  |
+| Move to left tab                                 | `<s-left>`            | n    |                  |
 | Move to right tab                                | `<s-right>`           | n    |                  |
 | Change window (ie. tree to tab)                  | `<c-w><c-w>`          |      |                  |
 | Help                                             | `?`                   |      | Tree             |
