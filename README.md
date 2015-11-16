@@ -1,7 +1,7 @@
 ![WebVim](resources/WebVim.png "WebVim")
 ===============================
 
-WebVim is a Vim based distribution targetting JavaScript and Web development.
+WebVim is a Vim based distribution targeting JavaScript and Web development.
 
 It targets :
  - JavaScript development (ES5, ES6, node.js)
