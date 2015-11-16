@@ -6,5 +6,4 @@
 " year  : 2015
 " 
 
-" my email
-iabbrev @@ chevrier.bertrand@gmail.com
+" nothing yet, you can suggest yours via PR
