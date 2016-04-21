@@ -26,11 +26,15 @@ And contains the features you expect from a modern code editor :
 
 ## Install
 
-__Only tested on linux__ (Ubuntu and Debian)
+__Only tested on Linux__
 
-### Dependencies
+### Dependencies (the long story)
+
+On a Ubuntu (from 15.04)
 
  1. A modern version of Vim
+
+Ubuntu :
 
 	apt-get install vim vim-runtime vim-gui-common
 
@@ -40,6 +44,7 @@ or compile a recent version with `xterm_clipboard` and `ruby` or `python` suppor
 
     apt-get install build-essential cmake python-dev exuberant-ctags libclang-3.4-dev
 
+
  3. Node.js and npm
 
     curl -sL https://deb.nodesource.com/setup_0.12 | bash -
@@ -48,6 +53,15 @@ or compile a recent version with `xterm_clipboard` and `ruby` or `python` suppor
  4. Some npm packages
 
     npm install -g eslint csslint jshint jsonlint handlebars
+
+### Dependencies (the short story)
+
+> Please report me what you did to make it work on your OS
+
+#### Fedora 23
+
+    dnf install cmake python-devel npm vim
+    npm install -g npm eslint csslint jshint jsonlint handlebars
 
 ### Install it:
 
@@ -80,8 +94,8 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | Update Plugins                                   | `:PlugUpdate`         | n    |                  |
 |                                                                                                    |
 | __Config__                                                                                         |
-| Edit .vimrc                                      | `<leader>e`           | n    |                  |
-| Reload .vimrc                                    | `<leader>s`           | n    |                  |
+| Edit .vimrc                                      | `<leader>ev`           | n    |                  |
+| Reload .vimrc                                    | `<leader>sv`           | n    |                  |
 |                                                                                                    |
 | __File Tree (NERDTree)__                                                                           |
 | Toggle Tree                                      | `<c-n>`               | n    |                  |
