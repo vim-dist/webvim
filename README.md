@@ -23,6 +23,7 @@ And contains the features you expect from a modern code editor :
  - grunt/gulp support (coming soon)
  - all the awesomeness from Vim
 
+> The WebVim idea is to provide you a vim distribution: something that comes prepackaged, preconfigured, built on a kernel to serve a goal. WebVim is to vim what Debian is to Linux, a vim distribution for the web.
 
 ## Install
 
@@ -34,23 +35,30 @@ On a Ubuntu (from 15.04)
 
  1. A modern version of Vim
 
-	apt-get install vim vim-runtime vim-gui-common
+```sh
+apt-get install vim vim-runtime vim-gui-common
+```
 
 or compile a recent version with `xterm_clipboard` and `ruby` or `python` support.
 
  2. Some tools to compile YouCompleteMe
 
-    apt-get install build-essential cmake python-dev exuberant-ctags libclang-3.4-dev
-
+```sh
+apt-get install build-essential cmake python-dev exuberant-ctags libclang-3.4-dev
+```
 
  3. Node.js and npm
 
-    curl -sL https://deb.nodesource.com/setup_0.12 | bash -
-    apt-get install -y nodejs
+```sh
+curl -sL https://deb.nodesource.com/setup_0.12 | bash -
+apt-get install -y nodejs
+```
 
  4. Some npm packages
 
-    npm install -g eslint csslint jshint jsonlint handlebars
+```sh
+npm install -g eslint csslint jshint jsonlint handlebars
+```
 
 ### Dependencies (the short story)
 
@@ -58,14 +66,20 @@ or compile a recent version with `xterm_clipboard` and `ruby` or `python` suppor
 
 #### Fedora 23
 
-    dnf install cmake python-devel npm vim
-    npm install -g npm eslint csslint jshint jsonlint handlebars
+```sh
+dnf install cmake python-devel npm vim
+npm install -g npm eslint csslint jshint jsonlint handlebars
+```
 
 ### Install it:
 
-	git clone https://github.com/krampstudio/webvim.git ~/.vim
-    ln -s ~/.vim/.vimrc ~/.vimrc
-    vim
+```sh
+git clone https://github.com/krampstudio/webvim.git ~/.vim
+ln -s ~/.vim/.vimrc ~/.vimrc
+vim
+```
+
+The plugins install can take some times, especially since there's a compilation made by YouCompleteMe. If you've the feeling the install has frozen, you can finish the install after by entering the command `:PlugInstall`.
 
 ## Hardcore mode
 
@@ -188,6 +202,8 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | __Editing__                                                                                        |
 | Move line up                                     | `<leader>-`           | nv   |                  |
 | Move line down                                   | `<leader>_`           | nv   |                  |
+| Wrap in single quote                             | `<leader>'`           | nv   |                  |
+| Wrap in double quote                             | `<leader>"`           | nv   |                  |
 |                                                                                                    |
 | _Next sections to come soon_                                                                       |
 |                                                                                                    |
