@@ -34,8 +34,6 @@ On a Ubuntu (from 15.04)
 
  1. A modern version of Vim
 
-Ubuntu :
-
 	apt-get install vim vim-runtime vim-gui-common
 
 or compile a recent version with `xterm_clipboard` and `ruby` or `python` support.
