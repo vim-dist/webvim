@@ -147,7 +147,7 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | Format the selection                             | `<c-f>`               | n    | js,json,html,css |
 |                                                                                                    |
 | __Multiple Cursor__                                                                                |
-| Start multiple cursor                            | `<c-m>`               | v    | Visual Bloc      |
+| Start multiple cursor                            | `<c-m>`               | v    | Visual Block     |
 | Multiple cursor insert                           | `i`                   |      | multiple cursor  |
 | Multiple cursor remove                           | `x`                   |      | multiple cursor  |
 | Leave multiple cursor                            | `<esc>`               |      | multiple cursor  |
