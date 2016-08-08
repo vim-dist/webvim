@@ -39,7 +39,7 @@ if !isdirectory(s:pluginDir)
     echom " > the vim IDE for web dev <"
     echom " "
     echom "Checking dependencies :"
-    if !executable('node') || !executable('npm')
+    if (!executable('node') && !executable('nodejs')) || !executable('npm')
         echom " [ERR] node.js and npm are required, please install them before continuing."
     	echom " "
     else
@@ -65,6 +65,7 @@ if !isdirectory(s:pluginDir)
 	"Install plugins on first run
 	autocmd VimEnter * PlugInstall
     endif
+
 else
 
     " Loads the global config, mapping and settings
@@ -80,7 +81,7 @@ else
 
     " user configuration
     if filereadable(s:userConfig)
-        exec ":source ".s:userConfig
+       "exec ":source ".s:userConfig
     endif
 
 endif
