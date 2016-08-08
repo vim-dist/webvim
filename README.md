@@ -1,7 +1,7 @@
 ![WebVim](resources/WebVim.png "WebVim")
 ===============================
 
-WebVim is a Vim based IDE for web development.
+WebVim is a Vim based distribution targeting JavaScript and Web development.
 
 It targets :
  - JavaScript development (ES5, ES6, node.js)
@@ -23,37 +23,63 @@ And contains the features you expect from a modern code editor :
  - grunt/gulp support (coming soon)
  - all the awesomeness from Vim
 
+> The WebVim idea is to provide you a vim distribution: something that comes prepackaged, preconfigured, built on a kernel to serve a goal. WebVim is to vim what Debian is to Linux, a vim distribution for the web.
 
 ## Install
 
-__Only tested on linux__ (Ubuntu and Debian)
+__Only tested on Linux__
 
-### Dependencies
+### Dependencies (the long story)
+
+On a Ubuntu (from 15.04)
 
  1. A modern version of Vim
 
-	apt-get install vim vim-runtime vim-gui-common
+```sh
+apt-get install vim vim-runtime vim-gui-common
+```
 
 or compile a recent version with `xterm_clipboard` and `ruby` or `python` support.
 
  2. Some tools to compile YouCompleteMe
 
-    apt-get install build-essential cmake python-dev exuberant-ctags libclang3.4-dev
+```sh
+apt-get install build-essential cmake python-dev exuberant-ctags libclang-3.4-dev
+```
 
  3. Node.js and npm
 
-    curl -sL https://deb.nodesource.com/setup_0.12 | bash -
-    apt-get install -y nodejs
+```sh
+curl -sL https://deb.nodesource.com/setup_0.12 | bash -
+apt-get install -y nodejs
+```
 
  4. Some npm packages
 
-    npm install -g eslint csslint jshint jsonlint handlebars
+```sh
+npm install -g eslint csslint jshint jsonlint handlebars
+```
+
+### Dependencies (the short story)
+
+> Please report me what you did to make it work on your OS
+
+#### Fedora 23
+
+```sh
+dnf install cmake python-devel npm vim
+npm install -g npm eslint csslint jshint jsonlint handlebars
+```
 
 ### Install it:
 
-	git clone https://github.com/krampstudio/webvim.git ~/.vim
-    ln -s ~/.vim/.vimrc ~/.vimrc
-    vim
+```sh
+git clone https://github.com/krampstudio/webvim.git ~/.vim
+ln -s ~/.vim/.vimrc ~/.vimrc
+vim
+```
+
+The plugins install can take some times, especially since there's a compilation made by YouCompleteMe. If you've the feeling the install has frozen, you can finish the install after by entering the command `:PlugInstall`.
 
 ## Hardcore mode
 
@@ -80,8 +106,8 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | Update Plugins                                   | `:PlugUpdate`         | n    |                  |
 |                                                                                                    |
 | __Config__                                                                                         |
-| Edit .vimrc                                      | `<leader>e`           | n    |                  |
-| Reload .vimrc                                    | `<leader>s`           | n    |                  |
+| Edit .vimrc                                      | `<leader>ev`           | n    |                  |
+| Reload .vimrc                                    | `<leader>sv`           | n    |                  |
 |                                                                                                    |
 | __File Tree (NERDTree)__                                                                           |
 | Toggle Tree                                      | `<c-n>`               | n    |                  |
@@ -121,7 +147,7 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | Format the selection                             | `<c-f>`               | n    | js,json,html,css |
 |                                                                                                    |
 | __Multiple Cursor__                                                                                |
-| Start multiple cursor                            | `<c-m>`               | v    | Visual Bloc      |
+| Start multiple cursor                            | `<c-m>`               | v    | Visual Block     |
 | Multiple cursor insert                           | `i`                   |      | multiple cursor  |
 | Multiple cursor remove                           | `x`                   |      | multiple cursor  |
 | Leave multiple cursor                            | `<esc>`               |      | multiple cursor  |
@@ -176,6 +202,8 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | __Editing__                                                                                        |
 | Move line up                                     | `<leader>-`           | nv   |                  |
 | Move line down                                   | `<leader>_`           | nv   |                  |
+| Wrap in single quote                             | `<leader>'`           | nv   |                  |
+| Wrap in double quote                             | `<leader>"`           | nv   |                  |
 |                                                                                                    |
 | _Next sections to come soon_                                                                       |
 |                                                                                                    |
