@@ -78,7 +78,7 @@ let g:syntastic_tpl_checkers=['handlebars']
 
 " get available js linters
 function! GetJslinters()
-    let l:linters = [ ['eslint', '.eslintrc'], ['jshint', '.jshintrc'] ]
+    let l:linters = [ ['eslint', '.eslintrc'], ['eslint', '.eslintrc.json'], ['eslint', '.eslintrc.js'], ['jshint', '.jshintrc'] ]
     let l:available = []
     for l:linter in l:linters
        if executable(l:linter[0])
