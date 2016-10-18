@@ -64,10 +64,10 @@ npm install -g eslint csslint jshint jsonlint handlebars
 
 > Please report me what you did to make it work on your OS
 
-#### Fedora 23
+#### Fedora 23/24
 
 ```sh
-dnf install cmake python-devel npm vim
+sudo dnf install cmake python-devel npm vim
 npm install -g npm eslint csslint jshint jsonlint handlebars
 ```
 
@@ -228,7 +228,12 @@ _Commands_ :
 
 ## Plugins
 
-WebVim is only a distribution that contains plugins. The plugin authors have made the hard work. _Plugin authors, you rocks!_
+WebVim is only a distribution that contains plugins. The plugin authors have made the hard work.
+
+_Plugin authors rocks!_
+
+### Plugin
+ - [vim-plug](https://github.com/junegunn/vim-plug) Minimalist Vim Plugin Manager
 
 ### User interface
 
