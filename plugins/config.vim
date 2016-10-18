@@ -98,15 +98,12 @@ let g:syntastic_handlebars_checkers=['handlebars']
 let g:syntastic_tpl_checkers=['handlebars']
 
 " get available js linters
+" it returns the mapping between a linter and the config files
 function! GetJslinters()
-    let l:linters = [ ['eslint', '.eslintrc'], ['eslint', '.eslintrc.json'], ['eslint', '.eslintrc.js'], ['jshint', '.jshintrc'] ]
-    let l:available = []
-    for l:linter in l:linters
-       if executable(l:linter[0])
-            call add(l:available, l:linter)
-       endif
-    endfor
-    return l:available
+    return {
+    \    'eslint' : [ '.eslintrc',  '.eslintrc.json',  '.eslintrc.js', '.eslint.yml' ],
+    \    'jshint' : [ '.jshintrc']
+    \ }
 endfunction
 
 " check if the path to see if a linter config is present
@@ -114,13 +111,19 @@ function! Jslinter(path, linters)
     let l:dir = fnamemodify(a:path, ':p:h')
 
     if(l:dir == '/')
-        return ''
+        return ['']
     endif
 
-    for l:linter in a:linters
-        if filereadable(l:dir . '/' . l:linter[1])
-            return l:linter[0]
-        endif
+    for l:linter in keys(a:linters)
+        for l:linterConfig in a:linters[l:linter]
+            if filereadable(l:dir . '/' . l:linterConfig)
+                let l:localLinter = l:dir . '/node_modules/.bin/' . l:linter
+                if executable(l:localLinter)
+                    return [l:linter, l:localLinter]
+                endif
+                return [l:linter, l:linter]
+            endif
+        endfor
     endfor
 
     return Jslinter(fnamemodify(l:dir, ':h'), a:linters)
@@ -133,14 +136,18 @@ function! SyntasticSetJsLinter()
 
     " look for linter config in the current folder
     let l:jslinter = Jslinter(expand('%:p'), l:availableLinters)
-    if l:jslinter == ''
+    if l:jslinter[0] == ''
         " otherwise look into the home dir
         let l:jslinter = Jslinter($HOME, l:availableLinters)
     endif
 
     " configure the linter
-    if l:jslinter != ''
-        let g:syntastic_javascript_checkers=[l:jslinter]
+    if l:jslinter[0] != ''
+        let g:syntastic_javascript_checkers=[l:jslinter[0]]
+        if l:jslinter[0] != l:jslinter[1]
+            exec 'let g:syntastic_javascript_' . l:jslinter[0] . '_exec = "' . l:jslinter[1] . '"'
+        endif
+        let g:syntastic_javascript_checkers=[l:jslinter[0]]
     endif
 endfunction
 
