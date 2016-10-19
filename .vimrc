@@ -15,20 +15,20 @@
 
 filetype plugin on
 
-let s:vimDir = $HOME.'/.vim'
+let g:vimDir = $HOME.'/.vim'
 
 let g:hardcoreMode = 1
 
-let s:pluginDir  = s:vimDir.'/plugins/plugged'
-let s:pluginDef  = s:vimDir.'/plugins/def.vim'
-let s:pluginConf = s:vimDir.'/plugins/config.vim'
+let s:pluginDir  = g:vimDir.'/plugins/plugged'
+let s:pluginDef  = g:vimDir.'/plugins/def.vim'
+let s:pluginConf = g:vimDir.'/plugins/config.vim'
 
-let s:configSetting = s:vimDir.'/config/setting.vim'
-let s:configMapping = s:vimDir.'/config/mapping.vim'
-let s:configAbbrev  = s:vimDir.'/config/abbrev.vim'
-let s:configAutocmd  = s:vimDir.'/config/autocmd.vim'
+let s:configSetting = g:vimDir.'/config/setting.vim'
+let s:configMapping = g:vimDir.'/config/mapping.vim'
+let s:configAbbrev  = g:vimDir.'/config/abbrev.vim'
+let s:configAutocmd  = g:vimDir.'/config/autocmd.vim'
 
-let s:userConfig  = s:vimDir.'/local.vim'
+let s:userConfig  = g:vimDir.'/local.vim'
 
 if !isdirectory(s:pluginDir)
 
