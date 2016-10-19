@@ -118,6 +118,8 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | Delete a file                                    | `d`                   |      | Tree Menu        |
 | Move a file                                      | `m`                   |      | Tree Menu        |
 | Copy a file                                      | `c`                   |      | Tree Menu        |
+| Search in files (grep)                           | `g`                   |      | Tree Menu        |
+| Next match in grep                               | `:cn`                 |      | Grep > Quickfix  |
 | Move to left tab                                 | `<s-left>`            | n    |                  |
 | Move to right tab                                | `<s-right>`           | n    |                  |
 | Change window (ie. tree to tab)                  | `<c-w><c-w>`          |      |                  |
