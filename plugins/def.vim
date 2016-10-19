@@ -1,7 +1,8 @@
 " Start plugins definition
 call plug#begin($HOME.'/.vim/plugins/plugged')
 
-Plug 'scrooloose/nerdtree',                       { 'commit' : '334fb0e68797cf56d17db42bf56f39030f226cf8' }
+Plug 'scrooloose/nerdtree',                       { 'commit' : '334fb0e68797cf56d17db42bf56f39030f226cf8' } | Plug 'https://gist.github.com/1f40e70e615f2fa2212bf5423662277d.git', { 'dir' : g:vimDir . '/nerdtree_plugin' }
+
 Plug 'scrooloose/nerdcommenter',                  { 'commit' : '97cb982f1f0d0631b34b71b065e162916bee4036' }
 Plug 'goatslacker/mango.vim',                     { 'commit' : '7af1e00e9068d4c1010a05626030eb0bf64365d7' }
 Plug 'bling/vim-airline',                         { 'commit' : '89646038445ccfefc00724a9a860db2cbc4f1e70', 'do' : $HOME.'/.vim/fonts/install' }
@@ -26,5 +27,7 @@ Plug 'marijnh/tern_for_vim',                      { 'commit' : '34c516a783b54f20
 Plug 'moll/vim-node',                             { 'commit' : '13b31218447335e176d46dd5f497b274f7f49595'}
 Plug 'syngan/vim-vimlint',                        { 'commit' : 'c8b9cd9d8a0fb6dc69667d32819aeef503cff55c'}
 Plug 'ynkdir/vim-vimlparser',                     { 'commit' : '2fff43c58968a18bc01bc8304df68bde01af04d9'}
+
+
 
 call plug#end()
