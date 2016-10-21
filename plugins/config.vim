@@ -198,3 +198,21 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 let g:used_javascript_libs = 'jquery,underscore,requirejs,chai,handlebars'
 
 
+
+" [> YCM shortcuts <]
+"
+function! Refactor()
+    call inputsave()
+    let g:newName = input("Enter the new variable name : ")
+    call inputrestore()
+    exec ":YcmCompleter RefactorRename " . g:newName
+endfunction
+
+nnoremap <leader>gt :YcmCompleter GetType<cr>
+nnoremap <leader>gd :YcmCompleter GetDoc<cr>
+nnoremap <leader>go :YcmCompleter GoTo<cr>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<cr>
+nnoremap <leader>gr :YcmCompleter GoToReferences<cr>
+nnoremap <leader>r :call Refactor()<cr>
+
+
