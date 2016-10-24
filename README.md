@@ -171,12 +171,13 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | Jump previous error                              | `:lprev`              | n    |                  |
 |                                                                                                    |
 | __JavaScript__                                                                                     |
-| Jump to the definition                           | `:TernDef`            | n    | under cursor     |
-| Look up the documentation                        | `:TernDoc`            | n    | under cursor     |
-| Find the type                                    | `:TernType`           | n    | under cursor     |
-| Show all references to the variable or prop      | `:TernRefs`           | n    | under cursor     |
-| Rename the variable                              | `:TernRename`         | n    | under cursor     |
-| jump to the source of a `require`                | `gf`                  | n    | node.js, cursor  |
+| Get type                                         | `<leader>gt`          | n    | under cursor     |
+| Get documentation                                | `<leader>gd`          | n    | under cursor     |
+| Go to                                            | `<leader>go`          | n    | under cursor     |
+| Jump to definition                               | `<leader>gf`          | n    | under cursor     |
+| Go to references                                 | `<leader>gr`          | n    | under cursor     |
+| Rename                                           | `<leader>r`           | n    | under cursor     |
+| Jump to the source of a `require`                | `gf`                  | n    | node.js, cursor  |
 | Edit the main file of a CJS module               | `:Nedit module`       | n    | node.js          |
 | Edit a file of a CJS module                      | `:Nedit module/foo.js`| n    | node.js          |
 | Edit projects main (from package.json)           | `:Nedit`              | n    | node.js          |
@@ -260,7 +261,6 @@ _Plugin authors rocks!_
  - [VimYankStack](https://github.com/maxbrunsfeld/vim-yankstack) Iterate over yanked stack on paste
  - [VimSurround](https://github.com/tpope/vim-surround) Quoting and parenthesizing
  - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) Autocompletion engine
- - [VimForTern](https://github.com/marijnh/tern_for_vim) Smart JavaScript autocompletion
  - [VimNode](https://github.com/moll/vim-node) Navigate through node.js code/modules
  - [VimLint](https://github.com/syngan/vim-vimlint) Linter used by syntastic for VimL
  - [VimLParser](https://github.com/ynkdir/vim-vimlparser) VimL parser (required by VimLint)

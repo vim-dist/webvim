@@ -1,3 +1,11 @@
+
+function! InstallYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+    !cd ./third_party/ycmd/third_party/tern_runtime && npm install
+  endif
+endfunction
+
 " Start plugins definition
 call plug#begin($HOME.'/.vim/plugins/plugged')
 
@@ -22,12 +30,10 @@ Plug 'othree/javascript-libraries-syntax.vim',    { 'commit' : '07293176a2c8f088
 Plug 'hail2u/vim-css3-syntax',                    { 'commit' : '02bd1421344d9c242b3044e5cd9f3a92793c79ee'}
 Plug 'cakebaker/scss-syntax.vim',                 { 'commit' : '4461789d02f81fd328afbdf27d6404b6c763c25f'}
 Plug 'othree/html5.vim',                          { 'commit' : 'bc7faabe7a4dfc0d963d6d8a406c3b7284e2866f'}
-Plug 'Valloric/YouCompleteMe',                    { 'commit' : 'ddf18cc6ec3bb0108bb89ac366fd74394815f2c6', 'do': './install.py' }
-Plug 'marijnh/tern_for_vim',                      { 'commit' : '34c516a783b54f2068674ffd581c0f82b8b48bf5', 'do' : 'npm install' }
+Plug 'Valloric/YouCompleteMe',                    { 'commit' : 'ddf18cc6ec3bb0108bb89ac366fd74394815f2c6', 'do': function('InstallYCM') }
 Plug 'moll/vim-node',                             { 'commit' : '13b31218447335e176d46dd5f497b274f7f49595'}
 Plug 'syngan/vim-vimlint',                        { 'commit' : 'c8b9cd9d8a0fb6dc69667d32819aeef503cff55c'}
 Plug 'ynkdir/vim-vimlparser',                     { 'commit' : '2fff43c58968a18bc01bc8304df68bde01af04d9'}
-
 
 
 call plug#end()
