@@ -81,7 +81,7 @@ else
 
     " user configuration
     if filereadable(s:userConfig)
-       "exec ":source ".s:userConfig
+       exec ":source ".s:userConfig
     endif
 
 endif
