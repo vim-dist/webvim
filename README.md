@@ -276,7 +276,7 @@ _Plugin authors rocks!_
 
 ## History
  - __1.2.0__ Fix #28, support new esint config files, update installe
- - __1.1.0__ Add user config, autocmd file, fix easyalign mapping, update Nerdtree config, better mouse support in in sert mode
+ - __1.1.0__ Add user config, autocmd file, fix easyalign mapping, update Nerdtree config, better mouse support in insert mode
  - __1.0.0__ Becomes `webvim` with an install process, a better configuration system, better plugins neighborhood
  - __0.1.0__ A basic `dotvim` repository with my own Vim configuration
 
