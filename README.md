@@ -218,7 +218,7 @@ _Modes_ :
 
 _Commands_ :
  - `:command` a Vim command
- - `:set somthing` can also be replaced by `:setlocal something` to apply it to the current buffer only
+ - `:set something` can also be replaced by `:setlocal something` to apply it to the current buffer only
  - `<c-m>a` or `a` a keyboard command
    - `<c-/>` means `CTRL and `/` (this is the Vim notation)
    - `<s-left>` means `Shift` and `left arrow`
