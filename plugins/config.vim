@@ -216,4 +216,7 @@ nnoremap <leader>gf :YcmCompleter GoToDefinition<cr>
 nnoremap <leader>gr :YcmCompleter GoToReferences<cr>
 nnoremap <leader>r :call Refactor()<cr>
 
+" [> Emmet shortcuts <]
+"
+au FileType html,css,scss imap <expr>kj  emmet#expandAbbrIntelligent("\<tab>")
 

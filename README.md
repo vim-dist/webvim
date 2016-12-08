@@ -18,6 +18,7 @@ And contains the features you expect from a modern code editor :
  - code format
  - support coding conventions (editorconfig)
  - hardcore mode (for real Vim users)
+ - Emmet support
  - jsdoc generation (coming soon)
  - debugging (coming soon)
  - grunt/gulp support (coming soon)
@@ -208,6 +209,9 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | Wrap in single quote                             | `<leader>'`           | nv   |                  |
 | Wrap in double quote                             | `<leader>"`           | nv   |                  |
 |                                                                                                    |
+| __Emmet__                                                                                          |
+| Expand abbreviation                              | `kj`                  | i    |                  |
+|                                                                                                    |
 | _Next sections to come soon_                                                                       |
 |                                                                                                    |
 
@@ -264,6 +268,7 @@ _Plugin authors rocks!_
  - [VimNode](https://github.com/moll/vim-node) Navigate through node.js code/modules
  - [VimLint](https://github.com/syngan/vim-vimlint) Linter used by syntastic for VimL
  - [VimLParser](https://github.com/ynkdir/vim-vimlparser) VimL parser (required by VimLint)
+ - [Emmet-vim](https://github.com/mattn/emmet-vim) Expanding abbreviations similar to [emmet](http://emmet.io/)
 
 ### Code reading
 
