@@ -1,3 +1,4 @@
 local.vim
 plugins/plugged/*
 nerdtree_plugin
+spell
