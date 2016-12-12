@@ -7,14 +7,13 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #495256; }
+  color: #606c71; }
 
 a {
-  color: #021a96;
+  color: #1e6bb8;
   text-decoration: none; }
   a:hover {
-    opacity: .8;
-  }
+    text-decoration: underline; }
 
 .btn {
   display: inline-block;
@@ -57,8 +56,8 @@ a {
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: #333;
-  background-image: linear-gradient(120deg, #333333, #555555); }
+  background-color: #159957;
+  background-image: linear-gradient(120deg, #155799, #159957); }
 
 @media screen and (min-width: 64em) {
   .page-header {
@@ -75,9 +74,6 @@ a {
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem; }
-
-.project-name img {
-  width: 300px; }
 
 @media screen and (min-width: 64em) {
   .project-name {
@@ -116,7 +112,7 @@ a {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color:#019632; }
+  color: #159957; }
 .main-content p {
   margin-bottom: 1em; }
 .main-content code {

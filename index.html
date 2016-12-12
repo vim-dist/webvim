@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>WebVim</title>
+    <title>Webvim by vim-dist</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,16 +11,19 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name"><img src="images/WebVim.svg" alt="WebVim" title="WebVim">
-</h1>
-      <h2 class="project-tagline">WebVim is a vim based distribution targeting JavaScript and Web development.</h2>
-      <a href="https://github.com/krampstudio/webvim" class="btn">View on GitHub</a>
-      <a href="https://github.com/krampstudio/webvim/tarball/1.2.0" class="btn">Download .tar.gz</a>
+      <h1 class="project-name">Webvim</h1>
+      <h2 class="project-tagline">WebVim is a vim based distribution targeting JavaScript and Web development</h2>
+      <a href="https://github.com/vim-dist/webvim" class="btn">View on GitHub</a>
+      <a href="https://github.com/vim-dist/webvim/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/vim-dist/webvim/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
+      <h1>
+<a id="" class="anchor" href="#" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><img src="resources/WebVim.png" alt="WebVim" title="WebVim">
+</h1>
 
-<p>WebVim is a Vim based IDE for web development.</p>
+<p>WebVim is a Vim based distribution targeting JavaScript and Web development.</p>
 
 <p>It targets :</p>
 
@@ -29,6 +32,8 @@
 <li>HTML5</li>
 <li>CSS3 and SCSS</li>
 </ul>
+
+<p><a href="./images/shots/js.png"><img src="./images/shots/js.png" width="80%" alt="javascript edition" title="Editing a javascript file with autocomplete"></a></p>
 
 <p>And contains the features you expect from a modern code editor :</p>
 
@@ -41,63 +46,79 @@
 <li>code format</li>
 <li>support coding conventions (editorconfig)</li>
 <li>hardcore mode (for real Vim users)</li>
+<li>Emmet support</li>
 <li>jsdoc generation (coming soon)</li>
 <li>debugging (coming soon)</li>
 <li>grunt/gulp support (coming soon)</li>
 <li>all the awesomeness from Vim</li>
 </ul>
 
-<a href="./images/shots/js.png" target="_blank"><img src="./images/shots/js.png" width="80%" alt="javascript edition" title="Editing a javascript file with autocomplete" /></a>
+<blockquote>
+<p>The WebVim idea is to provide you a vim distribution: something that comes prepackaged, preconfigured, built on a kernel to serve a goal. WebVim is to vim what Debian is to Linux, a vim distribution for the web.</p>
+</blockquote>
 
 <h2>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
 
-<p><strong>Only tested on linux</strong> (Ubuntu and Debian)</p>
+<p><strong>Only tested on Linux</strong></p>
 
 <h3>
-<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h3>
+<a id="dependencies-the-long-story" class="anchor" href="#dependencies-the-long-story" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies (the long story)</h3>
+
+<p>On Ubuntu (from 15.04)</p>
 
 <ol>
-<li>
-<p>A modern version of Vim</p>
-
-<p>apt-get install vim vim-runtime vim-gui-common</p>
-</li>
+<li>A modern version of Vim</li>
 </ol>
+
+<div class="highlight highlight-source-shell"><pre>apt-get install vim vim-runtime vim-gui-common</pre></div>
 
 <p>or compile a recent version with <code>xterm_clipboard</code> and <code>ruby</code> or <code>python</code> support.</p>
 
 <ol>
-<li>
-<p>Some tools to compile YouCompleteMe</p>
-
-<p>apt-get install build-essential cmake python-dev exuberant-ctags libclang3.4-dev</p>
-</li>
-<li>
-<p>Node.js and npm</p>
-
-<p>curl -sL <a href="https://deb.nodesource.com/setup_0.12">https://deb.nodesource.com/setup_0.12</a> | bash -
-apt-get install -y nodejs</p>
-</li>
-<li>
-<p>Some npm packages</p>
-
-<p>npm install -g eslint csslint jshint jsonlint handlebars</p>
-</li>
+<li>Some tools to compile YouCompleteMe</li>
 </ol>
 
+<div class="highlight highlight-source-shell"><pre>apt-get install build-essential cmake python-dev exuberant-ctags libclang-3.4-dev</pre></div>
+
+<ol>
+<li>Node.js and npm</li>
+</ol>
+
+<div class="highlight highlight-source-shell"><pre>curl -sL https://deb.nodesource.com/setup_0.12 <span class="pl-k">|</span> bash -
+apt-get install -y nodejs</pre></div>
+
+<ol>
+<li>Some npm packages</li>
+</ol>
+
+<div class="highlight highlight-source-shell"><pre>npm install -g eslint csslint jshint jsonlint handlebars</pre></div>
+
 <h3>
-<a id="install-it" class="anchor" href="#install-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install it:</h3>
+<a id="dependencies-the-short-story" class="anchor" href="#dependencies-the-short-story" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies (the short story)</h3>
 
-<pre><code>git clone https://github.com/krampstudio/webvim.git ~/.vim
-ln -s ~/.vim/.vimrc ~/.vimrc
-vim
-</code></pre>
+<blockquote>
+<p>Please report me what you did to make it work on your OS</p>
+</blockquote>
 
-<a href="./images/shots/install.png" target="_blank"><img src="./images/shots/install.png" width="80%" alt="install plugins" title="Webvim is installing plugins" /></a>
+<h4>
+<a id="fedora-2324" class="anchor" href="#fedora-2324" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fedora 23/24</h4>
+
+<div class="highlight highlight-source-shell"><pre>sudo dnf install cmake python-devel npm vim
+npm install -g npm eslint csslint jshint jsonlint handlebars</pre></div>
+
+<h3>
+<a id="install-it" class="anchor" href="#install-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install it:</h3>
+
+<div class="highlight highlight-source-shell"><pre>git clone https://github.com/krampstudio/webvim.git <span class="pl-k">~</span>/.vim
+ln -s <span class="pl-k">~</span>/.vim/.vimrc <span class="pl-k">~</span>/.vimrc
+ln -s <span class="pl-k">~</span>/.vim/.tern-project <span class="pl-k">~</span>/.tern-project
+vim</pre></div>
+
+<p>The plugins install can take some times, especially since there's a compilation made by YouCompleteMe. If you've the feeling the install has frozen, you can finish the install after by entering the command <code>:PlugInstall</code>.</p>
 
 <h2>
-<a id="hardcore-mode" class="anchor" href="#hardcore-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardcore mode</h2>
+<a id="hardcore-mode" class="anchor" href="#hardcore-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hardcore mode</h2>
 
 <p>The hardcore mode remap some keys to force you use Vim in a productive way:</p>
 
@@ -112,15 +133,15 @@ vim
 <p>You can disable the hardcore mode by setting the value of <code>g:hardcoreMode</code> to <code>0</code> in <code>.vimrc</code>. You can also change the mappings.</p>
 
 <h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
 <h3>
-<a id="vim" class="anchor" href="#vim" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vim</h3>
+<a id="vim" class="anchor" href="#vim" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vim</h3>
 
 <p>WebVim is only a Vim distribution with plugins and configuration, so all common Vim commands and basic mapping are available. You must know how to use Vim before using this IDE. If you're not comfortable with Vim enough I suggest you to take the interactive Vim tutorial (run <code>vimtutor</code> in a terminal), and keep a <a href="http://fprintf.net/vimCheatSheet.html">common usage cheat sheet</a> close to you until your fingers get all the mappings in memory.</p>
 
 <h3>
-<a id="webvim" class="anchor" href="#webvim" aria-hidden="true"><span class="octicon octicon-link"></span></a>WebVim</h3>
+<a id="webvim" class="anchor" href="#webvim" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>WebVim</h3>
 
 <table>
 <thead>
@@ -164,13 +185,13 @@ vim
 </tr>
 <tr>
 <td>Edit .vimrc</td>
-<td><code>&lt;leader&gt;e</code></td>
+<td><code>&lt;leader&gt;ev</code></td>
 <td align="center">n</td>
 <td></td>
 </tr>
 <tr>
 <td>Reload .vimrc</td>
-<td><code>&lt;leader&gt;s</code></td>
+<td><code>&lt;leader&gt;sv</code></td>
 <td align="center">n</td>
 <td></td>
 </tr>
@@ -233,6 +254,18 @@ vim
 <td><code>c</code></td>
 <td align="center"></td>
 <td>Tree Menu</td>
+</tr>
+<tr>
+<td>Search in files (grep)</td>
+<td><code>g</code></td>
+<td align="center"></td>
+<td>Tree Menu</td>
+</tr>
+<tr>
+<td>Next match in grep</td>
+<td><code>:cn</code></td>
+<td align="center"></td>
+<td>Grep &gt; Quickfix</td>
 </tr>
 <tr>
 <td>Move to left tab</td>
@@ -414,7 +447,7 @@ vim
 <td>Start multiple cursor</td>
 <td><code>&lt;c-m&gt;</code></td>
 <td align="center">v</td>
-<td>Visual Bloc</td>
+<td>Visual Block</td>
 </tr>
 <tr>
 <td>Multiple cursor insert</td>
@@ -545,37 +578,43 @@ vim
 <td></td>
 </tr>
 <tr>
-<td>Jump to the definition</td>
-<td><code>:TernDef</code></td>
+<td>Get type</td>
+<td><code>&lt;leader&gt;gt</code></td>
 <td align="center">n</td>
 <td>under cursor</td>
 </tr>
 <tr>
-<td>Look up the documentation</td>
-<td><code>:TernDoc</code></td>
+<td>Get documentation</td>
+<td><code>&lt;leader&gt;gd</code></td>
 <td align="center">n</td>
 <td>under cursor</td>
 </tr>
 <tr>
-<td>Find the type</td>
-<td><code>:TernType</code></td>
+<td>Go to</td>
+<td><code>&lt;leader&gt;go</code></td>
 <td align="center">n</td>
 <td>under cursor</td>
 </tr>
 <tr>
-<td>Show all references to the variable or prop</td>
-<td><code>:TernRefs</code></td>
+<td>Jump to definition</td>
+<td><code>&lt;leader&gt;gf</code></td>
 <td align="center">n</td>
 <td>under cursor</td>
 </tr>
 <tr>
-<td>Rename the variable</td>
-<td><code>:TernRename</code></td>
+<td>Go to references</td>
+<td><code>&lt;leader&gt;gr</code></td>
 <td align="center">n</td>
 <td>under cursor</td>
 </tr>
 <tr>
-<td>jump to the source of a <code>require</code>
+<td>Rename</td>
+<td><code>&lt;leader&gt;r</code></td>
+<td align="center">n</td>
+<td>under cursor</td>
+</tr>
+<tr>
+<td>Jump to the source of a <code>require</code>
 </td>
 <td><code>gf</code></td>
 <td align="center">n</td>
@@ -744,6 +783,36 @@ vim
 <td></td>
 </tr>
 <tr>
+<td>Wrap in single quote</td>
+<td><code>&lt;leader&gt;'</code></td>
+<td align="center">nv</td>
+<td></td>
+</tr>
+<tr>
+<td>Wrap in double quote</td>
+<td><code>&lt;leader&gt;"</code></td>
+<td align="center">nv</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Emmet</strong></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Expand abbreviation</td>
+<td><code>kj</code></td>
+<td align="center">i</td>
+<td>html,css,scss</td>
+</tr>
+<tr>
 <td></td>
 <td></td>
 <td align="center"></td>
@@ -781,7 +850,7 @@ vim
 <li>
 <code>:command</code> a Vim command</li>
 <li>
-<code>:set somthing</code> can also be replaced by <code>:setlocal something</code> to apply it to the current buffer only</li>
+<code>:set something</code> can also be replaced by <code>:setlocal something</code> to apply it to the current buffer only</li>
 <li>
 <code>&lt;c-m&gt;a</code> or <code>a</code> a keyboard command
 
@@ -805,12 +874,22 @@ vim
 </ul>
 
 <h2>
-<a id="plugins" class="anchor" href="#plugins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugins</h2>
+<a id="plugins" class="anchor" href="#plugins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plugins</h2>
 
-<p>WebVim is only a distribution that contains plugins. The plugin authors have made the hard work. <em>Plugin authors, you rocks!</em></p>
+<p>WebVim is only a distribution that contains plugins. The plugin authors have made the hard work.</p>
+
+<p><em>Plugin authors rocks!</em></p>
 
 <h3>
-<a id="user-interface" class="anchor" href="#user-interface" aria-hidden="true"><span class="octicon octicon-link"></span></a>User interface</h3>
+<a id="plugin" class="anchor" href="#plugin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plugin</h3>
+
+<ul>
+<li>
+<a href="https://github.com/junegunn/vim-plug">vim-plug</a> Minimalist Vim Plugin Manager</li>
+</ul>
+
+<h3>
+<a id="user-interface" class="anchor" href="#user-interface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>User interface</h3>
 
 <ul>
 <li>
@@ -820,7 +899,7 @@ vim
 </ul>
 
 <h3>
-<a id="manage-your-project" class="anchor" href="#manage-your-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manage your project</h3>
+<a id="manage-your-project" class="anchor" href="#manage-your-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manage your project</h3>
 
 <ul>
 <li>
@@ -834,7 +913,7 @@ vim
 </ul>
 
 <h3>
-<a id="code-writing" class="anchor" href="#code-writing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code writing</h3>
+<a id="code-writing" class="anchor" href="#code-writing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code writing</h3>
 
 <ul>
 <li>
@@ -856,17 +935,18 @@ vim
 <li>
 <a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> Autocompletion engine</li>
 <li>
-<a href="https://github.com/marijnh/tern_for_vim">VimForTern</a> Smart JavaScript autocompletion</li>
-<li>
 <a href="https://github.com/moll/vim-node">VimNode</a> Navigate through node.js code/modules</li>
 <li>
 <a href="https://github.com/syngan/vim-vimlint">VimLint</a> Linter used by syntastic for VimL</li>
 <li>
 <a href="https://github.com/ynkdir/vim-vimlparser">VimLParser</a> VimL parser (required by VimLint)</li>
+<li>
+<a href="https://github.com/mattn/emmet-vim">Emmet-vim</a> Expanding abbreviations similar to <a href="http://emmet.io/">emmet</a>
+</li>
 </ul>
 
 <h3>
-<a id="code-reading" class="anchor" href="#code-reading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code reading</h3>
+<a id="code-reading" class="anchor" href="#code-reading" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code reading</h3>
 
 <ul>
 <li>
@@ -884,9 +964,15 @@ vim
 </ul>
 
 <h2>
-<a id="history" class="anchor" href="#history" aria-hidden="true"><span class="octicon octicon-link"></span></a>History</h2>
+<a id="history" class="anchor" href="#history" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>History</h2>
 
 <ul>
+<li>
+<strong>1.3.0</strong> Fixed dependencies, tern via YCM, Emmet, new theme, nerdtree grep, use local linters</li>
+<li>
+<strong>1.2.0</strong> Fix #28, support new esint config files, update installe</li>
+<li>
+<strong>1.1.0</strong> Add user config, autocmd file, fix easyalign mapping, update Nerdtree config, better mouse support in insert mode</li>
 <li>
 <strong>1.0.0</strong> Becomes <code>webvim</code> with an install process, a better configuration system, better plugins neighborhood</li>
 <li>
@@ -894,7 +980,7 @@ vim
 </ul>
 
 <h2>
-<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
 
 <p>Every contribution is more than welcomed. You can:</p>
 
@@ -911,28 +997,18 @@ vim
 <p><a href="https://gratipay.com/%7Ekrampstudio/"><img src="https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png" alt="Support via Gratipay"></a></p>
 
 <h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
 
 <p>The content of this repository is licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a></p>
 
       <footer class="site-footer">
-          <span class="site-footer-owner"><a href="http://webvim.org">WebVim</a> is maintained by <a href="https://github.com/krampstudio">krampstudio</a> / <a href="https://twitter.com/kramp">@kramp</a></span>
+        <span class="site-footer-owner"><a href="https://github.com/vim-dist/webvim">Webvim</a> is maintained by <a href="https://github.com/vim-dist">vim-dist</a>.</span>
 
-        <span class="site-footer-credits">Based on the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
 
     </section>
 
-            <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-3993348-8");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
+  
   </body>
 </html>
