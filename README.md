@@ -281,6 +281,7 @@ _Plugin authors rocks!_
  - [HTML5](https://github.com/othree/html5.vim) HTML5 syntax
 
 ## History
+ - __1.3.0__ Fixed dependencies, tern via YCM, Emmet, new theme, nerdtree grep, use local linters
  - __1.2.0__ Fix #28, support new esint config files, update installe
  - __1.1.0__ Add user config, autocmd file, fix easyalign mapping, update Nerdtree config, better mouse support in insert mode
  - __1.0.0__ Becomes `webvim` with an install process, a better configuration system, better plugins neighborhood
