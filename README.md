@@ -31,7 +31,7 @@ __Only tested on Linux__
 
 ### Dependencies (the long story)
 
-On a Ubuntu (from 15.04)
+On Ubuntu (from 15.04)
 
  1. A modern version of Vim
 
@@ -76,6 +76,7 @@ npm install -g npm eslint csslint jshint jsonlint handlebars
 ```sh
 git clone https://github.com/krampstudio/webvim.git ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
+ln -s ~/.vim/.tern-project ~/.tern-project
 vim
 ```
 
