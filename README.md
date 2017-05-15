@@ -1,4 +1,4 @@
-![WebVim](resources/WebVim.png "WebVim")
+![WebVim](resources/WebVim.png?v=2 "WebVim")
 ===============================
 
 WebVim is a Vim based distribution targeting JavaScript and Web development.
