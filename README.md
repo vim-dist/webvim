@@ -45,7 +45,7 @@ or compile a recent version with `xterm_clipboard` and `ruby` or `python` suppor
  2. Some tools to compile YouCompleteMe
 
 ```sh
-apt-get install build-essential cmake python-dev exuberant-ctags libclang-3.4-dev
+apt-get install build-essential cmake python-dev exuberant-ctags
 ```
 
  3. Node.js and npm
