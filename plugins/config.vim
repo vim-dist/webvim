@@ -164,6 +164,22 @@ vmap <leader>a <Plug>(EasyAlign)<cr><right>
 
 let g:easy_align_ignore_groups = ['Comment']
 
+let s:easy_align_delimiters_default = {
+\  ' ': { 'pattern': ' ',  'left_margin': 0, 'right_margin': 0, 'stick_to_left': 0 },
+\  '=': { 'pattern': '===\|<=>\|\(&&\|||\|<<\|>>\)=\|=\~[#?]\?\|=>\|[:+/*!%^=><&|.-]\?=[#?]\?',
+\                          'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0 },
+\  ':': { 'pattern': ':',  'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0 },
+\  ',': { 'pattern': ',',  'left_margin': 0, 'right_margin': 1, 'stick_to_left': 1 },
+\  '|': { 'pattern': '|',  'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0 },
+\  '.': { 'pattern': '\.', 'left_margin': 0, 'right_margin': 0, 'stick_to_left': 0 },
+\  '#': { 'pattern': '#\+', 'delimiter_align': 'l', 'ignore_groups': ['!Comment']  },
+\  '&': { 'pattern': '\\\@<!&\|\\\\',
+\                          'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0 },
+\  '{': { 'pattern': '(\@<!{',
+\                          'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0 },
+\  '}': { 'pattern': '}',  'left_margin': 1, 'right_margin': 0, 'stick_to_left': 0 }
+\ }
+
 
 " [> multiple cursor <]
 
@@ -196,7 +212,7 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 " [> Javascript libraries syntax <]
 
-let g:used_javascript_libs = 'jquery,underscore,requirejs,chai,handlebars'
+let g:used_javascript_libs = 'jquery,underscore,requirejs,chai,handlebars,d3,tape'
 
 
 
@@ -218,5 +234,5 @@ nnoremap <leader>r :call Refactor()<cr>
 
 " [> Emmet shortcuts <]
 "
-au FileType html,css,scss imap <expr>kj  emmet#expandAbbrIntelligent("\<tab>")
+au FileType html,css,scss imap <leader>k  emmet#expandAbbrIntelligent("\<tab>")
 
