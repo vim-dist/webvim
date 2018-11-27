@@ -298,8 +298,9 @@ Every contribution is more than welcomed. You can:
  - Create a better logo
  - [Offer me a coffee](https://gratipay.com/~krampstudio/)
  
-<script src="https://liberapay.com/krampstudio/widgets/button.js"></script>
-<noscript><a href="https://liberapay.com/krampstudio/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+
+
+[![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/krampstudio/donate)
 
 ## License
 
