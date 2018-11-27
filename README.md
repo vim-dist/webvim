@@ -296,7 +296,7 @@ Every contribution is more than welcomed. You can:
  - Fix my English mistakes
  - Update the documentation
  - Create a better logo
- - [Offer me a coffee](https://gratipay.com/~krampstudio/)
+ - [Offer me a coffee](https://liberapay.com/krampstudio/donate)
  
 
 
