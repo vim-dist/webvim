@@ -234,5 +234,8 @@ nnoremap <leader>r :call Refactor()<cr>
 
 " [> Emmet shortcuts <]
 "
-au FileType html,css,scss imap <leader>k  emmet#expandAbbrIntelligent("\<tab>")
+let g:user_emmet_install_global = 0
+autocmd FileType html,tpl,hbs,css,scss EmmetInstall
+let g:user_emmet_leader_key='<C-k>'
+
 

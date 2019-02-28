@@ -211,7 +211,7 @@ WebVim is only a Vim distribution with plugins and configuration, so all common 
 | Wrap in double quote                             | `<leader>"`           | nv   |                  |
 |                                                                                                    |
 | __Emmet__                                                                                          |
-| Expand abbreviation                              | `kj`                  | i    | html,css,scss    |
+| Expand abbreviation                              | `<c-k>,`              | i    | html,css,scss    |
 |                                                                                                    |
 | _Next sections to come soon_                                                                       |
 |                                                                                                    |
@@ -297,7 +297,7 @@ Every contribution is more than welcomed. You can:
  - Update the documentation
  - Create a better logo
  - [Offer me a coffee](https://liberapay.com/krampstudio/donate)
- 
+
 
 
 [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/krampstudio/donate)
