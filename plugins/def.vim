@@ -9,7 +9,7 @@ endfunction
 " Start plugins definition
 call plug#begin($HOME.'/.vim/plugins/plugged')
 
-Plug 'scrooloose/nerdtree',                       { 'commit' : '334fb0e68797cf56d17db42bf56f39030f226cf8' } | Plug 'https://gist.github.com/1f40e70e615f2fa2212bf5423662277d.git', { 'dir' : g:vimDir . '/nerdtree_plugin' }
+Plug 'scrooloose/nerdtree', { 'commit' : '84737f2ebe533ffac9ebc21da8d1f57216962641' } | Plug 'https://gist.github.com/1f40e70e615f2fa2212bf5423662277d.git', { 'dir' : g:vimDir . '/nerdtree_plugin' } | Plug 'Xuyuanp/nerdtree-git-plugin', { 'commit' : '325a1298b0c9d8a4c61388a2f9956a534a9068cd' } | Plug 'MarSoft/nerdtree-grep-plugin', { 'commit' : '09e446ebe4770687a6283905d5ff461ea268bc14' }
 
 Plug 'scrooloose/nerdcommenter',                  { 'commit' : '97cb982f1f0d0631b34b71b065e162916bee4036' }
 Plug 'goatslacker/mango.vim',                     { 'commit' : '7af1e00e9068d4c1010a05626030eb0bf64365d7' }

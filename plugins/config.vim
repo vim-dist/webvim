@@ -3,7 +3,7 @@
 "
 " author: Bertrand Chevrier <chevrier.bertrand@gmail.com>
 " source: https://github.com/krampstudio/dotvim
-" year  : 2015
+" year  : 2015-2019
 "
 
 " TODO split by plugin ?
@@ -58,6 +58,19 @@ function! CheckLeftBuffers()
 endfunction
 autocmd BufEnter * call CheckLeftBuffers()
 
+" git indicator in tree
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
 
 " [> NERDCommenter <]
 
