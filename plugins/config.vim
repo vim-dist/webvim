@@ -227,6 +227,9 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 let g:used_javascript_libs = 'jquery,underscore,requirejs,chai,handlebars,d3,tape,react,vue,ramda'
 
+" [> JSON <]
+
+let g:vim_json_syntax_conceal = 0
 
 
 " [> YCM shortcuts <]

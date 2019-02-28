@@ -25,7 +25,7 @@ Plug 'terryma/vim-multiple-cursors',              { 'commit' : '51d0717f63cc231f
 Plug 'maksimr/vim-jsbeautify',                    { 'commit' : 'caffda66a2a8852ee132f95291115af67370c5e7', 'do' : 'git submodule update --init --recursive && npm install' }
 Plug 'maxbrunsfeld/vim-yankstack',                { 'commit' : '157a659c1b101c899935d961774fb5c8f0775370' }
 Plug 'tpope/vim-surround',                        { 'commit' : 'e49d6c2459e0f5569ff2d533b4df995dd7f98313'}
-Plug 'elzr/vim-json',                             { 'commit' : 'f5e3181d0b33a9c51377bb7ea8492feddca8b503'}
+Plug 'elzr/vim-json',                             { 'commit' : '3727f089410e23ae113be6222e8a08dd2613ecf2'}
 Plug 'othree/yajs.vim',                           { 'commit' : '437be4ccf0e78fe54cb482657091cff9e8479488'}
 Plug 'othree/es.next.syntax.vim',                 { 'commit' : 'ad2d6a27073e43e41b8041b3655f2444a251c444'}
 Plug 'othree/javascript-libraries-syntax.vim',    { 'commit' : '5ef435d8c28ebc3c9b52fb865f4c06db629857f7'}
@@ -33,7 +33,7 @@ Plug 'hail2u/vim-css3-syntax',                    { 'commit' : '3e40dde46c6a3bc4
 Plug 'cakebaker/scss-syntax.vim',                 { 'commit' : '4461789d02f81fd328afbdf27d6404b6c763c25f'}
 Plug 'othree/html5.vim',                          { 'commit' : 'bc7faabe7a4dfc0d963d6d8a406c3b7284e2866f'}
 Plug 'Valloric/YouCompleteMe',                    { 'commit' : 'ddf18cc6ec3bb0108bb89ac366fd74394815f2c6', 'do': function('InstallYCM') }
-Plug 'moll/vim-node',                             { 'commit' : '13b31218447335e176d46dd5f497b274f7f49595'}
+Plug 'moll/vim-node',                             { 'commit' : 'ede047791792b9530ba1ae73ed86e9671cdd96b8'}
 Plug 'syngan/vim-vimlint',                        { 'commit' : 'c8b9cd9d8a0fb6dc69667d32819aeef503cff55c'}
 Plug 'ynkdir/vim-vimlparser',                     { 'commit' : '2fff43c58968a18bc01bc8304df68bde01af04d9'}
 Plug 'mattn/emmet-vim',                           { 'commit' : 'd698f1658770ca5fa58c87e80421c8d65bbe9065'}
