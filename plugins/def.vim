@@ -26,7 +26,8 @@ Plug 'maksimr/vim-jsbeautify',                    { 'commit' : 'caffda66a2a8852e
 Plug 'maxbrunsfeld/vim-yankstack',                { 'commit' : '157a659c1b101c899935d961774fb5c8f0775370' }
 Plug 'tpope/vim-surround',                        { 'commit' : 'e49d6c2459e0f5569ff2d533b4df995dd7f98313'}
 Plug 'elzr/vim-json',                             { 'commit' : 'f5e3181d0b33a9c51377bb7ea8492feddca8b503'}
-Plug 'othree/yajs.vim',                           { 'commit' : '5cf2b9ef25eb5bb0a5116e902c17615937150f17'}
+Plug 'othree/yajs.vim',                           { 'commit' : '437be4ccf0e78fe54cb482657091cff9e8479488'}
+Plug 'othree/es.next.syntax.vim',                 { 'commit' : 'ad2d6a27073e43e41b8041b3655f2444a251c444'}
 Plug 'othree/javascript-libraries-syntax.vim',    { 'commit' : '5ef435d8c28ebc3c9b52fb865f4c06db629857f7'}
 Plug 'hail2u/vim-css3-syntax',                    { 'commit' : '3e40dde46c6a3bc4f0339248b000bbe96e39dc2d'}
 Plug 'cakebaker/scss-syntax.vim',                 { 'commit' : '4461789d02f81fd328afbdf27d6404b6c763c25f'}
