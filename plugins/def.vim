@@ -12,8 +12,9 @@ call plug#begin($HOME.'/.vim/plugins/plugged')
 Plug 'scrooloose/nerdtree', { 'commit' : '84737f2ebe533ffac9ebc21da8d1f57216962641' } | Plug 'https://gist.github.com/1f40e70e615f2fa2212bf5423662277d.git', { 'dir' : g:vimDir . '/nerdtree_plugin' } | Plug 'Xuyuanp/nerdtree-git-plugin', { 'commit' : '325a1298b0c9d8a4c61388a2f9956a534a9068cd' } | Plug 'MarSoft/nerdtree-grep-plugin', { 'commit' : '09e446ebe4770687a6283905d5ff461ea268bc14' }
 
 Plug 'scrooloose/nerdcommenter',                  { 'commit' : '9a32fd2534427f7a1dcfe22e9c0ea6b67b6dbe78' }
-Plug 'bling/vim-airline',                         { 'commit' : '89646038445ccfefc00724a9a860db2cbc4f1e70', 'do' : $HOME.'/.vim/fonts/install' }
-Plug 'NLKNguyen/PaperColor.vim',                   { 'commit' : 'c4a4dfdc21c14f58c12d077242ae33b729c894b2' }
+Plug 'NLKNguyen/papercolor-theme',                { 'commit' : 'c4a4dfdc21c14f58c12d077242ae33b729c894b2' }
+Plug 'bling/vim-airline',                         { 'commit' : '1c3ae6077af76927f82f87e05a7b9fdfba47ce2c', 'do' : $HOME.'/.vim/fonts/install' }
+Plug 'vim-airline/vim-airline-themes',            { 'commit' : '3bfe1d00d48f7c35b7c0dd7af86229c9e63e14a9' }
 Plug 'tpope/vim-fugitive',                        { 'commit' : 'aac85a268e89a6c8be79341e130ac90256fadbd6' }
 Plug 'airblade/vim-gitgutter',                    { 'commit' : '297678a08da0c2d1819d6cb98504f8a843395456' }
 Plug 'editorconfig/editorconfig-vim',             { 'commit' : 'a459b8cfef00100da40fd69c8ae92c4d1e63e1d2' }
