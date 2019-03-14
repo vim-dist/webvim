@@ -17,7 +17,7 @@ Plug 'bling/vim-airline',                         { 'commit' : '1c3ae6077af76927
 Plug 'vim-airline/vim-airline-themes',            { 'commit' : '3bfe1d00d48f7c35b7c0dd7af86229c9e63e14a9' }
 Plug 'tpope/vim-fugitive',                        { 'commit' : '2564c37d0a2ade327d6381fef42d84d9fad1d057' }
 Plug 'airblade/vim-gitgutter',                    { 'commit' : '7eeea63e62b1cc088a75c7a7c244fc774d82e5bb' }
-Plug 'editorconfig/editorconfig-vim',             { 'commit' : 'a459b8cfef00100da40fd69c8ae92c4d1e63e1d2' }
+Plug 'editorconfig/editorconfig-vim',             { 'commit' : '68f8136d2b018bfa9b23403e87d3d65bc942cbc3' }
 Plug 'bronson/vim-trailing-whitespace',           { 'commit' : '733fb64337b6da4a51c85a43450cd620d8b617b5' }
 Plug 'scrooloose/syntastic',                      { 'commit' : '6ffba7395c562e152cb84bc8f7906de2b1ed0b8a' }
 Plug 'junegunn/vim-easy-align',                   { 'commit' : '0cb6b98fc155717b0a56c110551ac57d1d951ddb' }
