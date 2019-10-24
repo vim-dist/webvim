@@ -16,10 +16,12 @@ Plug 'NLKNguyen/papercolor-theme',                { 'commit' : 'c4a4dfdc21c14f58
 Plug 'bling/vim-airline',                         { 'commit' : '1c3ae6077af76927f82f87e05a7b9fdfba47ce2c', 'do' : $HOME.'/.vim/fonts/install' }
 Plug 'vim-airline/vim-airline-themes',            { 'commit' : '3bfe1d00d48f7c35b7c0dd7af86229c9e63e14a9' }
 Plug 'tpope/vim-fugitive',                        { 'commit' : '2564c37d0a2ade327d6381fef42d84d9fad1d057' }
+Plug 'tpope/vim-rhubarb',                         { 'commit' : '57a350e6327af0074c4bc0d30b62662dfdb993af' }
 Plug 'airblade/vim-gitgutter',                    { 'commit' : '7eeea63e62b1cc088a75c7a7c244fc774d82e5bb' }
 Plug 'editorconfig/editorconfig-vim',             { 'commit' : '68f8136d2b018bfa9b23403e87d3d65bc942cbc3' }
 Plug 'bronson/vim-trailing-whitespace',           { 'commit' : '733fb64337b6da4a51c85a43450cd620d8b617b5' }
 Plug 'scrooloose/syntastic',                      { 'commit' : '6ffba7395c562e152cb84bc8f7906de2b1ed0b8a' }
+Plug 'gcorne/vim-sass-lint',                      { 'commit' : 'b9ff33141294c7af143f12687e9b1cf9a3a54e0f' }
 Plug 'junegunn/vim-easy-align',                   { 'commit' : '0cb6b98fc155717b0a56c110551ac57d1d951ddb' }
 Plug 'terryma/vim-multiple-cursors',              { 'commit' : '51d0717f63cc231f11b4b63ee5b611f589dce1b3' }
 Plug 'maksimr/vim-jsbeautify',                    { 'commit' : 'caffda66a2a8852ee132f95291115af67370c5e7', 'do' : 'git submodule update --init --recursive && npm install' }
@@ -37,5 +39,6 @@ Plug 'moll/vim-node',                             { 'commit' : 'ede047791792b953
 Plug 'syngan/vim-vimlint',                        { 'commit' : 'c8b9cd9d8a0fb6dc69667d32819aeef503cff55c'}
 Plug 'ynkdir/vim-vimlparser',                     { 'commit' : '2fff43c58968a18bc01bc8304df68bde01af04d9'}
 Plug 'mattn/emmet-vim',                           { 'commit' : 'd698f1658770ca5fa58c87e80421c8d65bbe9065'}
+Plug 'martinda/Jenkinsfile-vim-syntax'
 
 call plug#end()
