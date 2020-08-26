@@ -101,8 +101,9 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
+let g:syntastic_filetype_map = { "svelte": "html" }
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
-let g:syntastic_html_checkers=['tidy']
+let g:syntastic_html_checkers=['tidy', 'eslint', 'csslint', 'sasslint']
 let g:syntastic_vim_checkers=['vimlint']
 let g:syntastic_json_checkers=['jsonlint']
 let g:syntastic_yaml_checkers=['js-yaml']
@@ -111,6 +112,7 @@ let g:syntastic_scss_checkers=["sasslint"]
 let g:syntastic_css_checkers=['csslint']
 let g:syntastic_handlebars_checkers=['handlebars']
 let g:syntastic_tpl_checkers=['handlebars']
+
 
 " get available js linters
 " it returns the mapping between a linter and the config files
@@ -160,13 +162,17 @@ function! SyntasticSetJsLinter()
     if l:jslinter[0] != ''
         let g:syntastic_javascript_checkers=[l:jslinter[0]]
         if l:jslinter[0] != l:jslinter[1]
-            exec 'let g:syntastic_javascript_' . l:jslinter[0] . '_exec = "' . l:jslinter[1] . '"'
+            exec 'let g:syntastic_html_' . l:jslinter[0] . '_exec = "' . l:jslinter[1] . '"'
+            exec 'let g:syntastic_javascript_' . l:jslinter[0] . '_exe = "' . l:jslinter[1] . '"'
         endif
         let g:syntastic_javascript_checkers=[l:jslinter[0]]
     endif
 endfunction
 
 call SyntasticSetJsLinter()
+
+
+
 
 " [> EasyAlign <]
 
